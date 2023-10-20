@@ -44,7 +44,7 @@ dico = dict(zip(colonnes,valeurs))
 
 # Évolution des voitures électriques sous forme de dataframe
 EVOL_VE = pd.DataFrame(dico)
-#EVOL_VE.to_csv('SCRAP/EVOL_VE.csv')  
+EVOL_VE.to_csv('SCRAP/EVOL_VE.csv')  
 
 # ******* # ******* # ******* # ******* # ******* # ******* # ******* # ******* # ******* # ******* # ******* #
 
