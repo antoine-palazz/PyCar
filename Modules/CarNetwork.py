@@ -12,6 +12,7 @@ import pyroutelib3
 from pyroutelib3 import Router
 import requests, json
 import urllib.parse
+import folium 
 
 KEY = 'AIzaSyBzwNjr0jEe67mqgMdU9w6RqU_AHGln8UM'
 
@@ -59,6 +60,27 @@ class CarNetwork():
         dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
+
+    def trajet_voiture(coor_depart, coor_arrivee, idf):
+    
+        router = pyroutelib3.Router("car")
+        depart = router.findNode(coor_depart[0], coor_depart[1])
+        #print(depart)
+        arrivee = router.findNode(coor_arrivee[0], coor_arrivee[1])
+        #print(arrivee)
+
+        routeLatLons=[coor_depart,coor_arrivee]
+        
+        status, route = router.doRoute(depart, arrivee)
+        if status == 'success':
+            #print("Votre trajet existe")
+            routeLatLons = list(map(router.nodeLatLon, route))
+        #else:
+            #print("Votre trajet n'existe pas")
+
+        folium.PolyLine(routeLatLons, color="blue", weight=2.5, opacity=1).add_to(idf)
+        
+        return routeLatLons
 
     def calcul_distance_haversine(self):
         """
