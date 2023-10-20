@@ -1,7 +1,7 @@
 # Imports 
 import pandas as pd
 import math
-import googlemaps
+# import googlemaps
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -98,9 +98,6 @@ def nearest_station(self):
     return nearest_station  
 """
 
-# Pour faire des tests
-reseau = CarNetwork('1, rue Joliot Curie, 91190 Gif-sur-Yvette', '3, rue Dareau, 75014 Paris', 12)
-reseau.get_coordo()
-print(reseau.x_A, reseau.x_B)
+
 
 
