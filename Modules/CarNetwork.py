@@ -61,9 +61,17 @@ class CarNetwork():
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
-    def trajet_voiture(coor_depart, coor_arrivee, idf):
-    
-        router = pyroutelib3.Router("car")
+
+    def trajet_voiture(self):
+
+        '''
+        - permet de renvoyer le trajet de voiture emprunté pour relier les points A et B 
+        '''
+
+        coor_depart = [self.x_A[1], self.x_A[0]]     # faire attention au petit remaniement du début
+        coor_arrivee = [self.x_B[1], self.x_B[0]]
+
+        router = Router("car")
         depart = router.findNode(coor_depart[0], coor_depart[1])
         #print(depart)
         arrivee = router.findNode(coor_arrivee[0], coor_arrivee[1])
@@ -73,13 +81,11 @@ class CarNetwork():
         
         status, route = router.doRoute(depart, arrivee)
         if status == 'success':
-            #print("Votre trajet existe")
+            print("Votre trajet existe")
             routeLatLons = list(map(router.nodeLatLon, route))
-        #else:
-            #print("Votre trajet n'existe pas")
+        else:
+            print("Votre trajet n'existe pas")
 
-        folium.PolyLine(routeLatLons, color="blue", weight=2.5, opacity=1).add_to(idf)
-        
         return routeLatLons
 
     def calcul_distance_haversine(self):
