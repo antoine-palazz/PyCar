@@ -13,10 +13,11 @@ Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/Projet_p
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap1.png">
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap1.png">
-
+<img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+</picture>
+<picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap2.png">
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap2.png">
- 
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
 </picture>
 - 
