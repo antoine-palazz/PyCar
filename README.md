@@ -32,7 +32,7 @@ Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
-Pour accéder à la [carte]("https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html").
+Pour accéder à la [carte](https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html).
 - 
 
 ## Pour commencer
