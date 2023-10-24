@@ -27,13 +27,4 @@ def evolution_nbre_voiture_elec():
     dict = {'Date': List_date, 'Nombre': List_nombre}
 
     dataframe = pd.DataFrame(dict)
-    df0 = dataframe.sort_values('Date')
-    fig = px.line(df0, x='Date', y='Nombre',
-                  title='Evolution du parc de véhicules électriques en France')
-    
-    img_data = BytesIO()  # Conversion du graphique en image base64
-    plt.savefig(img_data, format='png')
-    img_data.seek(0)
-    img_base64 = base64.b64encode(img_data.read()).decode()
-    return fig, img_base64
-fig, img = evolution_nbre_voiture_elec()
+    return dataframe.sort_values('Date') 

@@ -1,5 +1,10 @@
 from flask import Flask, render_template, request
+from dash import html
 from graphiques import evolution_nbre_voiture_elec
+import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
+import dash_dangerously_set_inner_html
 #from CarNetwork import CarNetwork
 
 
@@ -8,7 +13,17 @@ app = Flask(__name__)
 def introduction():
     message = "En France, le secteur des transports est responsable de 38 pourcent des émissions de dioxyde de carbone (CO2). Pour opérer une transition vers une mobilité plus durable, le Gouvernement s’est engagé dans le développement de la mobilité électrique. Ainsi, la loi d’orientation des mobilités fixe-t-elle comme objectif la fin de la vente de voitures particulières et de véhicules utilitaires légers neufs utilisant des énergies fossiles d’ici 2040. Depuis 2020, les immatriculations de véhicules électriques connaissent une forte progression, le nombre de ventes ayant bondi de 128 pourcent en 2020 et de 63 pourcent en 2021."
     
-    fig, img_base64 = evolution_nbre_voiture_elec()  # Générer le graphique 
+    df = evolution_nbre_voiture_elec()
+    plt.figure(figsize=(12,8))
+    plt.plot(df['Date'], df['Nombre'], label='Evolution du parc de véhicules électriques en France')
+    plt.xlabel('Date')
+    plt.ylabel('Nombre')
+    plt.legend()
+
+    img_data = BytesIO()  # Conversion du graphique en image base64
+    plt.savefig(img_data, format='png')
+    img_data.seek(0)
+    img_base64 = base64.b64encode(img_data.read()).decode()
     graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
     return f'''
     <html>
