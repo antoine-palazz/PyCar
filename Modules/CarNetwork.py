@@ -82,15 +82,15 @@ class CarNetwork():
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
 
-    def trajet_voiture(coor_depart, coor_arrivee, idf):
+    def trajet_voiture(self):
     
         router = pyroutelib3.Router("car")
-        depart = router.findNode(coor_depart[0], coor_depart[1])
+        depart = router.findNode(self.x_A[0], self.x_B[1])
         #print(depart)
-        arrivee = router.findNode(coor_arrivee[0], coor_arrivee[1])
+        arrivee = router.findNode(self.x_A[0], self.x_B[1])
         #print(arrivee)
 
-        routeLatLons=[coor_depart,coor_arrivee]
+        routeLatLons=[self.x_A,self.x_B]
         
         status, route = router.doRoute(depart, arrivee)
         if status == 'success':
@@ -98,8 +98,6 @@ class CarNetwork():
             routeLatLons = list(map(router.nodeLatLon, route))
         #else:
             #print("Votre trajet n'existe pas")
-
-        folium.PolyLine(routeLatLons, color="blue", weight=2.5, opacity=1).add_to(idf)
         
         return routeLatLons
     
