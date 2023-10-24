@@ -18,7 +18,7 @@
 Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en distance et en coût) pour une voiture électrique, afin de relier un point A à un point B en France. 
 
 ## Architecture du répertoire 
-Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/Bornes_v%C3%A9hicules_%C3%A9lectriques.ipynb) est construit de la manière suivante :
+Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/notebooks/EDA_bornes.ipynb) est construit de la manière suivante :
 - Description du fichier et statistiques descriptives
 - Représentation des bornes à recharge pour les voitures électriques en France
 
