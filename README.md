@@ -18,10 +18,9 @@
 Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en distance et en coût) pour une voiture électrique, afin de relier un point A à un point B en France. 
 
 ## Architecture du répertoire 
-Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/Bornes_v%C3%A9hicules_%C3%A9lectriques.ipynb) est construit de la manière suivante :
+Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/Bornes_v%C3%A9hicules_%C3%A9lectriques.ipynb) est construit de la manière suivante :
 - Description du fichier et statistiques descriptives
 - Représentation des bornes à recharge pour les voitures électriques en France
-<iframe width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html"></iframe>
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
@@ -33,6 +32,7 @@ Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/PyCar/bl
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
+Pour accéder à la [carte]("https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html").
 - 
 
 ## Pour commencer
