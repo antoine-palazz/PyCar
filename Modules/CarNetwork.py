@@ -52,7 +52,7 @@ class CarNetwork():
         self.autonomie = autonomie
         self.x_A = None
         self.x_B = None
-        self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ',', on_bad_lines='skip')
+        self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ';')
 
     def clean_data(self):
         '''
