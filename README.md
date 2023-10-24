@@ -1,14 +1,17 @@
 # PyCar
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
-    <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
-</picture>
-
-Projet python de deuxième année à l'ENSAE.
-
-
+<div style="display: flex; justify-content: space-between;">
+    <div style="flex: 1; padding-right: 10px;">
+        Projet python de deuxième année à l'ENSAE.
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
+        <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
+        <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+        </picture>
+    </div>
+</div>
 
 ## Description du projet 
 Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en distance et en coût) pour une voiture électrique, afin de relier un point A à un point B en France. 
