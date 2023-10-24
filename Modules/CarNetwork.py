@@ -84,6 +84,16 @@ class CarNetwork():
 
     def trajet_voiture(self):
     
+        """
+        Il faut inclure le code de get_cordo dans le code de cette routine au cas où l'utilisateur 
+        utilise la méthode trajet_voiture avant celle get_cordo auquel cas les transformations sur 
+        self.x_A et self.x_B n'auraient pas été faites. 
+        """
+        dep_json_A = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.A) + "&format=json").json()
+        dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
+        self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
+        self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
+
         router = pyroutelib3.Router("car")
         depart = router.findNode(self.x_A[0], self.x_B[1])
         #print(depart)
