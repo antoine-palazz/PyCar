@@ -50,7 +50,7 @@ def accueil():
         <title>Calcul d'autonomie pour un voyage en France</title>
         body {{
                 text-align: center;
-                background-image: url("URL_de_votre_image_de_fond");
+                background-image: url("https://github.com/AugustinCablant/PyCar/blob/main/images/fond.jpeg");
                 background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
                 background-repeat: no-repeat; /* Empêche la répétition de l'image */
                 background-attachment: fixed; /* Fixe l'image de fond à la fenêtre pour le défilement */
