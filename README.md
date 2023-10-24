@@ -22,13 +22,13 @@ Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/PyCar/bl
 - Description du fichier et statistiques descriptives
 - Représentation des bornes à recharge pour les voitures électriques en France
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap1.png">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap1.png">
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
 <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap2.png">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/cap2.png">
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
 - 
