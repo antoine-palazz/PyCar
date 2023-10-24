@@ -94,10 +94,10 @@ class CarNetwork():
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
-        router = pyroutelib3.Router("car")
-        depart = router.findNode(self.x_A[0], self.x_B[1])
+        router = pyroutelib3.Router('car')
+        depart = router.findNode(self.x_A[1], self.x_B[0])
         #print(depart)
-        arrivee = router.findNode(self.x_A[0], self.x_B[1])
+        arrivee = router.findNode(self.x_A[1], self.x_B[0])
         #print(arrivee)
 
         routeLatLons=[self.x_A,self.x_B]
