@@ -18,7 +18,6 @@ KEY = 'AIzaSyBzwNjr0jEe67mqgMdU9w6RqU_AHGln8UM'
 
 # Coordonnées des villes en France 
 URL = "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
-df = pd.read_csv(URL)
 
 # Liste des colonnes de df : ['insee_code', 'city_code', 'zip_code', 'label', 'latitude', 'longitude', 
 #                            'department_name', 'department_number', 'region_name', 'region_geojson_name']
@@ -54,6 +53,7 @@ class CarNetwork():
         self.autonomie = autonomie
         self.x_A = None
         self.x_B = None
+<<<<<<< Updated upstream
         self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ';')
 
 
@@ -68,10 +68,29 @@ class CarNetwork():
         liste = []
         df = self.stations_data
         for row in df.itertuples():
+=======
+        self.stations_data = pd.read_csv("https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1", sep=',')
+
+    def clean_df(self):
+        '''
+        Les coordonnées de longitude > 90 ou de latitude > 90 sont inutiles car elles dépassent les limites 
+        des valeurs possibles pour la longitude (de -180 à 180) et la latitude (de -90 à 90) sur la surface 
+        de la Terre, et donc, elles sont généralement considérées comme des données incorrectes. 
+        La routine supprime ces données du dataframe.
+        '''
+
+        liste = []
+    
+        for row in self.stations_data.itertuples():
+>>>>>>> Stashed changes
             if row.xlongitude > 90 or row.ylatitude > 90:
                 liste.append(row.Index)
 
         df.drop(liste)
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
     def get_coordo(self):
         """
@@ -82,6 +101,27 @@ class CarNetwork():
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
+<<<<<<< Updated upstream
+=======
+    def clean_df(self):
+        '''
+        Les coordonnées de longitude > 90 ou de latitude > 90 sont inutiles car elles dépassent les limites 
+        des valeurs possibles pour la longitude (de -180 à 180) et la latitude (de -90 à 90) sur la surface 
+        de la Terre, et donc, elles sont généralement considérées comme des données incorrectes. 
+        La routine supprime ces données du dataframe.
+        '''
+
+        liste = []
+    
+        for row in self.stations_data.itertuples():
+            if row.xlongitude > 90 or row.ylatitude > 90:
+                liste.append(row.Index)
+
+        df.drop(liste)
+
+
+
+>>>>>>> Stashed changes
     def trajet_voiture(coor_depart, coor_arrivee, idf):
     
         router = pyroutelib3.Router("car")
@@ -102,6 +142,7 @@ class CarNetwork():
         folium.PolyLine(routeLatLons, color="blue", weight=2.5, opacity=1).add_to(idf)
         
         return routeLatLons
+    
 
     def calcul_distance_haversine(self):
         """
