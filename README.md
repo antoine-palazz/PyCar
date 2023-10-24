@@ -1,19 +1,6 @@
 # PyCar
 
-<div style="display: flex; justify-content: flex-end;">
-    <div style="flex: 1;">
-        Projet python de deuxième année à l'ENSAE.
-    </div>
-    <div style="flex: 1; text-align: right;">
-        ![Un rapide aperçu](https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png)
-    </div>
-</div>
-
-
 <div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; padding-right: 10px;">
-        Projet python de deuxième année à l'ENSAE.
-    </div>
     <div style="flex: 1; text-align: right;">
         <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
@@ -21,6 +8,10 @@
         <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
         </picture>
     </div>
+    <div style="flex: 1; padding-right: 10px;">
+        Projet python de deuxième année à l'ENSAE.
+    </div>
+    
 </div>
 
 ## Description du projet 
