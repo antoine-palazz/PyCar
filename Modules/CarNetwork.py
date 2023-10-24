@@ -17,7 +17,6 @@ import folium
 KEY = 'AIzaSyBzwNjr0jEe67mqgMdU9w6RqU_AHGln8UM'
 
 # Coordonnées des villes en France 
-URL = "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
 
 # Liste des colonnes de df : ['insee_code', 'city_code', 'zip_code', 'label', 'latitude', 'longitude', 
 #                            'department_name', 'department_number', 'region_name', 'region_geojson_name']
@@ -32,8 +31,8 @@ class CarNetwork():
     A : adresse de départ  / format : numéro, rue, code postal ville (en minuscule)
     B : adresse d'arrivée / format : numéro, rue, code postal ville (en minuscule)
     Autonomie : Autonomie du véhicule utilisé
-    url : lien qui encapsule la base de donnée sur laquelle repose la classe, ici la base de donnée considérée est 
-    celle donnée par l'URL : 'https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25'
+    --> on précise l'autonomie car si celle-ci est supérieure à la distance totale, 
+    alors rien ne sert d'optimiser le trajet.
 
     Attributes:
     -----------
@@ -62,7 +61,6 @@ class CarNetwork():
         de la Terre, et donc, elles sont généralement considérées comme des données incorrectes. 
         La routine supprime ces données du dataframe.
         '''
-
 
         liste = []
     
