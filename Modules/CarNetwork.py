@@ -114,6 +114,18 @@ class CarNetwork():
 
         return routeLatLons
     
+    def get_route_map(self):
+        trajet = self.trajet_voiture()
+        paris_coord = [48.8566, 2.3522]
+
+        # Crée une carte centrée sur Paris
+        carte = folium.Map(location=paris_coord, zoom_start=13)
+
+        # Trace l'itinéraire
+        folium.PolyLine(locations=trajet, color='red').add_to(carte)
+
+        # Affiche la carte dans le notebook
+        return carte
 
     def calcul_distance_haversine(self):
         """
