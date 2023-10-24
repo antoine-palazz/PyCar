@@ -14,8 +14,6 @@ import requests, json
 import urllib.parse
 import folium 
 
-KEY = 'AIzaSyBzwNjr0jEe67mqgMdU9w6RqU_AHGln8UM'
-
 # Coordonnées des villes en France 
 URL = "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
 df = pd.read_csv(URL)
