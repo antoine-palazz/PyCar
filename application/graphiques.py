@@ -2,10 +2,13 @@ import pandas as pd
 from datetime import datetime 
 import os 
 import plotly.express as px
+import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
 
 os.chdir("/Users/augustincablant/Documents/GitHub/PyCar")
 def evolution_nbre_voiture_elec():
-    df = pd.read_csv('download/Voitures.csv', sep=';')
+    df = pd.read_csv('DOWNLOAD/Voitures.csv', sep=';')
     List_date = []
     List_nombre = []
 
@@ -27,5 +30,10 @@ def evolution_nbre_voiture_elec():
     df0 = dataframe.sort_values('Date')
     fig = px.line(df0, x='Date', y='Nombre',
                   title='Evolution du parc de véhicules électriques en France')
-    return fig
-evolution_nbre_voiture_elec()
+    
+    img_data = BytesIO()  # Conversion du graphique en image base64
+    plt.savefig(img_data, format='png')
+    img_data.seek(0)
+    img_base64 = base64.b64encode(img_data.read()).decode()
+    return fig, img_base64
+fig, img = evolution_nbre_voiture_elec()
