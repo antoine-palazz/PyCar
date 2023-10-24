@@ -4,7 +4,6 @@ from graphiques import evolution_nbre_voiture_elec
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-import dash_dangerously_set_inner_html
 #from CarNetwork import CarNetwork
 
 
@@ -49,11 +48,19 @@ def accueil():
     <html>
     <head>
         <title>Calcul d'autonomie pour un voyage en France</title>
+        body {{
+                text-align: center;
+                background-image: url("URL_de_votre_image_de_fond");
+                background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
+                background-repeat: no-repeat; /* Empêche la répétition de l'image */
+                background-attachment: fixed; /* Fixe l'image de fond à la fenêtre pour le défilement */
+            }}
         <style>
             body {{text-align: center}}
         </style>
     </head>
     <body>
+    <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png" alt="Logo" style="width: 100px; height: 100px;">
         <h1>Bienvenue sur notre application PyCar</h1>
         <h2>Le premier calculateur d'itinéraire pour un véhicule électrique prenant en compte les bornes de recharge présentes sur le territoire français</h2>
         {introduction()}
