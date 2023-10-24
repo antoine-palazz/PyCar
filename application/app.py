@@ -8,10 +8,10 @@ import base64
 
 
 app = Flask(__name__)
-
 def introduction():
     message = "En France, le secteur des transports est responsable de 38 pourcent des émissions de dioxyde de carbone (CO2). Pour opérer une transition vers une mobilité plus durable, le Gouvernement s’est engagé dans le développement de la mobilité électrique. Ainsi, la loi d’orientation des mobilités fixe-t-elle comme objectif la fin de la vente de voitures particulières et de véhicules utilitaires légers neufs utilisant des énergies fossiles d’ici 2040. Depuis 2020, les immatriculations de véhicules électriques connaissent une forte progression, le nombre de ventes ayant bondi de 128 pourcent en 2020 et de 63 pourcent en 2021."
-    
+    message2 = "Ce déploiement doit nécessairement s’accompagner d’un développement des infrastructures de recharge. Pour que le modèle du véhicule électrique soit viable, il est nécessaire de disposer d’une borne de recharge publique pour 10 voitures (Directive AFI). La France a largement dépassé ces préconisations. Mais si les objectifs de couverture territoriale homogène demeurent pertinents, le développement de la mobilité électrique passe désormais par une adéquation des infrastructures de recharge aux besoins des usagers."
+
     df = evolution_nbre_voiture_elec()
     plt.figure(figsize=(12,8))
     plt.plot(df['Date'], df['Nombre'], label='Evolution du parc de véhicules électriques en France')
@@ -38,6 +38,12 @@ def introduction():
         <h1>Véhicules électriques en France</h1>
         <p>{message}</p>
         {graph_html}
+        <p>{message2}</p>
+        <picture>
+        <srcset = "https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
+        <img alt="Logo" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+        </picture>
+        <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png" alt="Bornes en France" style="width: 100px; height: 100px;">
     </body>
     </html>
     '''
@@ -48,19 +54,18 @@ def accueil():
     <html>
     <head>
         <title>Calcul d'autonomie pour un voyage en France</title>
-        body {{
+        <style>
+            body {{
                 text-align: center;
-                background-image: url("https://github.com/AugustinCablant/PyCar/blob/main/images/fond.jpeg");
+                <img src ="https://github.com/AugustinCablant/PyCar/blob/main/images/fond.jpeg">
                 background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
                 background-repeat: no-repeat; /* Empêche la répétition de l'image */
                 background-attachment: fixed; /* Fixe l'image de fond à la fenêtre pour le défilement */
             }}
-        <style>
-            body {{text-align: center}}
         </style>
     </head>
     <body>
-    <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png" alt="Logo" style="width: 100px; height: 100px;">
+        <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png" alt="Logo" style="width: 100px; height: 100px;">
         <h1>Bienvenue sur notre application PyCar</h1>
         <h2>Le premier calculateur d'itinéraire pour un véhicule électrique prenant en compte les bornes de recharge présentes sur le territoire français</h2>
         {introduction()}
@@ -76,6 +81,7 @@ def accueil():
     </body>
     </html>
     '''
+
 
 @app.route('/calcul', methods=['POST'])
 def calcul():
