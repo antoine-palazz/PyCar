@@ -21,8 +21,8 @@ Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en d
 Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/Bornes_v%C3%A9hicules_%C3%A9lectriques.ipynb) est construit de la manière suivante :
 - Description du fichier et statistiques descriptives
 - Représentation des bornes à recharge pour les voitures électriques en France
+<iframe width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html"></iframe>
 
-<img src = "https://github.com/AugustinCablant/PyCar/blob/main/DOWNLOAD/map_bornes.html" >
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
