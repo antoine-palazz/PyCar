@@ -1,7 +1,7 @@
 # Imports 
 import pandas as pd
 import math
-# import googlemaps
+from geopy.distance import geodesic
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -13,13 +13,19 @@ from pyroutelib3 import Router
 import requests, json
 import urllib.parse
 import folium 
+import plotly.express as px
+from fonctions import trajet, recherche_station_proche, trajet, trajet_electrique, coor_cp
 
 # Coordonnées des villes en France 
 URL = "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
 df = pd.read_csv(URL)
 
-# Liste des colonnes de df : ['insee_code', 'city_code', 'zip_code', 'label', 'latitude', 'longitude', 
-#                            'department_name', 'department_number', 'region_name', 'region_geojson_name']
+# Bornes 
+URL = 'https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25'
+df_bornes = pd.read_csv(URL, sep = ';')
+
+#Code postaux
+df_code = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/dbe8a621-a9c4-4bc3-9cae-be1699c5ff25')
 
 
 class CarNetwork():
@@ -52,16 +58,45 @@ class CarNetwork():
 
     def get_coordo(self):
         """
-        Permet de renvoyer (latitude,longitude)
+        Permet de récupérer la latitude et la longitude [latitude,longitude]
         """
         dep_json_A = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.A) + "&format=json").json()
         dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
+    def visu_iti(self):
+        départ = coor_cp(df_code, self.A)  # [lat, lon]
+        if départ == None:
+            return "Adresse de départ incorrecte"
+
+        fin = coor_cp(df_code, self.B)
+        if fin == None:
+            return "Adresse d'arrivée incorrecte"
+
+        Trajet_thermique_lat, Trajet_thermique_lon, total_thermique = trajet(départ, fin)
+        Type = ['Thermique']*len(Trajet_thermique_lat)
+
+        elec = trajet_electrique(Trajet_thermique_lat, Trajet_thermique_lon, self.autonomie)
+        if elec == None:
+            return 'Autonomie insuffisante'
+
+        Trajet_lat_elec, Trajet_lon_elec, total_elec = elec
+        Type_elec = ['Electrique']*len(Trajet_lat_elec)
+        Type += Type_elec
+
+        Trajet_lat = Trajet_thermique_lat + Trajet_lat_elec
+        Trajet_lon = Trajet_thermique_lon + Trajet_lon_elec
+        data = pd.DataFrame({'Latitude': Trajet_lat, 'Longitude': Trajet_lon, 'Type': Type})
+        fig = px.line_mapbox(data, lat='Latitude',
+                            lon='Longitude',
+                            color='Type', 
+                            mapbox_style='open-street-map', 
+                            height=800)
+        return fig, total_thermique, total_elec
+
 
     def trajet_voiture(self):
-
         '''
         - permet de renvoyer le trajet de voiture emprunté pour relier les points A et B 
         '''
@@ -83,34 +118,7 @@ class CarNetwork():
             routeLatLons = list(map(router.nodeLatLon, route))
         else:
             print("Votre trajet n'existe pas")
-
         return routeLatLons
-
-    def calcul_distance_haversine(self):
-        """
-        on utilise la distance de haversine
-        -----------
-        x_A = (latitude, longitude)
-        x_B = (latitude, longitude)
-
-        Peu efficace car distance à vol d'oiseau
-        """
-        reseau.get_coordo()
-
-        # Rayon de la Terre en kilomètres
-        R = 6371.0
-        latitudeA, longitudeA = self.x_A
-        latitudeA, longitudeA = math.radians(latitudeA), math.radians(longitudeA)
-        latitudeB, longitudeB = self.x_B
-        latitudeB, longitudeB = math.radians(latitudeB), math.radians(longitudeB)
-        dlat = latitudeB - latitudeA
-        dlon = longitudeB - longitudeA
-        a = math.sin(dlat / 2)**2 + math.cos(latitudeA) * math.cos(latitudeB) * math.sin(dlon / 2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-
-        # Distance en kilomètres
-        distance = R * c
-        return distance  
 
 
 """
