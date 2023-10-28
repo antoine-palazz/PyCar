@@ -14,7 +14,7 @@ import requests, json
 import urllib.parse
 import folium 
 import plotly.express as px
-from fonctions import trajet, recherche_station_proche, trajet, trajet_electrique, coor_cp
+from fonctions import trajet, recherche_station_proche, trajet, trajet_electrique, coor_cp, clean_df
 
 # Coordonnées des villes en France 
 URL = "https://www.data.gouv.fr/fr/datasets/r/51606633-fb13-4820-b795-9a2a575a72f1"
@@ -23,6 +23,7 @@ df = pd.read_csv(URL)
 # Bornes 
 URL = 'https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25'
 df_bornes = pd.read_csv(URL, sep = ';')
+df_bornes.apply(clean_df, inplace = True)
 
 #Code postaux
 df_code = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/dbe8a621-a9c4-4bc3-9cae-be1699c5ff25')
