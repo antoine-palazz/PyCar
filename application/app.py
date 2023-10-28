@@ -8,83 +8,33 @@ import base64
 
 
 app = Flask(__name__)
-def introduction():
-    message = "En France, le secteur des transports est responsable de 38 pourcent des émissions de dioxyde de carbone (CO2). Pour opérer une transition vers une mobilité plus durable, le Gouvernement s’est engagé dans le développement de la mobilité électrique. Ainsi, la loi d’orientation des mobilités fixe-t-elle comme objectif la fin de la vente de voitures particulières et de véhicules utilitaires légers neufs utilisant des énergies fossiles d’ici 2040. Depuis 2020, les immatriculations de véhicules électriques connaissent une forte progression, le nombre de ventes ayant bondi de 128 pourcent en 2020 et de 63 pourcent en 2021."
-    message2 = "Ce déploiement doit nécessairement s’accompagner d’un développement des infrastructures de recharge. Pour que le modèle du véhicule électrique soit viable, il est nécessaire de disposer d’une borne de recharge publique pour 10 voitures (Directive AFI). La France a largement dépassé ces préconisations. Mais si les objectifs de couverture territoriale homogène demeurent pertinents, le développement de la mobilité électrique passe désormais par une adéquation des infrastructures de recharge aux besoins des usagers."
-
-    df = evolution_nbre_voiture_elec()
-    plt.figure(figsize=(12,8))
-    plt.plot(df['Date'], df['Nombre'], label='Evolution du parc de véhicules électriques en France')
-    plt.xlabel('Date')
-    plt.ylabel('Nombre')
-    plt.legend()
-
-    img_data = BytesIO()  # Conversion du graphique en image base64
-    plt.savefig(img_data, format='png')
-    img_data.seek(0)
-    img_base64 = base64.b64encode(img_data.read()).decode()
-    graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
-    return f'''
-    <html>
-    <head>
-        <title>Les véhicules électriques en France</title>
-        <style>
-            body {{
-                text-align: center;
-            }}
-        </style>
-    </head>
-    <body>
-        <h1>Véhicules électriques en France</h1>
-        <p>{message}</p>
-        {graph_html}
-        <p>{message2}</p>
-        <picture>
-        <srcset = "https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
-        <img alt="Logo" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
-        </picture>
-        <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png" alt="Bornes en France" style="width: 100px; height: 100px;">
-    </body>
-    </html>
-    '''
 
 @app.route('/')
 def accueil():
-    return f'''
-    <html>
-    <head>
-        <title>Calcul d'autonomie pour un voyage en France</title>
-        <style>
-            body {{
-                text-align: center;
-                <img src ="https://github.com/AugustinCablant/PyCar/blob/main/images/fond.jpeg">
-                background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
-                background-repeat: no-repeat; /* Empêche la répétition de l'image */
-                background-attachment: fixed; /* Fixe l'image de fond à la fenêtre pour le défilement */
-            }}
-        </style>
-    </head>
-    <body>
-        <img src="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png" alt="Logo" style="width: 100px; height: 100px;">
-        <h1>Bienvenue sur notre application PyCar</h1>
-        <h2>Le premier calculateur d'itinéraire pour un véhicule électrique prenant en compte les bornes de recharge présentes sur le territoire français</h2>
-        {introduction()}
-        <form method="post" action="/calcul">
-            <label for="destination">Destination en France :</label>
-            <input type="text" id="destination" name="destination"><br>
-            <label for="depart">Point de départ :</label>
-            <input type="text" id="depart" name="depart"><br>
-            <label for="autonomie">Autonomie de votre véhicule électrique (en km) :</label>
-            <input type="number" id="autonomie" name="autonomie"><br>
-            <input type="submit" value="Calculer">
-        </form>
-    </body>
-    </html>
-    '''
+    def graph_intro():
+        df = evolution_nbre_voiture_elec()
+        plt.figure(figsize=(10, 6))
+        plt.plot(df['Date'], df['Nombre'], label='Évolution du parc de véhicules électriques en France', color='blue', marker='o')
+        plt.xlabel('Date')
+        plt.ylabel('Nombre de véhicules électrique en France (x1e6)')
+        plt.xticks(rotation=45)  # Rotation des étiquettes de l'axe des x pour rendre les dates plus lisibles
+        plt.legend()
+        plt.fill_between(df['Date'], df['Nombre'], color='lightgray', alpha=0.7)  # Fond gris clair
+        plt.title('Évolution du parc de véhicules électriques en France', fontsize=16)
+        plt.grid(True, linestyle='--', alpha=0.7)
+        plt.tight_layout()  # Pour éviter que les étiquettes de l'axe des x ne se chevauchent
+        img_data = BytesIO()  # Conversion du graphique en image base64
+        plt.savefig(img_data, format='png')
+        img_data.seek(0)
+        img_base64 = base64.b64encode(img_data.read()).decode()
+        graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
+        return graph_html
+    get_graph = graph_intro()
+    return render_template("index.html", graph = get_graph)
 
 
 @app.route('/calcul', methods=['POST'])
-def calcul():
+def calcul(): 
     destination = request.form['destination']
     depart = request.form['depart']
     autonomie = int(request.form['autonomie'])
@@ -95,5 +45,12 @@ def calcul():
     message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
     return message
 
+
+# Lancer l'application avec le terminal
+"""
+cd #chemin
+python app.py
+copier le chemin et le coller dans le navigateur
+"""
 if __name__ == '__main__':
     app.run(debug=True)

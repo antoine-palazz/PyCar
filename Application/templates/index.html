@@ -1,53 +1,89 @@
-<html>
-<head>
-<style>
-.button {
-background-color: #23b83c;
-	border: 2px solid #020353;
-	color: whitesmoke;
-	padding: 0.5em 0.5em;
-	text-align: center;
-	text-decoration: none;
-	font-size: 1em;
-	display: inline-block;
-	width: 18%;
-	border-radius: 5px;
-	box-shadow: 3px 3px 8px 0 #000; 
-}
-body {
-  background-image: url("{{url_for('static', filename='fond.jpeg')}}");
-  background-repeat: no-repeat;
- background-size: 100% 100%;
-}
-h1{
-   background-color: rgb(128, 94, 0);
-  color: white;
-}
-h3{
-   background-color: rgb(128, 105, 0);
-  color: white;
-}
+<!DOCTYPE html>
+<html lang="fr"> 
+<head> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style> 
+	.button {
+		background-color: #23b83c;
+		border: 2px solid #020353;
+		color: whitesmoke;
+		padding: 0.5em 0.5em;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1em;
+		display: inline-block;
+		width: 18%;
+		border-radius: 5px;
+		box-shadow: 3px 3px 8px 0 #000; 
+			}	
+		
+		/* .logo-container */
+	.logo-container {
+		position: absolute;
+		top: 0;
+		right: 100px;;
+	}
 
+	/* .logo */
+	.logo {
+		background-image: url("{{ url_for('static', filename='logo.jpeg') }}"); /* Correction ici */
+		width: 250px; /* Ajustez la largeur et la hauteur selon vos besoins */
+		height: 140px;
+	}
 
-</style>
+	.center-text {
+            text-align: center;
+        }
+
+	
+	body {
+            background-image: url("{{ url_for('static', filename='fond.jpeg') }}"); 
+            background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond avec opacité */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+	</style>
 </head>
-<body>
-<center>
+    <body>
+		<div class="logo-container">
+			<div class="logo"></div>
+		</div>
+		<div class="center-text">
+			<h1>Bienvenue sur PyCar !</h1>
+		</div>
+		<br>
 
-
-<h1>Calcul d'autonomie pour un voyage en France</h1>
-<pre>
-<form action="{{ url_for('predict')}}"method="post">
-
-<input type='text' name="area" placeholder="Area in sq. ft" required="required"/>
-
-
-<button type="submit" class="button">Predict Price</button>
-</form>
-<textarea>
-{{prediction_text}}
-</textarea>
-</pre>
-</center>
-</body>
+        <h2>Le premier calculateur d'itinéraire pour un véhicule électrique prenant en compte les bornes de recharge présentes sur le territoire français</h2>
+        
+		<p> <b> En France, le secteur des transports est responsable de 38 pourcent des émissions de dioxyde de carbone (CO2). 
+			Pour opérer une transition vers une mobilité plus durable, le Gouvernement s’est engagé dans le développement de la 
+			mobilité électrique. Ainsi, la loi d’orientation des mobilités fixe-t-elle comme objectif la fin de la vente de voitures 
+			particulières et de véhicules utilitaires légers neufs utilisant des énergies fossiles d’ici 2040. 
+			Depuis 2020, les immatriculations de véhicules électriques connaissent une forte progression, 
+			le nombre de ventes ayant bondi de 128 pourcent en 2020 et de 63 pourcent en 2021.</b></p>
+			<div class="center-text"> 
+				{{ graph | safe }}
+			</div>
+		<p> <b> Ce déploiement doit nécessairement s’accompagner d’un développement des infrastructures de recharge. 
+			Pour que le modèle du véhicule électrique soit viable, il est nécessaire de disposer d’une borne de recharge publique 
+			pour 10 voitures (Directive AFI). La France a largement dépassé ces préconisations. 
+			Mais si les objectifs de couverture territoriale homogène demeurent pertinents, le développement 
+			de la mobilité électrique passe désormais par une adéquation des infrastructures de recharge aux besoins des usagers.</b></p>
+		
+		<div class="center-text">
+			<h2>Trouve l'itinéraire optimal : </h2>
+			<form method="post" action="/calcul">
+				<label for="destination">Destination en France :</label>
+				<input type="text" id="destination" name="destination"><br>
+				<label for="depart">Point de départ :</label>
+				<input type="text" id="depart" name="depart"><br>
+				<label for="autonomie">Autonomie de votre véhicule électrique (en km) :</label>
+				<input type="number" id="autonomie" name="autonomie"><br>
+				<input type="submit" value="Calculer">
+			</form>
+		</div>
+    </body>
 </html>
