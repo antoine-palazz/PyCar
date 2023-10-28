@@ -20,7 +20,7 @@ def calcul():
     message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
     return message
 
-@app.route("/next")
+@app.route("/evolution_electrique")
 def page_suivante1():
     def graph_intro():
         df = evolution_nbre_voiture_elec()
@@ -42,6 +42,10 @@ def page_suivante1():
         return graph_html
     get_graph = graph_intro()
     return render_template("evolution_electrique.html", graph = get_graph)
+
+@app.route("/bornes")
+def page_suivante2():
+    return render_template("map_bornes.html")
 
 @app.route('/')
 def accueil():
