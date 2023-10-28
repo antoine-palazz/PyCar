@@ -11,6 +11,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def accueil():
+    """ 
+    Permet d'afficher la page d'accueil.
+    """
     def graph_intro():
         df = evolution_nbre_voiture_elec()
         plt.figure(figsize=(10, 6))
@@ -35,13 +38,12 @@ def accueil():
 
 @app.route('/calcul', methods=['POST'])
 def calcul(): 
+    """ 
+    Permet de calculer et retourner l'itinéraire.
+    """
     destination = request.form['destination']
     depart = request.form['depart']
     autonomie = int(request.form['autonomie'])
-    
-    # Ici, vous pouvez effectuer le calcul d'autonomie en fonction des données fournies
-
-    # Par exemple, un simple exemple de calcul :
     message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
     return message
 
