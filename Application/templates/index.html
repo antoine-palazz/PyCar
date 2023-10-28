@@ -55,24 +55,10 @@
 			<h1>Bienvenue sur PyCar !</h1>
 		</div>
 		<br>
-
+		<br>
+        <br>
         <h2>Le premier calculateur d'itinéraire pour un véhicule électrique prenant en compte les bornes de recharge présentes sur le territoire français</h2>
-        
-		<p> <b> En France, le secteur des transports est responsable de 38 pourcent des émissions de dioxyde de carbone (CO2). 
-			Pour opérer une transition vers une mobilité plus durable, le Gouvernement s’est engagé dans le développement de la 
-			mobilité électrique. Ainsi, la loi d’orientation des mobilités fixe-t-elle comme objectif la fin de la vente de voitures 
-			particulières et de véhicules utilitaires légers neufs utilisant des énergies fossiles d’ici 2040. 
-			Depuis 2020, les immatriculations de véhicules électriques connaissent une forte progression, 
-			le nombre de ventes ayant bondi de 128 pourcent en 2020 et de 63 pourcent en 2021.</b></p>
-			<div class="center-text"> 
-				{{ graph | safe }}
-			</div>
-		<p> <b> Ce déploiement doit nécessairement s’accompagner d’un développement des infrastructures de recharge. 
-			Pour que le modèle du véhicule électrique soit viable, il est nécessaire de disposer d’une borne de recharge publique 
-			pour 10 voitures (Directive AFI). La France a largement dépassé ces préconisations. 
-			Mais si les objectifs de couverture territoriale homogène demeurent pertinents, le développement 
-			de la mobilité électrique passe désormais par une adéquation des infrastructures de recharge aux besoins des usagers.</b></p>
-		
+
 		<div class="center-text">
 			<h2>Trouve l'itinéraire optimal : </h2>
 			<form method="post" action="/calcul">
@@ -85,5 +71,7 @@
 				<input type="submit" value="Calculer">
 			</form>
 		</div>
+
+		<a href='{{ url_for("page_suivante1") }}'>Évolution du nombre de véhicules électriques en France</a>
     </body>
 </html>

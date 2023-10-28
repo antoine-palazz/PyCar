@@ -9,11 +9,19 @@ import base64
 
 app = Flask(__name__)
 
-@app.route('/')
-def accueil():
+@app.route('/calcul', methods=['POST'])
+def calcul(): 
     """ 
-    Permet d'afficher la page d'accueil.
+    Permet de calculer et retourner l'itinéraire.
     """
+    destination = request.form['destination']
+    depart = request.form['depart']
+    autonomie = int(request.form['autonomie'])
+    message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
+    return message
+
+@app.route("/next")
+def page_suivante1():
     def graph_intro():
         df = evolution_nbre_voiture_elec()
         plt.figure(figsize=(10, 6))
@@ -33,19 +41,14 @@ def accueil():
         graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
         return graph_html
     get_graph = graph_intro()
-    return render_template("index.html", graph = get_graph)
+    return render_template("evolution_electrique.html", graph = get_graph)
 
-
-@app.route('/calcul', methods=['POST'])
-def calcul(): 
+@app.route('/')
+def accueil():
     """ 
-    Permet de calculer et retourner l'itinéraire.
+    Permet d'afficher la page d'accueil.
     """
-    destination = request.form['destination']
-    depart = request.form['depart']
-    autonomie = int(request.form['autonomie'])
-    message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
-    return message
+    return render_template("index.html")
 
 
 # Lancer l'application avec le terminal
