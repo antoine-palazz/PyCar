@@ -3,8 +3,8 @@
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; text-align: right;">
         <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
-        <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/logo.png">
+        <source media="(prefers-color-scheme: dark) srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
+        <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
         <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
         </picture>
     </div>
