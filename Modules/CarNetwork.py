@@ -134,7 +134,9 @@ class CarNetwork():
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
         self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
 
-        return geopy.distance.distance(self.x_A, self.x_B)
+        dist = geopy.distance.distance(self.x_A, self.x_B)
+
+        return float(str(dist.replace(' km', '')))
 
     """def calcul_distance_haversine(self):
         
