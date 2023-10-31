@@ -53,6 +53,7 @@ class CarNetwork():
         self.x_A = None
         self.x_B = None
         self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ';')
+        self.API_key = "AIzaSyCnuH5NvjIYsQeKcsSPOF_ZilFXyJ2lB2A"
 
     def clean_data(self):
         '''
@@ -126,16 +127,48 @@ class CarNetwork():
 
         # Affiche la carte dans le notebook
         return carte
+    
+    def update_API_key(self):
 
-    def calcul_distance_haversine(self):
-        """
+        ## Rentrer par défaut la clé de Thomas : api_key = "AIzaSyCnuH5NvjIYsQeKcsSPOF_ZilFXyJ2lB2A"
+        n = input('Entrer la clé Google Maps API')
+        self.API_key = n
+
+    def distance_via_routes(self):
+
+        dep_json_A = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.A) + "&format=json").json()
+        dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
+        self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
+        self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
+
+        base_url = "https://maps.googleapis.com/maps/api/directions/json?"
+        
+        params = {
+            "origin": str(self.x_A).replace('[', '').replace(']', ''),
+            "destination": str(self.x_B).replace('[', '').replace(']', ''),
+            "key": self.API_key
+        }
+
+        response = requests.get(base_url, params=params)
+        data = response.json()
+
+        if data["status"] == "OK":
+            distance = data["routes"][0]["legs"][0]["distance"]["text"]
+            return distance
+        else:
+            return "Erreur: Impossible de calculer la distance."
+
+
+
+    """def calcul_distance_haversine(self):
+        
         on utilise la distance de haversine
         -----------
         x_A = (latitude, longitude)
         x_B = (latitude, longitude)
 
         Peu efficace car distance à vol d'oiseau
-        """
+        
         self.get_coordo()
 
         # Rayon de la Terre en kilomètres
@@ -152,7 +185,7 @@ class CarNetwork():
         # Distance en kilomètres
         distance = R * c
         return distance  
-
+"""
 
 """
 def nearest_station(self):
