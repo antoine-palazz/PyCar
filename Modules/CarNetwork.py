@@ -6,8 +6,6 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import time
-import datetime
 import pyroutelib3
 from pyroutelib3 import Router
 import requests, json
@@ -129,52 +127,24 @@ class CarNetwork():
     
     def distance_via_routes(self):
 
-        dep_json_A = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.A) + "&format=json").json()
-        dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
-        self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
-        self.x_B = list(dep_json_B['features'][0].get('geometry').get('coordinates'))
+        ## On récupère le trajet en voiture entre les deux destinations 
+        # A et B
+        trajet = self.trajet_voiture()
 
-        dist = geopy.distance.distance(self.x_A, self.x_B)
+        distance = 0
 
-        return float(str(dist.replace(' km', '')))
-
-    """def calcul_distance_haversine(self):
+        for i in range(len(trajet)-1):
         
-        on utilise la distance de haversine
-        -----------
-        x_A = (latitude, longitude)
-        x_B = (latitude, longitude)
+            ## on convertit l'élément i de la liste trajet, 
+            # qui est un tuple, en une liste
+            trajet_depart = list(trajet[i]) 
+            trajet_arrivee = list(trajet[i+1])
 
-        Peu efficace car distance à vol d'oiseau
+            d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
+
+            distance = distance + d
         
-        self.get_coordo()
-
-        # Rayon de la Terre en kilomètres
-        R = 6371.0
-        latitudeA, longitudeA = self.x_A
-        latitudeA, longitudeA = math.radians(latitudeA), math.radians(longitudeA)
-        latitudeB, longitudeB = self.x_B
-        latitudeB, longitudeB = math.radians(latitudeB), math.radians(longitudeB)
-        dlat = latitudeB - latitudeA
-        dlon = longitudeB - longitudeA
-        a = math.sin(dlat / 2)**2 + math.cos(latitudeA) * math.cos(latitudeB) * math.sin(dlon / 2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-
-        # Distance en kilomètres
-        distance = R * c
-        return distance  
-"""
-
-"""
-def nearest_station(self):
-    stations = data[['x_longitude', 'y_latitude']]
-    coord_actuelle = np.array([self.position_actuelle[0], self.position_actuelle[1]])
-    distances = distance.cdist(coord_actuelle, stations, metric='euclidean')
-    indice_min_distance = np.argmin(distances)
-    nearest_station = stations.iloc[indice_min_distance][['x_longitude', 'y_latitude']]
-
-    return nearest_station  
-"""
+        return distance
 
 
 
