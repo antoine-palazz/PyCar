@@ -189,6 +189,7 @@ class CarNetwork():
         distance = 0
         distance_1 = 0 ## we use this double variable in the if
         # condition to remove the autonomy
+        i = 0
 
         stop_coord = []
 
@@ -202,7 +203,7 @@ class CarNetwork():
             d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
 
             distance = distance + d
-            distance_1 = distance
+            distance_1 = distance - i*self.autonomie
 
             ## On fait d'une pierre deux coup dans ce code en calculant 
             #  une liste qui renvoie les premiers points à partir desquels 
@@ -210,7 +211,8 @@ class CarNetwork():
 
             if self.autonomie < distance_1:
                 stop_coord.append(list(trajet[i]))
-                distance_1 = distance_1 - self.autonomie
+                i = i + 1 # compte combien de fois l'autonomie a été saturée pour pénaliser 
+                          # la distance_1 sur toutes les boucles à partir de là
 
         
         return distance, stop_coord
@@ -240,9 +242,11 @@ class CarNetwork():
 
         location_tuples = [(row.xlongitude, row.ylatitude) for row in self.stations_data[['xlongitude', 'ylatitude']].itertuples()]
         
-        M = 0
+        M = 0 # on initialise cette valeur à 0, elle correspond à la distance minimale
+        
         coord_arr = location
-        pos = 0
+        pos = 0 # on est intéressé par les coordonnées de la station la plus proche de location 
+                # ce qui revient à s'intéresser à sa position dans la liste location_tuples
 
         for i in range(len(location_tuples)):
 
@@ -267,6 +271,8 @@ class CarNetwork():
 
             distance = 0
 
+            ## On a juste repris de façon concise le code du calcul 
+            #  de la distance hors de la classe, ici entre location et coord_dep
 
             for i in range(len(trajet)-1):
             
@@ -284,10 +290,6 @@ class CarNetwork():
                 pos = i
 
         return M, pos
-
-
-
-
 
 
     def plot_stations(self, map):
