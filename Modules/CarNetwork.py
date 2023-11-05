@@ -69,6 +69,31 @@ class CarNetwork():
 
         self.stations_data.drop(liste)
 
+        # we clean the dataframe 
+
+        droping_liste = list(set(self.stations_data[self.stations_data['xlongitude'].isna()].index.to_list() + self.stations_data[self.stations_data['ylatitude'].isna()].index.to_list()))
+        self.stations_data.drop(droping_liste, inplace = True)
+
+        # we transform the acces row in the dataframe by defining 
+        # a function that we will then apply to the "acces_recharge" row
+
+        def transform_acces(row):
+            if not pd.isna(row):  # On ne peut rien dire des nan
+                row = row.lower()  # Mettre en lettre minuscule 
+                mots = row.split(' ')
+                if 'payant' in mots: row = 'payant'
+                elif 'gratuit' in mots: row = 'gratuit'
+                for mot in mots: 
+                    if len(mot.split('€'))>1: row = 'payant'
+                    if mot=='carte' or mot=='badge': row = 'carte ou badge'
+                    if mot=='oui': row = 'information manquante'
+                #else: row = 'accès spécial'
+            else: row = 'information manquante'
+            return row
+        
+        self.stations_data['acces_recharge'] = self.stations_data['acces_recharge'].apply(transform_acces)
+        list(self.stations_data['acces_recharge'].unique())
+
 
     def get_coordo(self):
         """
@@ -154,7 +179,7 @@ class CarNetwork():
             #  l'autonomie ne couvre plus la distance. 
 
             if self.autonomie < distance_1:
-                stop_coord.append(trajet[i])
+                stop_coord.append(list(trajet[i]))
                 distance_1 = distance - self.autonomie
 
         
@@ -177,30 +202,6 @@ class CarNetwork():
 
         df = self.stations_data
 
-        # we clean the dataframe 
-
-        droping_liste = list(set(df[df['xlongitude'].isna()].index.to_list() + df[df['ylatitude'].isna()].index.to_list()))
-        df.drop(droping_liste, inplace = True)
-
-        # we transform the acces row in the dataframe by defining 
-        # a function that we will then apply to the "acces_recharge" row
-
-        def transform_acces(row):
-            if not pd.isna(row):  # On ne peut rien dire des nan
-                row = row.lower()  # Mettre en lettre minuscule 
-                mots = row.split(' ')
-                if 'payant' in mots: row = 'payant'
-                elif 'gratuit' in mots: row = 'gratuit'
-                for mot in mots: 
-                    if len(mot.split('€'))>1: row = 'payant'
-                    if mot=='carte' or mot=='badge': row = 'carte ou badge'
-                    if mot=='oui': row = 'information manquante'
-                #else: row = 'accès spécial'
-            else: row = 'information manquante'
-            return row
-        
-        df['acces_recharge'] = df['acces_recharge'].apply(transform_acces)
-        list(df['acces_recharge'].unique())
 
         legend_html = """
         <div style="position: fixed; 
