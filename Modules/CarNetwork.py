@@ -132,6 +132,10 @@ class CarNetwork():
         trajet = self.trajet_voiture()
 
         distance = 0
+        distance_1 = 0 ## we use this double variable in the if
+        # condition to remove the autonomy
+
+        stop_coord = []
 
         for i in range(len(trajet)-1):
         
@@ -143,9 +147,101 @@ class CarNetwork():
             d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
 
             distance = distance + d
-        
-        return distance
+            distance_1 = distance
 
+            ## On fait d'une pierre deux coup dans ce code en calculant 
+            #  une liste qui renvoie les premiers points à partir desquels 
+            #  l'autonomie ne couvre plus la distance. 
+
+            if self.autonomie < distance_1:
+                stop_coord.append(trajet[i])
+                distance_1 = distance - self.autonomie
+
+        
+        return distance, stop_coord
+    
+    def plot_stop_points(self, map):
+
+        distance, stop_coord = self.distance_via_routes()
+
+
+        for i in range(len(stop_coord)):
+            lat = stop_coord[i][0]
+            lon = stop_coord[i][1]
+
+            folium.Marker(location=[lat, lon], icon=folium.Icon(color='purple')).add_to(map)
+
+
+
+    def plot_stations(self, map):
+
+        df = self.stations_data
+
+        # we clean the dataframe 
+
+        droping_liste = list(set(df[df['xlongitude'].isna()].index.to_list() + df[df['ylatitude'].isna()].index.to_list()))
+        df.drop(droping_liste, inplace = True)
+
+        # we transform the acces row in the dataframe by defining 
+        # a function that we will then apply to the "acces_recharge" row
+
+        def transform_acces(row):
+            if not pd.isna(row):  # On ne peut rien dire des nan
+                row = row.lower()  # Mettre en lettre minuscule 
+                mots = row.split(' ')
+                if 'payant' in mots: row = 'payant'
+                elif 'gratuit' in mots: row = 'gratuit'
+                for mot in mots: 
+                    if len(mot.split('€'))>1: row = 'payant'
+                    if mot=='carte' or mot=='badge': row = 'carte ou badge'
+                    if mot=='oui': row = 'information manquante'
+                #else: row = 'accès spécial'
+            else: row = 'information manquante'
+            return row
+        
+        df['acces_recharge'] = df['acces_recharge'].apply(transform_acces)
+        list(df['acces_recharge'].unique())
+
+        legend_html = """
+        <div style="position: fixed; 
+                    top: 10px; 
+                    right: 10px; 
+                    width: 220px; 
+                    background-color: rgba(255, 255, 255, 0.8); 
+                    border: 2px solid #000; 
+                    border-radius: 5px; 
+                    box-shadow: 3px 3px 5px #888; 
+                    z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
+            <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
+            
+            <p><i class="fa fa-map-marker" style="color: orange;"></i> <strong>Marqueur Rouge</strong>: Payant</p>
+            
+            <p><i class="fa fa-map-marker" style="color: green;"></i> <strong>Marqueur Bleu</strong>: Gratuit</p>
+            
+            <p><i class="fa fa-circle" style="color: grey; font-size: 20px;"></i> <strong>Point Vert</strong>: Information manquantes</p>
+            
+            <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carré Orange</strong>: Carte ou badge</p>
+            
+            <p><i class="fa fa-circle" style="color: yellow; font-size: 20px;"></i> <strong>Point Violet</strong>: Charges gratuites</p>
+            
+            <p><i class="fa fa-star" style="color: purple; font-size: 20px;"></i> <strong>Étoile Dorée</strong>: Points d'arrêt</p>
+        </div>
+        """
+
+        # Ajoutez la légende personnalisée à la carte
+        map.get_root().html.add_child(folium.Element(legend_html))
+
+
+        for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
+            # Créez un marqueur avec une couleur différente en fonction des valeurs
+            if acces_recharge == 'payant': fill_color = 'orange'
+            elif acces_recharge == 'gratuit': fill_color = 'green'
+            elif acces_recharge == 'information manquante': fill_color = 'grey'
+            elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
+            elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
+
+            # Ajoutez le marqueur à la carte
+            folium.RegularPolygonMarker(location=[lat, lon], popup=com, fill_color=fill_color, color =fill_color, radius=5).add_to(map)
 
 
 
