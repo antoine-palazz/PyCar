@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.9 (3768574 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="48.7489453" minlon="1.7797852" maxlat="48.7561888" maxlon="1.7907715"/>
+ <node id="899155723" visible="true" version="1" changeset="5698198" timestamp="2010-09-06T14:01:24Z" user="bourlpi" uid="326537" lat="48.7579024" lon="1.7770679"/>
+ <node id="899155749" visible="true" version="1" changeset="5698198" timestamp="2010-09-06T14:01:25Z" user="bourlpi" uid="326537" lat="48.7551144" lon="1.7822948"/>
+ <node id="912974836" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:27:47Z" user="Damouns" uid="13442" lat="48.7515643" lon="1.7789975"/>
+ <node id="912987134" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:36:54Z" user="Damouns" uid="13442" lat="48.7509706" lon="1.7812884"/>
+ <node id="912991077" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:38:50Z" user="Damouns" uid="13442" lat="48.7527379" lon="1.7828813"/>
+ <node id="912996166" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:41:37Z" user="Damouns" uid="13442" lat="48.7524552" lon="1.7796778"/>
+ <node id="912999732" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:43:40Z" user="Damouns" uid="13442" lat="48.7509505" lon="1.7818523"/>
+ <node id="913007271" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:48:22Z" user="Damouns" uid="13442" lat="48.7530029" lon="1.7818491"/>
+ <node id="913015624" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T05:54:41Z" user="Damouns" uid="13442" lat="48.7521826" lon="1.7832656"/>
+ <node id="913029057" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:08:30Z" user="Damouns" uid="13442" lat="48.7518373" lon="1.7781458"/>
+ <node id="913035689" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:11:45Z" user="Damouns" uid="13442" lat="48.7530072" lon="1.7827850"/>
+ <node id="913049549" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:20:23Z" user="Damouns" uid="13442" lat="48.7516195" lon="1.7826550"/>
+ <node id="913054212" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:24:16Z" user="Damouns" uid="13442" lat="48.7512366" lon="1.7800397"/>
+ <node id="913058462" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:27:34Z" user="Damouns" uid="13442" lat="48.7530648" lon="1.7812239"/>
+ <node id="913062409" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:31:42Z" user="Damouns" uid="13442" lat="48.7530002" lon="1.7808431"/>
+ <node id="913064813" visible="true" version="1" changeset="5783860" timestamp="2010-09-15T06:35:01Z" user="Damouns" uid="13442" lat="48.7524471" lon="1.7832301"/>
+ <node id="1531313216" visible="true" version="1" changeset="10035015" timestamp="2011-12-04T16:52:46Z" user="bourlpi" uid="326537" lat="48.7518501" lon="1.7781775"/>
+ <node id="1531315711" visible="true" version="1" changeset="10035015" timestamp="2011-12-04T16:53:52Z" user="bourlpi" uid="326537" lat="48.7549813" lon="1.7826287"/>
+ <node id="1531315716" visible="true" version="1" changeset="10035015" timestamp="2011-12-04T16:53:52Z" user="bourlpi" uid="326537" lat="48.7529771" lon="1.7809873"/>
+ <node id="1531315719" visible="true" version="4" changeset="59044136" timestamp="2018-05-17T09:39:16Z" user="cypriend" uid="183450" lat="48.7590689" lon="1.7863775">
+  <tag k="junction" v="yes"/>
+  <tag k="name" v="Carrefour du Pré au Prince"/>
+  <tag k="place" v="locality"/>
+ </node>
+ <node id="1547096417" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050" lat="48.7530759" lon="1.7832038"/>
+ <node id="1547096418" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050" lat="48.7533164" lon="1.7847702"/>
+ <node id="1547096420" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050" lat="48.7534437" lon="1.7857358"/>
+ <node id="1547096421" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050" lat="48.7535957" lon="1.7861057"/>
+ <node id="1547096422" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050" lat="48.7530059" lon="1.7824957"/>
+ <node id="1601389627" visible="true" version="6" changeset="88520439" timestamp="2020-07-26T13:05:16Z" user="Joji" uid="351946" lat="48.7515745" lon="1.7913202">
+  <tag k="junction" v="yes"/>
+  <tag k="name" v="Carrefour du Chène Baudet"/>
+  <tag k="place" v="locality"/>
+ </node>
+ <node id="1601389628" visible="true" version="2" changeset="88520439" timestamp="2020-07-26T13:05:16Z" user="Joji" uid="351946" lat="48.7517946" lon="1.7909949"/>
+ <node id="1826670663" visible="true" version="2" changeset="13132851" timestamp="2012-09-16T17:38:34Z" user="bourlpi" uid="326537" lat="48.7585091" lon="1.7756750"/>
+ <node id="3826511814" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7523538" lon="1.7824301"/>
+ <node id="3826511815" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7523898" lon="1.7822791"/>
+ <node id="3826511816" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7524558" lon="1.7824841"/>
+ <node id="3826511817" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7524938" lon="1.7823341"/>
+ <node id="3826511818" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7526358" lon="1.7809451"/>
+ <node id="3826511819" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7526748" lon="1.7808401"/>
+ <node id="3826511820" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7527888" lon="1.7810801"/>
+ <node id="3826511821" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:23:28Z" user="DF45" uid="239546" lat="48.7528248" lon="1.7809661"/>
+ <node id="6244093485" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:45Z" user="wuff57" uid="2583033" lat="48.7555274" lon="1.7938399"/>
+ <node id="6244093547" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:46Z" user="wuff57" uid="2583033" lat="48.7552445" lon="1.7931962"/>
+ <node id="6244093548" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:46Z" user="wuff57" uid="2583033" lat="48.7552127" lon="1.7930299"/>
+ <node id="6244093549" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:46Z" user="wuff57" uid="2583033" lat="48.7546751" lon="1.7908144"/>
+ <node id="6244093550" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:46Z" user="wuff57" uid="2583033" lat="48.7529456" lon="1.7895752"/>
+ <node id="6244093551" visible="true" version="1" changeset="66734782" timestamp="2019-01-29T11:12:46Z" user="wuff57" uid="2583033" lat="48.7527352" lon="1.7888242"/>
+ <node id="7107921274" visible="true" version="1" changeset="79197892" timestamp="2020-01-04T19:47:56Z" user="Christian Perrier" uid="60669" lat="48.7547454" lon="1.7857899">
+  <tag k="denotation" v="landmark"/>
+  <tag k="leaf_cycle" v="deciduous"/>
+  <tag k="leaf_type" v="broadleaved"/>
+  <tag k="natural" v="tree"/>
+ </node>
+ <node id="7750266343" visible="true" version="1" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946" lat="48.7550054" lon="1.7825681"/>
+ <node id="7750266344" visible="true" version="1" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946" lat="48.7549030" lon="1.7824781"/>
+ <node id="7750266345" visible="true" version="1" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946" lat="48.7548608" lon="1.7825942"/>
+ <node id="7750266346" visible="true" version="1" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946" lat="48.7549598" lon="1.7826827"/>
+ <node id="7750276375" visible="true" version="1" changeset="88520439" timestamp="2020-07-26T13:05:16Z" user="Joji" uid="351946" lat="48.7519734" lon="1.7907204"/>
+ <way id="77602727" visible="true" version="6" changeset="73610424" timestamp="2019-08-22T08:13:38Z" user="Ayack" uid="32476">
+  <nd ref="913035689"/>
+  <nd ref="912991077"/>
+  <nd ref="913064813"/>
+  <nd ref="913015624"/>
+  <nd ref="913049549"/>
+  <nd ref="912999732"/>
+  <nd ref="912987134"/>
+  <nd ref="913054212"/>
+  <nd ref="912974836"/>
+  <nd ref="913029057"/>
+  <nd ref="1531313216"/>
+  <nd ref="912996166"/>
+  <nd ref="913062409"/>
+  <nd ref="913058462"/>
+  <nd ref="913007271"/>
+  <nd ref="1547096422"/>
+  <nd ref="913035689"/>
+  <tag k="boundary" v="protected_area"/>
+  <tag k="leisure" v="nature_reserve"/>
+  <tag k="name" v="Réserve biologique dirigée du Parc d'en Haut"/>
+  <tag k="protect_class" v="4"/>
+  <tag k="protection_title" v="Réserve biologique dirigée"/>
+  <tag k="ref:FR:INPN" v="FR2300078"/>
+  <tag k="source" v="Inventaire National du Patrimoine Naturel 2010"/>
+  <tag k="valid_from" v="1988-12-07"/>
+  <tag k="wikidata" v="Q65953750"/>
+ </way>
+ <way id="139733155" visible="true" version="5" changeset="116533614" timestamp="2022-01-24T10:04:36Z" user="yann1408" uid="14125135">
+  <nd ref="1531313216"/>
+  <nd ref="1531315716"/>
+  <nd ref="1547096422"/>
+  <nd ref="1547096417"/>
+  <nd ref="1547096418"/>
+  <nd ref="1547096420"/>
+  <nd ref="1547096421"/>
+  <tag k="bicycle" v="designated"/>
+  <tag k="highway" v="path"/>
+  <tag k="source" v="GPS,bing"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="141328083" visible="true" version="1" changeset="10123636" timestamp="2011-12-15T12:21:47Z" user="Naphi" uid="363050">
+  <nd ref="1531315716"/>
+  <nd ref="1531315711"/>
+  <nd ref="1531315719"/>
+  <tag k="highway" v="track"/>
+  <tag k="source" v="GPS,bing"/>
+ </way>
+ <way id="141328084" visible="true" version="3" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946">
+  <nd ref="1547096421"/>
+  <nd ref="7750266346"/>
+  <nd ref="1531315711"/>
+  <nd ref="7750266343"/>
+  <nd ref="899155749"/>
+  <nd ref="899155723"/>
+  <nd ref="1826670663"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="name" v="Route Goron"/>
+  <tag k="surface" v="paved"/>
+ </way>
+ <way id="379350590" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:24:37Z" user="DF45" uid="239546">
+  <nd ref="3826511816"/>
+  <nd ref="3826511817"/>
+  <nd ref="3826511815"/>
+  <nd ref="3826511814"/>
+  <nd ref="3826511816"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2015"/>
+ </way>
+ <way id="379350591" visible="true" version="1" changeset="35190528" timestamp="2015-11-09T12:24:37Z" user="DF45" uid="239546">
+  <nd ref="3826511821"/>
+  <nd ref="3826511819"/>
+  <nd ref="3826511818"/>
+  <nd ref="3826511820"/>
+  <nd ref="3826511821"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2015"/>
+ </way>
+ <way id="666887041" visible="true" version="2" changeset="111907002" timestamp="2021-09-30T09:32:16Z" user="yann1408" uid="14125135">
+  <nd ref="6244093551"/>
+  <nd ref="6244093550"/>
+  <nd ref="6244093549"/>
+  <nd ref="6244093548"/>
+  <nd ref="6244093547"/>
+  <nd ref="6244093485"/>
+  <tag k="source" v="BD Carthage;BDOrtho IGN"/>
+  <tag k="waterway" v="stream"/>
+ </way>
+ <way id="830307354" visible="true" version="1" changeset="88520285" timestamp="2020-07-26T12:58:21Z" user="Joji" uid="351946">
+  <nd ref="7750266343"/>
+  <nd ref="7750266344"/>
+  <nd ref="7750266345"/>
+  <nd ref="7750266346"/>
+  <nd ref="7750266343"/>
+  <tag k="access" v="yes"/>
+  <tag k="amenity" v="parking"/>
+ </way>
+ <way id="830308316" visible="true" version="2" changeset="116533614" timestamp="2022-01-24T10:04:36Z" user="yann1408" uid="14125135">
+  <nd ref="1601389627"/>
+  <nd ref="1601389628"/>
+  <nd ref="7750276375"/>
+  <nd ref="1547096421"/>
+  <tag k="bicycle" v="designated"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="motor_vehicle" v="no"/>
+  <tag k="name" v="Route Goron"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <relation id="1655182" visible="true" version="10" changeset="117079574" timestamp="2022-02-06T13:42:03Z" user="rando67" uid="466374">
+  <member type="way" ref="120738921" role="outer"/>
+  <member type="way" ref="77602727" role="inner"/>
+  <member type="way" ref="56235998" role="inner"/>
+  <member type="way" ref="163284244" role="inner"/>
+  <member type="way" ref="120738943" role="inner"/>
+  <member type="way" ref="120738945" role="inner"/>
+  <member type="way" ref="41993201" role="inner"/>
+  <member type="way" ref="120914793" role="inner"/>
+  <member type="way" ref="23722356" role="inner"/>
+  <member type="way" ref="126482091" role="inner"/>
+  <member type="way" ref="120738946" role="inner"/>
+  <member type="way" ref="203403693" role="inner"/>
+  <member type="way" ref="133093307" role="inner"/>
+  <member type="way" ref="715574965" role="inner"/>
+  <member type="way" ref="885124002" role="inner"/>
+  <member type="way" ref="1028644265" role="inner"/>
+  <tag k="landuse" v="forest"/>
+  <tag k="leaf_type" v="broadleaved"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+ <relation id="9273935" visible="true" version="4" changeset="111907002" timestamp="2021-09-30T09:32:16Z" user="yann1408" uid="14125135">
+  <member type="way" ref="666887036" role="side_stream"/>
+  <member type="way" ref="773147582" role="side_stream"/>
+  <member type="way" ref="773147581" role="side_stream"/>
+  <member type="way" ref="666887035" role="side_stream"/>
+  <member type="way" ref="53553755" role=""/>
+  <member type="way" ref="227064460" role=""/>
+  <member type="way" ref="227064459" role=""/>
+  <member type="way" ref="227064236" role=""/>
+  <member type="way" ref="53553756" role="side_stream"/>
+  <member type="way" ref="222567337" role="side_stream"/>
+  <member type="way" ref="666887038" role="side_stream"/>
+  <member type="way" ref="666887037" role="side_stream"/>
+  <member type="way" ref="666887041" role=""/>
+  <member type="way" ref="988263730" role=""/>
+  <member type="way" ref="988263729" role=""/>
+  <member type="way" ref="988263726" role=""/>
+  <member type="way" ref="988263725" role=""/>
+  <member type="way" ref="666887040" role=""/>
+  <member type="way" ref="204005508" role=""/>
+  <member type="way" ref="666887039" role=""/>
+  <member type="way" ref="763141993" role=""/>
+  <member type="way" ref="763141992" role=""/>
+  <member type="way" ref="763141995" role=""/>
+  <member type="way" ref="763141994" role=""/>
+  <member type="way" ref="763141989" role=""/>
+  <member type="way" ref="763141988" role=""/>
+  <member type="way" ref="763141991" role=""/>
+  <member type="way" ref="763141990" role=""/>
+  <member type="way" ref="222566617" role=""/>
+  <member type="way" ref="227064235" role=""/>
+  <tag k="name" v="La Guyonne"/>
+  <tag k="ref:sandre" v="H3039100"/>
+  <tag k="type" v="waterway"/>
+  <tag k="waterway" v="stream"/>
+  <tag k="wikidata" v="Q3122354"/>
+  <tag k="wikipedia" v="fr:Guyonne"/>
+ </relation>
+</osm>
