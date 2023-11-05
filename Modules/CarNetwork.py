@@ -180,7 +180,6 @@ class CarNetwork():
 
             return "Erreur: Impossible de calculer la distance."
 
-    
     def distance_via_routes(self):
 
         ## On récupère le trajet en voiture entre les deux destinations 
@@ -211,7 +210,7 @@ class CarNetwork():
 
             if self.autonomie < distance_1:
                 stop_coord.append(list(trajet[i]))
-                distance_1 = distance - self.autonomie
+                distance_1 = distance_1 - self.autonomie
 
         
         return distance, stop_coord
@@ -226,6 +225,68 @@ class CarNetwork():
             lon = stop_coord[i][1]
 
             folium.Marker(location=[lat, lon], icon=folium.Icon(color='purple')).add_to(map)
+
+    def nearest_stations(self, location):
+        
+        '''
+        - On prend en arguments une liste [longitude, latitude] (où longitude et latitude sont des
+        floats) et qui correspond à un lieu donné en France.
+        - On détermine la localisation de la borne de chargement la plus proche de cette localisation.
+        '''
+
+        # 1. on récupère les coordonnées de toutes les bornes en France
+        # 2. on tranforme le format de coord_stations pour obtenir une liste dont chaque élément 
+        #    est un tuple (latitude, longitude)
+
+        location_tuples = [(row.xlongitude, row.ylatitude) for row in self.stations_data[['xlongitude', 'ylatitude']].itertuples()]
+        
+        M = 0
+        coord_arr = location
+        pos = 0
+
+        for i in range(len(location_tuples)):
+
+            coord_dep = list(location_tuples[i])
+            
+            router = pyroutelib3.Router('car')
+            depart = router.findNode(coord_dep[1], coord_dep[0])
+            #print(depart)
+            arrivee = router.findNode(coord_arr[1], coord_arr[0])
+            #print(arrivee)
+
+            routeLatLons=[coord_dep,coord_arr]
+
+            status, route = router.doRoute(depart, arrivee)
+            if status == 'success':
+
+                routeLatLons = list(map(router.nodeLatLon, route))
+
+            trajet = routeLatLons
+
+            trajet = self.trajet_voiture()
+
+            distance = 0
+
+
+            for i in range(len(trajet)-1):
+            
+                trajet_depart = list(trajet[i]) 
+                trajet_arrivee = list(trajet[i+1])
+
+                d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
+
+                distance = distance + d
+                
+            M2 = distance
+
+            if M2 <= M:
+                M = M2 
+                pos = i
+
+        return M, pos
+
+
+
 
 
 
