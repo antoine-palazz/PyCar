@@ -150,36 +150,6 @@ class CarNetwork():
         # Affiche la carte dans le notebook
         return carte
     
-    def distance_and_itinerary(self):
-
-        self.get_coordo()
-
-        origin = self.x_A
-        destination = self.x_B
-        api_key = "AIzaSyCnuH5NvjIYsQeKcsSPOF_ZilFXyJ2lB2A"
-
-        gmaps = googlemaps.Client(key=api_key)
-
-        directions_result = gmaps.directions(origin, destination, mode="driving")
-
-
-        if directions_result:
-            # extrait la distance totale du trajet
-            distance = directions_result["routes"][0]["legs"][0]["distance"]["text"]
-
-            trajet = []
-
-            # affiche les étapes du trajet
-            for step in directions_result[0]['legs'][0]['steps']:
-                trajet.append(step)
-
-            # renvoie la distance et l'ensemble des étapes du trajet
-            return distance, trajet
-        
-        else:
-
-            return "Erreur: Impossible de calculer la distance."
-
     def distance_via_routes(self):
 
         ## On récupère le trajet en voiture entre les deux destinations 
@@ -189,7 +159,7 @@ class CarNetwork():
         distance = 0
         distance_1 = 0 ## we use this double variable in the if
         # condition to remove the autonomy
-        i = 0
+        j = 0
 
         stop_coord = []
 
@@ -203,7 +173,8 @@ class CarNetwork():
             d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
 
             distance = distance + d
-            distance_1 = distance - i*self.autonomie
+            distance_1 = distance 
+            distance_1 = distance_1 - j*self.autonomie
 
             ## On fait d'une pierre deux coup dans ce code en calculant 
             #  une liste qui renvoie les premiers points à partir desquels 
@@ -211,7 +182,7 @@ class CarNetwork():
 
             if self.autonomie < distance_1:
                 stop_coord.append(list(trajet[i]))
-                i = i + 1 # compte combien de fois l'autonomie a été saturée pour pénaliser 
+                j = j + 1 # compte combien de fois l'autonomie a été saturée pour pénaliser 
                           # la distance_1 sur toutes les boucles à partir de là
 
         
