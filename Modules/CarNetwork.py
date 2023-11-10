@@ -508,7 +508,7 @@ class CarNetwork():
                                         radius=5
                                         ).add_to(map)
 
-        categories = list(df['acces_recharge']).unique()
+        categories = list(df['acces_recharge'].unique())
         TagFilterButton(categories).add_to(map)
 
 
