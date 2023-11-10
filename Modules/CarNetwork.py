@@ -208,7 +208,7 @@ class CarNetwork():
 
         ## On récupère uniquement les données qui nous intéressent sous forme 
         # de tuple de localisations (latitude, longitude)   
-        loc_tuples = [(row.xlongitude, row.ylatitude) for row in stations.itertuples()]
+        loc_tuples = [(row.ylatitude, row.ylongitude) for row in stations.itertuples()]
     
         ## on définit une lambda fonction qui prend en argument une distance, 
         # un couple (latitude, longitude) [dans coord] et un float distance_max
