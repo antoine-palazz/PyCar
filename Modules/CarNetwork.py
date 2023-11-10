@@ -491,7 +491,7 @@ class CarNetwork():
         map.get_root().html.add_child(folium.Element(legend_html))
 
 
-        for lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
+        for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
             if acces_recharge == 'payant': fill_color = 'orange'
             elif acces_recharge == 'gratuit': fill_color = 'green'
