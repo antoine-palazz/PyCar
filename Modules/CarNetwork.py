@@ -11,7 +11,8 @@ from pyroutelib3 import Router
 import requests, json
 import urllib.parse
 import folium 
-import geopy.distance
+import geopy.distance 
+from geopy.distance import geodesic
 
 
 # Coordonnées des villes en France 
@@ -199,70 +200,43 @@ class CarNetwork():
 
             folium.Marker(location=[lat, lon], icon=folium.Icon(color='purple')).add_to(map)
 
-    def nearest_stations(self, location):
-        
-        '''
-        - On prend en arguments une liste [longitude, latitude] (où longitude et latitude sont des
-        floats) et qui correspond à un lieu donné en France.
-        - On détermine la localisation de la borne de chargement la plus proche de cette localisation.
-        '''
+    def nearest_stations(self, stop_coord, distance_max): 
 
-        # 1. on récupère les coordonnées de toutes les bornes en France
-        # 2. on tranforme le format de coord_stations pour obtenir une liste dont chaque élément 
-        #    est un tuple (latitude, longitude)
+        stations = self.stations_data[['xlongitude', 'ylatitude']]
+        stations = stations[(stations['ylatitude'] >= -90) & (stations['ylatitude'] <= 90) &
+            (stations['xlongitude'] >= -90) & (stations['xlongitude'] <= 90)]
 
-        location_tuples = [(row.xlongitude, row.ylatitude) for row in self.stations_data[['xlongitude', 'ylatitude']].itertuples()]
-        
-        M = 0 # on initialise cette valeur à 0, elle correspond à la distance minimale
-        
-        coord_arr = location
-        pos = 0 # on est intéressé par les coordonnées de la station la plus proche de location 
-                # ce qui revient à s'intéresser à sa position dans la liste location_tuples
-
-        for i in range(len(location_tuples)):
-
-            coord_dep = list(location_tuples[i])
-            
-            router = pyroutelib3.Router('car')
-            depart = router.findNode(coord_dep[1], coord_dep[0])
-            #print(depart)
-            arrivee = router.findNode(coord_arr[1], coord_arr[0])
-            #print(arrivee)
-
-            routeLatLons=[coord_dep,coord_arr]
-
-            status, route = router.doRoute(depart, arrivee)
-            if status == 'success':
-
-                routeLatLons = list(map(router.nodeLatLon, route))
-
-            trajet = routeLatLons
-
-            trajet = self.trajet_voiture()
-
-            distance = 0
-
-            ## On a juste repris de façon concise le code du calcul 
-            #  de la distance hors de la classe, ici entre location et coord_dep
-
-            for i in range(len(trajet)-1):
-            
-                trajet_depart = list(trajet[i]) 
-                trajet_arrivee = list(trajet[i+1])
-
-                d = geopy.distance.distance(trajet_depart, trajet_arrivee).kilometers
-
-                distance = distance + d
-                
-            M2 = distance
-
-            if M2 <= M:
-                M = M2 
-                pos = i
-
-        return M, pos
+        ## On récupère uniquement les données qui nous intéressent sous forme 
+        # de tuple de localisations (latitude, longitude)   
+        loc_tuples = [(row.xlongitude, row.ylatitude) for row in stations.itertuples()]
+    
+        ## on définit une lambda fonction qui prend en argument une distance, 
+        # un couple (latitude, longitude) [dans coord] et un float distance_max
+        # et qui teste si la distance entre location et coord est inférieure (renvoie
+        # alors True) à la distance_max
+        is_in_range = lambda location, coord, distance: geodesic(location, coord).kilometers <= distance
 
 
+        ## On instancie une liste vide qu'on remplira des stations les plus proches pour chaque 
+        # point d'arrêt
+        nearest_stations = []
+        for i in range(len(stop_coord)):
+
+            location = stop_coord[i]
+            location_tuples = [list(element) for element in loc_tuples if is_in_range(location, element, distance_max)]
+
+            nearest_stations.append(location_tuples)
+
+        return nearest_stations
+
+    '''def plot_nearest_stations(self, map, nearest_stations):
+
+        for i in range(len(nearest_stations)):
+            lat = nearest_stations[i][0]
+            lon = nearest_stations[i][1]
+
+            folium.Marker(location=[lat, lon], icon=folium.Icon(color='yellow')).add_to(map1)
+'''
     def plot_stations(self, map):
 
         df = self.stations_data
