@@ -108,11 +108,38 @@ class CarNetwork():
 
     def trajet_voiture(self):
     
+
         """
-        Il faut inclure le code de get_cordo dans le code de cette routine au cas où l'utilisateur 
-        utilise la méthode trajet_voiture avant celle get_cordo auquel cas les transformations sur 
-        self.x_A et self.x_B n'auraient pas été faites. 
+        ================================================================
+        IDÉE : Fonction qui calcule l'itinéraire en voiture entre deux 
+               adresses en utilisant l'API d'adresse gouvernementale et 
+               la bibliothèque pyroutelib3.
+
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        ================================================================
+
+        ================================================================
+        SORTIE : Liste de coordonnées (latitude, longitude) représentant 
+                 l'itinéraire en voiture.
+        ================================================================
+
+        
+        
+        Note: Il est recommandé d'inclure le code de la fonction get_cordo dans cette routine au cas où
+        l'utilisateur utilise la méthode trajet_voiture avant celle get_cordo. Dans ce cas, les transformations
+        sur self.x_A et self.x_B n'auraient pas été faites.
+
         """
+
+
+        ## Il faut inclure le code de get_cordo dans le code de cette routine au cas où l'utilisateur 
+        # utilise la méthode trajet_voiture avant celle get_cordo auquel cas les transformations sur 
+        # self.x_A et self.x_B n'auraient pas été faites. 
+
         dep_json_A = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.A) + "&format=json").json()
         dep_json_B = requests.get("https://api-adresse.data.gouv.fr/search/?q=" + urllib.parse.quote(self.B) + "&format=json").json()
         self.x_A = list(dep_json_A['features'][0].get('geometry').get('coordinates'))
@@ -139,6 +166,26 @@ class CarNetwork():
         return routeLatLons
     
     def get_route_map(self):
+
+        """
+
+        ================================================================
+        IDÉE : Fonction qui génère une carte représentant l'itinéraire 
+               en voiture entre deux destinations, centrée sur Paris, 
+               avec l'itinéraire tracé en rouge.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        ================================================================
+
+        ================================================================
+        SORTIE : Objet carte Folium représentant l'itinéraire.
+        ================================================================
+
+        """
+
         trajet = self.trajet_voiture()
         paris_coord = [48.8566, 2.3522]
 
@@ -152,6 +199,29 @@ class CarNetwork():
         return carte
     
     def distance_via_routes(self):
+
+        """
+
+        ================================================================
+        IDÉE : Fonction qui calcule la distance totale d'un trajet en 
+               voiture entre deux destinations, tout en identifiant les 
+               points d'arrêt potentiels où l'autonomie de la voiture ne 
+               suffit plus.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        ================================================================
+
+        ================================================================
+        SORTIE : Tuple contenant la distance totale du trajet en voiture 
+                 et une liste de coordonnées représentant les points 
+                 d'arrêt potentiels où l'autonomie de la voiture ne suffit 
+                 plus.
+        ================================================================
+
+        """
 
         ## On récupère le trajet en voiture entre les deux destinations 
         # A et B
@@ -191,9 +261,33 @@ class CarNetwork():
     
     def plot_stop_points(self, map):
 
+        """
+
+        ================================================================
+        IDÉE : Fonction pour représenter graphiquement sur une carte les 
+               points d'arrêt du réseau, en utilisant des marqueurs de 
+               couleur violette.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        -map : Objet carte Folium sur laquelle les points d'arrêt seront 
+               représentés.
+
+        ================================================================
+
+        ================================================================
+        SORTIE : La carte Folium mise à jour avec des marqueurs violets 
+                 représentant les points d'arrêts les plus proches.
+        ================================================================
+
+        """
+
+        # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
-
+        # Itération sur chaque point d'arrêt
         for i in range(len(stop_coord)):
             lat = stop_coord[i][0]
             lon = stop_coord[i][1]
@@ -202,6 +296,33 @@ class CarNetwork():
 
     def nearest_stations(self, stop_coord, distance_max): 
 
+        """
+
+        ================================================================
+        IDÉE : Fonction qui identifie et renvoie les stations les plus 
+               proches pour chaque point d'arrêt donné,dans une plage de 
+               distance spécifiée.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        -stop_coord : Liste des coordonnées (latitude, longitude) des 
+                      points d'arrêt. Tel que rendu par distance_via_routes
+
+        -distance_max : Distance maximale (en kilomètres) à partir de 
+                        laquelle une station est considérée comme "proche".
+        ================================================================
+
+        ================================================================
+        SORTIE : Liste de listes, où chaque sous-liste représente les 
+                 coordonnées des stations les plus proches pour un point 
+                 d'arrêt donné.
+        ================================================================
+
+        """
+
+        # Extraction des coordonnées des stations du DataFrame self.stations_data
         stations = self.stations_data[['xlongitude', 'ylatitude']]
         stations = stations[(stations['ylatitude'] >= -90) & (stations['ylatitude'] <= 90) &
             (stations['xlongitude'] >= -90) & (stations['xlongitude'] <= 90)]
@@ -223,14 +344,43 @@ class CarNetwork():
         for i in range(len(stop_coord)):
 
             location = stop_coord[i]
+                   
+            # Filtrage des stations qui sont dans la plage de distance pour le point d'arrêt actuel
             location_tuples = [list(element) for element in loc_tuples if is_in_range(location, element, distance_max)]
 
+            # Ajout des stations filtrées à la liste des stations les plus proches
             nearest_stations.append(location_tuples)
 
         return nearest_stations
 
     def plot_nearest_stations(self, map, nearest_stations):
 
+        """ 
+        ================================================================
+        IDÉE : Fonction permettant de représenter graphiquement sur une 
+               carte toutes les stations les plus proches associées à des 
+               points d'arrêt donnés.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        -map : objet de type folium map, tel que renvoyé par get_route_map
+               ou plot_stop_points
+
+        -nearest_stations : liste de longueur égale au nombre d'arrêt 
+                            sur le trajet. Chaque élément correspond 
+                            lui-même à une liste de liste contenant les 
+                            localisations des stations les plus proches
+        ================================================================
+
+        ================================================================
+        SORTIE : La carte Folium mise à jour avec des marqueurs représentant 
+                 les stations les plus proches.
+        ================================================================
+
+        """
+         
         for i in range(len(nearest_stations)):
     
             ## On récupère les localisations de toutes les bornes les 
@@ -247,6 +397,30 @@ class CarNetwork():
 
     def plot_stations(self, map):
 
+        """ 
+        ================================================================
+        IDÉE : Fonction permettant de représenter graphiquement sur une 
+               carte folium toutes les stations dont on dispose dans notre 
+               base de données en attribut.
+        ================================================================
+
+        ================================================================
+        PARAMÈTRES : 
+
+        -map : objet de type folium map, tel que renvoyé par get_route_map
+               ou plot_stop_points
+
+        ================================================================
+
+        ================================================================
+        SORTIE : La carte Folium mise à jour avec des marqueurs représentant 
+                 toutes les stations de recharge de véhicules électrique en 
+                 France.
+        ================================================================
+
+        """
+
+        ## On récupère les données sur lesquelles on travaille
         df = self.stations_data
 
 
