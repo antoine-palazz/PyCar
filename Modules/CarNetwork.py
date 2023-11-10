@@ -15,6 +15,8 @@ import geopy.distance
 from geopy.distance import geodesic
 from folium.plugins import MousePosition
 from folium.plugins import TagFilterButton
+from folium.plugins import MarkerCluster
+
 
 
 
@@ -489,6 +491,9 @@ class CarNetwork():
         map.get_root().html.add_child(folium.Element(legend_html))
 
 
+        marker_cluster = MarkerCluster().add_to(map)
+
+
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
             if acces_recharge == 'payant': fill_color = 'orange'
@@ -498,7 +503,7 @@ class CarNetwork():
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
             # Ajoutez le marqueur à la carte
-            folium.RegularPolygonMarker(location=[lat, lon], popup=com, fill_color=fill_color, color =fill_color, radius=5).add_to(map)
+            folium.RegularPolygonMarker(location=[lat, lon], popup=com, fill_color=fill_color, color =fill_color, radius=5).add_to(marker_cluster)
 
 
         for acces_recharge in df['acces_recharge'].unique():
