@@ -262,17 +262,17 @@ class CarNetwork():
                     z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
             <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
             
-            <p><i class="fa fa-map-marker" style="color: orange;"></i> <strong>Marqueur Rouge</strong>: Payant</p>
+            <p><i class="fa fa-square" style="color: orange;"></i> <strong>Payant</strong></p>
             
-            <p><i class="fa fa-map-marker" style="color: green;"></i> <strong>Marqueur Bleu</strong>: Gratuit</p>
+            <p><i class="fa fa-square" style="color: green;"></i> <strong>Gratuit</strong></p>
             
-            <p><i class="fa fa-circle" style="color: grey; font-size: 20px;"></i> <strong>Point Vert</strong>: Information manquantes</p>
+            <p><i class="fa fa-square" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
             
-            <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carré Orange</strong>: Carte ou badge</p>
+            <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
             
-            <p><i class="fa fa-circle" style="color: yellow; font-size: 20px;"></i> <strong>Point Violet</strong>: Charges gratuites</p>
+            <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
             
-            <p><i class="fa fa-star" style="color: purple; font-size: 20px;"></i> <strong>Étoile Dorée</strong>: Points d'arrêt</p>
+            <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
         </div>
         """
 
