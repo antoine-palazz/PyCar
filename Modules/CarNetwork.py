@@ -210,7 +210,7 @@ class CarNetwork():
 
         # Paramétrer le plein écran sur la carte
         folium.plugins.Fullscreen(
-            position="topright",
+            position="bottomleft",
             title="Expand me",
             title_cancel="Exit me",
             force_separate_button=True,
