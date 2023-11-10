@@ -292,7 +292,13 @@ class CarNetwork():
             lat = stop_coord[i][0]
             lon = stop_coord[i][1]
 
-            folium.Marker(location=[lat, lon], icon=folium.Icon(color='purple')).add_to(map)
+
+            folium.Marker(
+                location=[lat, lon],
+                icon=folium.Icon(color='purple'),
+                popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
+                ).add_to(map)
+
 
     def nearest_stations(self, stop_coord, distance_max): 
 
@@ -393,7 +399,11 @@ class CarNetwork():
                 lat = nearest_stations_i[j][0] ## longitude
                 lon = nearest_stations_i[j][1] ##  latitude
 
-                folium.Marker(location=[lat, lon], icon=folium.Icon(color='yellow')).add_to(map)
+                folium.Marker(
+                location=[lat, lon],
+                icon=folium.Icon(color='yellow'),
+                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}.",
+                ).add_to(map)
 
     def plot_stations(self, map):
 
