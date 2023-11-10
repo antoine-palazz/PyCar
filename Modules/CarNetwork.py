@@ -13,6 +13,9 @@ import urllib.parse
 import folium 
 import geopy.distance 
 from geopy.distance import geodesic
+from folium.plugins import MousePosition
+from folium.plugins import TagFilterButton
+
 
 
 # Coordonnées des villes en France 
@@ -193,7 +196,29 @@ class CarNetwork():
         carte = folium.Map(location=paris_coord, zoom_start=13)
 
         # Trace l'itinéraire
-        folium.PolyLine(locations=trajet, color='red').add_to(carte)
+        """folium.PolyLine(locations=trajet, color='red').add_to(carte)"""
+
+        folium.plugins.AntPath(
+            locations=trajet, 
+            reverse="True", 
+            dash_array=[20, 30]
+        ).add_to(carte)
+
+        carte.fit_bounds(carte.get_bounds())
+
+        # Paramétrer le plein écran sur la carte
+        folium.plugins.Fullscreen(
+            position="topright",
+            title="Expand me",
+            title_cancel="Exit me",
+            force_separate_button=True,
+        ).add_to(carte)
+        
+        # Permet à l'utilisateur d'afficher la localisation du point sur 
+        # lequel sa souris pointe
+        MousePosition().add_to(carte)
+
+    
 
         # Affiche la carte dans le notebook
         return carte
@@ -475,5 +500,9 @@ class CarNetwork():
             # Ajoutez le marqueur à la carte
             folium.RegularPolygonMarker(location=[lat, lon], popup=com, fill_color=fill_color, color =fill_color, radius=5).add_to(map)
 
+
+        for acces_recharge in df['acces_recharge'].unique():
+            tag_filter = TagFilterButton(tag=acces_recharge, title=acces_recharge)
+            tag_filter.add_to(map)
 
 
