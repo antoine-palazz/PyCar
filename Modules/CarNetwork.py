@@ -491,10 +491,7 @@ class CarNetwork():
         map.get_root().html.add_child(folium.Element(legend_html))
 
 
-        marker_cluster = MarkerCluster().add_to(map)
-
-
-        for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
+        for lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
             if acces_recharge == 'payant': fill_color = 'orange'
             elif acces_recharge == 'gratuit': fill_color = 'green'
@@ -503,11 +500,15 @@ class CarNetwork():
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
             # Ajoutez le marqueur à la carte
-            folium.RegularPolygonMarker(location=[lat, lon], popup=com, fill_color=fill_color, color =fill_color, radius=5).add_to(marker_cluster)
+            folium.RegularPolygonMarker(location=[lat, lon], 
+                                        tags = acces_recharge,
+                                        popup=com, 
+                                        fill_color=fill_color, 
+                                        color =fill_color, 
+                                        radius=5
+                                        ).add_to(map)
 
-
-        for acces_recharge in df['acces_recharge'].unique():
-            tag_filter = TagFilterButton(tag=acces_recharge, title=acces_recharge)
-            tag_filter.add_to(map)
+        categories = list(df['acces_recharge']).unique()
+        TagFilterButton(categories).add_to(map)
 
 
