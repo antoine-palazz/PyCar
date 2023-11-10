@@ -1,0 +1,5 @@
+## Cette ligne indique à Git d'ignorer tout fichier nommé "data.osm", indépendamment de son emplacement dans le dépôt.
+#  Le double astérisque (**) est un caractère générique qui correspond à n'importe quel répertoire ou sous-répertoire.
+
+**/data.osm
+
