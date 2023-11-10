@@ -229,14 +229,22 @@ class CarNetwork():
 
         return nearest_stations
 
-    '''def plot_nearest_stations(self, map, nearest_stations):
+    def plot_nearest_stations(self, map, nearest_stations):
 
         for i in range(len(nearest_stations)):
-            lat = nearest_stations[i][0]
-            lon = nearest_stations[i][1]
+    
+            ## On récupère les localisations de toutes les bornes les 
+            # plus proches du i-ème point d'arrêt 
+            nearest_stations_i = nearest_stations[i]
 
-            folium.Marker(location=[lat, lon], icon=folium.Icon(color='yellow')).add_to(map1)
-'''
+            ## On itère sur cette première liste pour représenter toutes les
+            # stations les plus proches 
+            for j in range(len(nearest_stations_i)):
+                lat = nearest_stations_i[j][0] ## longitude
+                lon = nearest_stations_i[j][1] ##  latitude
+
+                folium.Marker(location=[lat, lon], icon=folium.Icon(color='yellow')).add_to(map)
+
     def plot_stations(self, map):
 
         df = self.stations_data
