@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import tempfile
 from dash import html
 from graphiques import evolution_nbre_voiture_elec
 import matplotlib.pyplot as plt
@@ -35,7 +36,10 @@ def calcul():
     nearest_stations = reseau.nearest_stations(stop_coord, distance_max)
     reseau.plot_nearest_stations(map1, nearest_stations)
     reseau.plot_stations(map1)
-    return print(map1)
+    carte_html = map1.get_root().render()
+
+    # Renvoyer le contenu du fichier HTML via render_template
+    return render_template('resultat.html', donnees=carte_html)
 
 @app.route("/evolution_electrique")
 def page_suivante1():
@@ -64,6 +68,7 @@ def page_suivante1():
 def page_suivante2():
     return render_template("map_bornes.html")
 
+
 @app.route('/')
 def accueil():
     """ 
@@ -80,4 +85,3 @@ copier le chemin et le coller dans le navigateur
 """
 if __name__ == '__main__':
     app.run(debug=True)
-
