@@ -21,8 +21,8 @@ from CarNetwork import CarNetwork
 
 class Autoroute(CarNetwork):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, A, B, autonomie):
+        super().__init__(A, B, autonomie)
         self.stations_péages = pd.read_csv('https://static.data.gouv.fr/resources/gares-de-peage-du-reseau-routier-national-concede/20230728-163544/gares-peage-2023.csv', sep = ';')
 
     
