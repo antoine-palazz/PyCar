@@ -73,6 +73,7 @@ class Autoroute(CarNetwork):
     def plot_peages_autoroutes(self, map):
 
         self.clean_base()
+        
         df = self.stations_peages[self.stations_peages['route'].str.startswith('A')]
 
         for index, lat, lon in df[['ylatitude', 'xlongitude']].itertuples():
