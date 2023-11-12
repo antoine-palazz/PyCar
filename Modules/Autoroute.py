@@ -23,7 +23,7 @@ class Autoroute(CarNetwork):
 
     def __init__(self, A, B, autonomie):
         super().__init__(A, B, autonomie)
-        self.stations_péages = pd.read_csv('https://static.data.gouv.fr/resources/gares-de-peage-du-reseau-routier-national-concede/20230728-163544/gares-peage-2023.csv', sep = ';')
+        self.stations_peages = pd.read_csv('https://static.data.gouv.fr/resources/gares-de-peage-du-reseau-routier-national-concede/20230728-163544/gares-peage-2023.csv', sep = ';')
 
     
     def clean_base(self):
@@ -34,8 +34,8 @@ class Autoroute(CarNetwork):
         ## Dans la base de donnée, les coordonées de Lambert données dans 
         #  les colonnes 'x' et 'y' sont des strings, on corrige ça 
 
-        self.stations_péages['x'] = self.stations_péages['x'].str.replace(',', '.').astype(float)
-        self.stations_péages['y'] = self.stations_péages['y'].str.replace(',', '.').astype(float)
+        self.stations_peages['x'] = self.stations_peages['x'].str.replace(',', '.').astype(float)
+        self.stations_peages['y'] = self.stations_peages['y'].str.replace(',', '.').astype(float)
 
 
         def lambert93_to_latlon(x, y):
@@ -47,11 +47,11 @@ class Autoroute(CarNetwork):
             return lat, lon
                 
         ## On crée deux nouvelles colonnes 
-        self.stations_péages['xlongitude'] = lambert93_to_latlon(self.stations_péages['x'], self.stations_péages['y'])[0]
-        self.stations_péages['ylatitude'] = lambert93_to_latlon(self.stations_péages['x'], self.stations_péages['y'])[1]
+        self.stations_peages['xlongitude'] = lambert93_to_latlon(self.stations_peages['x'], self.stations_peages['y'])[0]
+        self.stations_peages['ylatitude'] = lambert93_to_latlon(self.stations_peages['x'], self.stations_peages['y'])[1]
 
         ## On renomme les colonnes par soucis de clarté
-        self.stations_péages.rename(columns={'x': 'lambert93_x', 'y' : 'lambert93_y'}, inplace=True)
+        self.stations_peages.rename(columns={'x': 'lambert93_x', 'y' : 'lambert93_y'}, inplace=True)
 
         '''
         Les coordonnées de longitude > 90 ou de latitude > 90 sont inutiles car elles dépassent les limites 
@@ -62,9 +62,16 @@ class Autoroute(CarNetwork):
 
 
         liste = []
-        for row in self.stations_péages.itertuples():
+        for row in self.stations_peages.itertuples():
 
             if row.xlongitude > 90 or row.ylatitude > 90:
                 liste.append(row.Index)
 
-        self.stations_péages.drop(liste)
+        self.stations_peages.drop(liste)
+
+
+    def plot_peages(self, map):
+
+        for index, lat, lon in self.stations_peages[['ylatitude', 'xlongitude']].itertuples():
+            
+            folium.RegularPolygonMarker(location=[lat, lon], color ='blue', radius=5).add_to(map)
