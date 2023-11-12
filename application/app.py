@@ -4,7 +4,12 @@ from graphiques import evolution_nbre_voiture_elec
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-#from CarNetwork import CarNetwork
+import pyroutelib3 
+import os
+import sys
+car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
+sys.path.append(car_network_directory)
+from CarNetwork import CarNetwork
 
 
 app = Flask(__name__)
@@ -63,3 +68,4 @@ copier le chemin et le coller dans le navigateur
 """
 if __name__ == '__main__':
     app.run(debug=True)
+
