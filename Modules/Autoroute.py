@@ -34,8 +34,8 @@ class Autoroute(CarNetwork):
         ## Dans la base de donnée, les coordonées de Lambert données dans 
         #  les colonnes 'x' et 'y' sont des strings, on corrige ça 
 
-        self.stations_péages['x'].str.replace(',', '.').astype(float)
-        self.stations_péages['y'].str.replace(',', '.').astype(float)
+        self.stations_péages['x'] = self.stations_péages['x'].str.replace(',', '.').astype(float)
+        self.stations_péages['y'] = self.stations_péages['y'].str.replace(',', '.').astype(float)
 
 
         def lambert93_to_latlon(x, y):
@@ -51,7 +51,7 @@ class Autoroute(CarNetwork):
         self.stations_péages['ylatitude'] = lambert93_to_latlon(self.stations_péages['x'].str.replace(',', '.').astype(float), self.stations_péages['y'].str.replace(',', '.').astype(float))[1]
 
         ## On renomme les colonnes par soucis de clarté
-        self.stations_péages = self.stations_péages.rename(columns={'x': 'lambert93_x', 'y' : 'lambert93_y'}, inplace=True)
+        self.stations_péages.rename(columns={'x': 'lambert93_x', 'y' : 'lambert93_y'}, inplace=True)
 
         '''
         Les coordonnées de longitude > 90 ou de latitude > 90 sont inutiles car elles dépassent les limites 
