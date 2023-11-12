@@ -34,8 +34,8 @@ class Autoroute(CarNetwork):
         ## Dans la base de donnée, les coordonées de Lambert données dans 
         #  les colonnes 'x' et 'y' sont des strings, on corrige ça 
 
-        self.stations_péages['x'] = self.stations_péages['x'].str.replace(',', '.').astype(float)
-        self.stations_péages['y'] = self.stations_péages['y'].str.replace(',', '.').astype(float)
+        self.stations_péages['x'] = self.stations_péages['x'].astype(str).str.replace(',', '.').astype(float)
+        self.stations_péages['y'] = self.stations_péages['y'].astype(str).str.replace(',', '.').astype(float)
 
 
         def lambert93_to_latlon(x, y):
