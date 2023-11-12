@@ -17,13 +17,25 @@ app = Flask(__name__)
 @app.route('/calcul', methods=['POST'])
 def calcul(): 
     """ 
-    Permet de calculer et retourner l'itinéraire.
+    Permet de déterminer et retourner l'itinéraire.
     """
     destination = request.form['destination']
     depart = request.form['depart']
     autonomie = int(request.form['autonomie'])
-    message = f"Vous voyagez de {depart} à {destination} avec une autonomie de {autonomie} km."
-    return message
+
+    # Passons à la visualisation 
+    reseau = CarNetwork(depart, destination, autonomie)  #On initialise un objet de la classe CarNetwork
+    reseau.clean_data()  # On nettoie les données à l'aide de la méthode .clean_data()
+    reseau.get_coordo()
+    trajet = reseau.trajet_voiture()
+    map1 = reseau.get_route_map()
+    distance, stop_coord = reseau.distance_via_routes()
+    reseau.plot_stop_points(map1)
+    distance_max = autonomie
+    nearest_stations = reseau.nearest_stations(stop_coord, distance_max)
+    reseau.plot_nearest_stations(map1, nearest_stations)
+    reseau.plot_stations(map1)
+    return print(map1)
 
 @app.route("/evolution_electrique")
 def page_suivante1():
