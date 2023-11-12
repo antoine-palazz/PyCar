@@ -1,7 +1,5 @@
 # Imports 
 import pandas as pd
-import math
-import googlemaps
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -15,7 +13,6 @@ import geopy.distance
 from geopy.distance import geodesic
 from folium.plugins import MousePosition
 from folium.plugins import TagFilterButton
-from folium.plugins import MarkerCluster
 
 
 
