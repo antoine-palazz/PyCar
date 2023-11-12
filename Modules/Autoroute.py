@@ -70,8 +70,11 @@ class Autoroute(CarNetwork):
         self.stations_peages.drop(liste)
 
 
-    def plot_peages(self, map):
+    def plot_peages_autoroutes(self, map):
 
-        for index, lat, lon in self.stations_peages[['ylatitude', 'xlongitude']].itertuples():
+        self.clean_base()
+        df = self.stations_peages[self.stations_peages['route'].str.startswith('A')]
+
+        for index, lat, lon in df[['ylatitude', 'xlongitude']].itertuples():
             
             folium.RegularPolygonMarker(location=[lat, lon], color ='blue', radius=5).add_to(map)
