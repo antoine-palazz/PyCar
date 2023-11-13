@@ -89,3 +89,23 @@ def bornes_region():
     img_base64 = base64.b64encode(img_data.read()).decode()
     graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
     return graph_html
+
+def evol_accidents():
+    df_acc = pd.read_csv('SCRAP/EVOL_ACC.csv').set_index('Année')
+    df_acc = df_acc[1:]
+    df_acc = df_acc.drop(['1981 et 1982'])
+    df_acc['Accidents'] = df_acc['Accidents'].astype(int)
+    plt.figure(figsize = (12, 8))
+    df_sampled = df_acc[::4]
+    plt.plot(df_acc.index, df_acc['Accidents'], marker='o', linestyle='-')
+    plt.title('Évolution des accidents en France métropolitaine')
+    plt.xlabel('Année')
+    plt.xticks(df_sampled.index)
+    plt.ylabel('Accidents')
+    plt.legend(['Nombre d\'accidents'], loc='upper left')
+    img_data = BytesIO()  # Conversion du graphique en image base64
+    plt.savefig(img_data, format='png')
+    img_data.seek(0)
+    img_base64 = base64.b64encode(img_data.read()).decode()
+    graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'
+    return graph_html

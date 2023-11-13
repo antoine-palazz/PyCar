@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import tempfile
 from dash import html
-from graphiques import evolution_nbre_voiture_elec, graph_html_pol_par_activité, bornes_region
+from graphiques import evolution_nbre_voiture_elec, graph_html_pol_par_activité, bornes_region, evol_accidents
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
@@ -79,6 +79,11 @@ def page_suivante3():
 def page_suivante4():
     get_graph = bornes_region()
     return render_template("bornes_region.html", graph = get_graph)
+
+@app.route("/evol_acc")
+def page_suivante5():
+    get_graph = evol_accidents()
+    return render_template("evol_accidents.html", graph = get_graph)
 
 @app.route('/')
 def accueil():

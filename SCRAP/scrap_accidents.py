@@ -71,7 +71,7 @@ for i, donnees in enumerate(tableau_tr3):
 
 valeurs3 = [element.replace('\xa0', '') for element in row3]
 n3 = len(valeurs3)
-values3 = [[valeurs3[2 * k], valeurs3[2 * k + 1]] for k in list(range(int(n3 / 2)))]
+values3 = [[valeurs3[2 * k].split('[')[0], valeurs3[2 * k + 1]] for k in list(range(int(n3 / 2)))]
 values += values3
 #### 
 
