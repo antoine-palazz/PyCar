@@ -1,13 +1,15 @@
 from flask import Flask, render_template, request
 import tempfile
 from dash import html
-from graphiques import evolution_nbre_voiture_elec
+from graphiques import evolution_nbre_voiture_elec, graph_html_pol_par_activité
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 import pyroutelib3 
 import os
 import sys
+import seaborn as sns
+import pandas as pd
 car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
 sys.path.append(car_network_directory)
 from CarNetwork import CarNetwork
@@ -68,6 +70,10 @@ def page_suivante1():
 def page_suivante2():
     return render_template("map_bornes.html")
 
+@app.route("/pol_par_activité")
+def page_suivante3():
+    get_graph = graph_html_pol_par_activité()
+    return render_template("pol_par_activité.html", graph = get_graph)
 
 @app.route('/')
 def accueil():

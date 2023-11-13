@@ -1,4 +1,6 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 from datetime import datetime 
 import os 
 import plotly.express as px
@@ -28,3 +30,33 @@ def evolution_nbre_voiture_elec():
 
     dataframe = pd.DataFrame(dict)
     return dataframe.sort_values('Date') 
+
+def graph_html_pol_par_activité():
+        URL = "https://www.insee.fr/fr/statistiques/fichier/2015759/deve-envir-emissions-co2.xlsx"
+        df = pd.read_excel(URL)
+        # Tracer l'évolution 
+        plt.figure(figsize=(12,8))
+        sns.set(style="whitegrid")
+        palette = sns.color_palette("husl", n_colors=7)
+        colonnes = df.columns.to_list()[1:]
+        colonnes_int = [int(x) for x in colonnes]
+
+        for i in df.index.to_list():
+            if i<7:
+                nom = df['Émissions de gaz à effet de serre par activité'][i]
+                evol = [df[col][i] for col in colonnes]
+                #evol = df[colonnes][i:i+1].values
+                plt.plot(colonnes_int, evol, label = f'{nom}', color = palette[i])
+            else:
+                pass
+        plt.xlabel('Année')
+        plt.ylabel('en millions de tonnes d’équivalent CO₂')
+        plt.title('Évolution des émissions de gaz à effet de serre par activité')
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+        plt.show()
+        img_data = BytesIO()  # Conversion du graphique en image base64
+        plt.savefig(img_data, format='png')
+        img_data.seek(0)
+        img_base64 = base64.b64encode(img_data.read()).decode()
+        graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
+        return graph_html
