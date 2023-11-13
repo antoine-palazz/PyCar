@@ -34,6 +34,13 @@ def evolution_nbre_voiture_elec():
 def graph_html_pol_par_activité():
         URL = "https://www.insee.fr/fr/statistiques/fichier/2015759/deve-envir-emissions-co2.xlsx"
         df = pd.read_excel(URL)
+        def transform(dataset):
+            colonnes = ['Émissions de gaz à effet de serre par activité'] + [ f'{i}' for i in range(1990,2023)]
+            dataset.set_axis(colonnes, axis=1, inplace=True)
+            dataset = dataset[3:11].reset_index()
+            dataset.drop('index', axis=1, inplace = True)
+            return dataset
+        df = transform(df)
         # Tracer l'évolution 
         plt.figure(figsize=(12,8))
         sns.set(style="whitegrid")
@@ -60,3 +67,5 @@ def graph_html_pol_par_activité():
         img_base64 = base64.b64encode(img_data.read()).decode()
         graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
         return graph_html
+
+print(graph_html_pol_par_activité())
