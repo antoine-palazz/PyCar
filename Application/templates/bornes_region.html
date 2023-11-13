@@ -1,0 +1,60 @@
+<head> 
+	<style> 
+	.button {
+		background-color: #23b83c;
+		border: 2px solid #020353;
+		color: whitesmoke;
+		padding: 0.5em 0.5em;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1em;
+		display: inline-block;
+		width: 18%;
+		border-radius: 5px;
+		box-shadow: 3px 3px 8px 0 #000; 
+			}	
+		
+		/* .logo-container */
+	.logo-container {
+		position: absolute;
+		top: 0;
+		right: 100px;;
+	}
+
+	/* .logo */
+	.logo {
+		background-image: url("{{ url_for('static', filename='logo.jpeg') }}"); /* Correction ici */
+		width: 250px; /* Ajustez la largeur et la hauteur selon vos besoins */
+		height: 140px;
+	}
+
+	.center-text {
+            text-align: center;
+        }
+	</style>
+
+</head>
+    <body>
+		<div class="logo-container">
+			<div class="logo"></div>
+		</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+		<p> <b> Les engagements pris par le Gouvernement pour le développement de l’usage des véhicules électriques s’accompagnent 
+            d’un déploiement d’infrastructures de recharge pour véhicules électriques (IRVE) le long du réseau routier national (RRN), 
+            afin de favoriser l’usage de ce type de véhicule pour des trajets interurbains. 
+            Selon le baromètre national des infrastructures de recharge ouvertes au public, 
+            déployé par le Ministère de la Transition écologique, l’objectif des 100 000 bornes a été atteint le 5 mai 2023. 
+            Désormais, on compte 148 points de charge pour 100 000 habitants. 17 000 points de recharge ont été installés et raccordés au réseau public 
+            de distribution. </b></p>
+			<div class="center-text"> 
+				{{ graph | safe }}
+			</div>
+    </body>
+</html>

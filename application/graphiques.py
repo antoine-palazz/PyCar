@@ -66,3 +66,26 @@ def graph_html_pol_par_activité():
         img_base64 = base64.b64encode(img_data.read()).decode()
         graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
         return graph_html
+
+
+def bornes_region():
+    URL = 'https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25'
+    df = pd.read_csv(URL, sep = ';')
+    bornes_region = df['region'].value_counts().reset_index()  # On compte le nombre de bornes par région
+    bornes_region.columns = ['region', 'nombre de bornes']
+    bornes_region = bornes_region.sort_values(by='nombre de bornes', ascending=False)
+
+    # On affiche cela dans un histogramme 
+    plt.figure(figsize=(12, 6))
+    plt.bar(bornes_region['region'], bornes_region['nombre de bornes'])
+    plt.xlabel('Région')
+    plt.ylabel('Nombre de bornes')
+    plt.title('Nombre de bornes de recharge pour les véhicules électriques par région')
+    plt.xticks(rotation=90)
+    plt.tight_layout()
+    img_data = BytesIO()  # Conversion du graphique en image base64
+    plt.savefig(img_data, format='png')
+    img_data.seek(0)
+    img_base64 = base64.b64encode(img_data.read()).decode()
+    graph_html = f'<img src="data:image/png;base64,{img_base64}" alt="Graphique d\'autonomie">'  # Code HTML pour afficher le graphique
+    return graph_html
