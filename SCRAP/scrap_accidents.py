@@ -29,7 +29,7 @@ for element in tableau_tr[0].find_all('th'):
     colonnes.append(element.text.strip())
 
 colonnes = colonnes[0:2]
-
+colonnes = [el.split('[')[0] for el in colonnes]
 row = []
 # On récupère les informations correspondantes
 for i, donnees in enumerate(tableau_tr):
@@ -60,8 +60,22 @@ values2 = [[valeurs2[2 * k], valeurs2[2 * k + 1]] for k in list(range(int(n2 / 2
 values += values2
 
 # De 2004 à 2022 
-#dico = dict(zip(colonnes,row))
+tableau_tbody3 = tableau2[2].find('tbody')
+tableau_tr3 = tableau_tbody3.find_all('tr')
+row3 = []
+for i, donnees in enumerate(tableau_tr3):
+    if i>0:
+        recup = donnees.find_all('td')[0:2]
+        for j, element in enumerate(recup):
+            row3.append(element.text.strip())
 
-# Évolution des accidents
-#EVOL_ACC = pd.DataFrame(dico)
-#print(EVOL_ACC.head())
+valeurs3 = [element.replace('\xa0', '') for element in row3]
+n3 = len(valeurs3)
+values3 = [[valeurs3[2 * k], valeurs3[2 * k + 1]] for k in list(range(int(n3 / 2)))]
+values += values3
+#### 
+
+
+# DataFrame Évolution des accidents
+EVOL_ACC = pd.DataFrame(values, columns = colonnes).set_index('Année')
+EVOL_ACC.to_csv('SCRAP/EVOL_ACC.csv')
