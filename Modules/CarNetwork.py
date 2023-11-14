@@ -311,36 +311,6 @@ class CarNetwork():
         # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
-        '''# Créer une légende avec la distance
-        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 2px solid black; border-radius: 5px; width: 300px; text-align: center;">Distance du trajet : <strong>{distance:.2f} km</strong></div>'
-
-        # Create a div icon for the legend
-        legend_div = folium.DivIcon(html=legend_html)
-
-        # Create a marker for the legend using the div icon
-        legend_marker = folium.Marker(
-            location='bottom',  # Use the coordinates of the first stop as the location for the legend
-            icon=legend_div,
-        )
-        legend_marker.add_to(map)'''
-
-        legend_html = """
-            <div style="position: fixed; 
-                        top: 10px; 
-                        left: 50%; 
-                        transform: translateX(-50%); 
-                        background-color: white; 
-                        padding: 10px; 
-                        border: 2px solid black; 
-                        border-radius: 5px; 
-                        width: 200px; 
-                        text-align: center;">
-                Distance du trajet : <strong>{distance:.2f} km</strong><br>
-            </div>
-        """
-        legend = folium.Element(legend_html)
-        legend.add_to(map)
-
         # Itération sur chaque point d'arrêt
         for i in range(len(stop_coord)):
             lat = stop_coord[i][0]
@@ -488,6 +458,7 @@ class CarNetwork():
         ## On récupère les données sur lesquelles on travaille
         df = self.stations_data
 
+        distance, stop_coord = self.distance_via_routes()
 
         legend_html = """
         <div style="position: fixed; 
@@ -512,6 +483,8 @@ class CarNetwork():
             <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
             
             <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
+
+            <p> Distance du trajet : <strong>{distance:.2f} km</strong> </p>
         </div>
         """
 
