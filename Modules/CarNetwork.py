@@ -311,7 +311,7 @@ class CarNetwork():
         # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
-        # Créer une légende avec la distance
+        '''# Créer une légende avec la distance
         legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 2px solid black; border-radius: 5px; width: 300px; text-align: center;">Distance du trajet : <strong>{distance:.2f} km</strong></div>'
 
         # Create a div icon for the legend
@@ -322,7 +322,24 @@ class CarNetwork():
             location='bottom',  # Use the coordinates of the first stop as the location for the legend
             icon=legend_div,
         )
-        legend_marker.add_to(map)
+        legend_marker.add_to(map)'''
+
+        legend_html = """
+            <div style="position: fixed; 
+                        top: 10px; 
+                        left: 50%; 
+                        transform: translateX(-50%); 
+                        background-color: white; 
+                        padding: 10px; 
+                        border: 2px solid black; 
+                        border-radius: 5px; 
+                        width: 200px; 
+                        text-align: center;">
+                Distance du trajet : <strong>{distance:.2f} km</strong><br>
+            </div>
+        """
+        legend = folium.LatLngPopup(legend_html, parse_html=True)
+        legend.add_to(map)
 
         # Itération sur chaque point d'arrêt
         for i in range(len(stop_coord)):
