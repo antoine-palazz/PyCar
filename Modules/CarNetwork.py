@@ -312,7 +312,7 @@ class CarNetwork():
         distance, stop_coord = self.distance_via_routes()
 
         # Créer une légende avec la distance
-        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 2px solid black; border-radius: 5px; width: 300px; text-align: center;">Distance du trajet : <strong>{total_distance:.2f} km</strong></div>'
+        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 2px solid black; border-radius: 5px; width: 300px; text-align: center;">Distance du trajet : <strong>{distance:.2f} km</strong></div>'
 
         # Create a div icon for the legend
         legend_div = folium.DivIcon(html=legend_html)
