@@ -517,11 +517,9 @@ class CarNetwork():
             elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
-            category = category_column[index]
-
             # Ajoutez le marqueur à la carte
             folium.Marker(location=[lat, lon], 
-                          tags = category,
+                          tags = acces_recharge,
                           tooltip="Cliquez sur moi !",
                           popup=com, 
                           icon=folium.Icon(color=fill_color, icon_size=(30, 30))
