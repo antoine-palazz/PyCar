@@ -78,6 +78,9 @@ class CarNetwork():
         droping_liste = list(set(self.stations_data[self.stations_data['xlongitude'].isna()].index.to_list() + self.stations_data[self.stations_data['ylatitude'].isna()].index.to_list()))
         self.stations_data.drop(droping_liste, inplace = True)
 
+        # Supprimer les lignes où toutes les valeurs sont les mêmes
+        self.stations_data.drop_duplicates()
+
         # we transform the acces row in the dataframe by defining 
         # a function that we will then apply to the "acces_recharge" row
 
