@@ -322,7 +322,7 @@ class CarNetwork():
 
             folium.Marker(
                 location=[lat, lon],
-                icon=folium.Icon(color='purple'),
+                icon=folium.Icon(icon=f'{i}', prefix='fa', color='purple'),
                 popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
                 ).add_to(map)
             
