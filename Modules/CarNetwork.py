@@ -209,10 +209,10 @@ class CarNetwork():
         # Pour le point d'arrivée 
         folium.Marker(
             location=trajet[-1],
-            popup='Drapeau',
+            popup=self.B,
             icon=folium.Icon(icon='flag', prefix='fa', color='red')
         ).add_to(carte)
-        
+
         # Trace l'itinéraire
         """folium.PolyLine(locations=trajet, color='red').add_to(carte)"""
 
