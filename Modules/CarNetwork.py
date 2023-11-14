@@ -200,7 +200,6 @@ class CarNetwork():
 
 
         # Représenter le point de départ et le point d'arrivée 
-
         # Pour le point de départ
         folium.Marker(
             location=trajet[0],
@@ -458,7 +457,7 @@ class CarNetwork():
                 folium.Marker(
                 location=[lat, lon],
                 icon=folium.Icon(color='yellow'),
-                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est"+acces_type,
+                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est {acces_type}",
                 ).add_to(map)
 
     def plot_stations(self, map):
