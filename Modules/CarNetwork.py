@@ -479,15 +479,15 @@ class CarNetwork():
                             z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
                     <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
                     
-                    <p><i class="fa fa-square" style="color: orange;"></i> <strong>Payant</strong></p>
+                    <p><i class="fa fa-map-marker" style="color: orange;"></i> <strong>Payant</strong></p>
                     
-                    <p><i class="fa fa-square" style="color: green;"></i> <strong>Gratuit</strong></p>
+                    <p><i class="fa fa-map-marker" style="color: green;"></i> <strong>Gratuit</strong></p>
                     
-                    <p><i class="fa fa-square" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
+                    <p><i class="fa fa-map-marker" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
                     
-                    <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
+                    <p><i class="fa fa-map-marker" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
                     
-                    <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
+                    <p><i class="fa fa-map-marker" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
                     
                     <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
 
@@ -522,7 +522,7 @@ class CarNetwork():
                           tags = acces_recharge,
                           tooltip="Cliquez sur moi !",
                           popup=com, 
-                          icon=folium.Icon(color=fill_color, icon_size=(30, 30))
+                          icon=folium.Icon(color=fill_color, icon_size=(20, 20))
                           ).add_to(map)
 
         TagFilterButton(categories).add_to(map)
