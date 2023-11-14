@@ -498,6 +498,16 @@ class CarNetwork():
         # Ajoutez la légende personnalisée à la carte
         map.get_root().html.add_child(folium.Element(legend_html))
 
+        ## C.f. la documentation folium disponible ici pour justifier l'exemple 
+        ## 'https://python-visualization.github.io/folium/latest/user_guide/plugins/tag_filter_button.html'
+
+        # On récupère dans categories les différentes catégories représentées 
+        # dans la colonne acces_recharge
+        categories = list(self.stations_data['acces_recharge'].unique())
+
+        # On récupère dans category les valeurs d'acces_recharge prise pas chaque
+        # borne dans la base de donnée self.stations_data
+        category_column = self.stations_data['acces_recharge'].to_list()
 
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
@@ -507,16 +517,16 @@ class CarNetwork():
             elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
-            # Ajoutez le marqueur à la carte
-            folium.RegularPolygonMarker(location=[lat, lon], 
-                                        tags = acces_recharge,
-                                        popup=com, 
-                                        fill_color=fill_color, 
-                                        color =fill_color, 
-                                        radius=5
-                                        ).add_to(map)
+            category = category_column[index]
 
-        categories = list(df['acces_recharge'].unique())
+            # Ajoutez le marqueur à la carte
+            folium.Marker(location=[lat, lon], 
+                          tags = category,
+                          tooltip="Cliquez sur moi !",
+                          popup=com, 
+                          icon=folium.Icon(color=fill_color, icon_size=(30, 30))
+                          ).add_to(map)
+
         TagFilterButton(categories).add_to(map)
 
 
