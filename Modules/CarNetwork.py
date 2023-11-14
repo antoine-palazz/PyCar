@@ -319,7 +319,7 @@ class CarNetwork():
 
         # Create a marker for the legend using the div icon
         legend_marker = folium.Marker(
-            location=[stop_coord[0][0], stop_coord[0][1]],  # Use the coordinates of the first stop as the location for the legend
+            location='bottom',  # Use the coordinates of the first stop as the location for the legend
             icon=legend_div,
         )
         legend_marker.add_to(map)
