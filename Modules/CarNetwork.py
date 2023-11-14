@@ -311,9 +311,16 @@ class CarNetwork():
         # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
-        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 1px solid black; border-radius: 5px;">Distance = {distance:.2f} km</div>'
-        map.get_root().html.add_child(folium.Element(legend_html))
+        # Créer une légende avec la distance
+        legend_html = f'Distance = {distance:.2f} km'
+        legend_marker = folium.Marker(
+            location=[stop_coord[0][0], stop_coord[0][1]],  # Use the coordinates of the first stop as the location for the legend
+            icon=None,  # No icon for the legend marker
+            popup=folium.Popup(legend_html, parse_html=True),  # Use Popup to allow HTML content
+        )
 
+        legend_marker.add_to(map)
+        
         # Itération sur chaque point d'arrêt
         for i in range(len(stop_coord)):
             lat = stop_coord[i][0]
