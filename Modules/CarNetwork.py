@@ -338,7 +338,7 @@ class CarNetwork():
                 Distance du trajet : <strong>{distance:.2f} km</strong><br>
             </div>
         """
-        legend = folium.LatLngPopup(legend_html, parse_html=True)
+        legend = folium.Element(legend_html)
         legend.add_to(map)
 
         # Itération sur chaque point d'arrêt
