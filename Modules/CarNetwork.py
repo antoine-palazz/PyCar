@@ -40,7 +40,7 @@ class CarNetwork():
     x_A : (latitude, longitude) du point A
     x_B : (latitude, longitude) du point B
     df : base de données sur laquelle repose la classe. On la défini à partir d'un URL
-
+    distance : distance between point A and point B that is computed afterwards
     Methods:
     --------
     get_coordo : permet de récupérer x_A et x_B
@@ -53,6 +53,7 @@ class CarNetwork():
         self.autonomie = autonomie
         self.x_A = None
         self.x_B = None
+        self.distance = None
         self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ';')
 
     def clean_data(self):
@@ -280,7 +281,9 @@ class CarNetwork():
                 j = j + 1 # compte combien de fois l'autonomie a été saturée pour pénaliser 
                           # la distance_1 sur toutes les boucles à partir de là
 
-        
+        self.distance = distance 
+
+
         return distance, stop_coord
     
     def plot_stop_points(self, map):
@@ -454,38 +457,43 @@ class CarNetwork():
         ================================================================
 
         """
+        # Make sure self.distance is set before using it
+        if self.distance is None:
+            # If not set, calculate it
+            self.distance, _ = self.distance_via_routes()
 
         ## On récupère les données sur lesquelles on travaille
         df = self.stations_data
 
-        distance, stop_coord = self.distance_via_routes()
+        distance = float(self.distance)
+        print(distance)
 
         legend_html = """
-        <div style="position: fixed; 
-                    top: 10px; 
-                    right: 10px; 
-                    width: 220px; 
-                    background-color: rgba(255, 255, 255, 0.8); 
-                    border: 2px solid #000; 
-                    border-radius: 5px; 
-                    box-shadow: 3px 3px 5px #888; 
-                    z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
-            <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
-            
-            <p><i class="fa fa-square" style="color: orange;"></i> <strong>Payant</strong></p>
-            
-            <p><i class="fa fa-square" style="color: green;"></i> <strong>Gratuit</strong></p>
-            
-            <p><i class="fa fa-square" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
-            
-            <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
-            
-            <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
-            
-            <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
+                <div style="position: fixed; 
+                            top: 10px; 
+                            right: 10px; 
+                            width: 220px; 
+                            background-color: rgba(255, 255, 255, 0.8); 
+                            border: 2px solid #000; 
+                            border-radius: 5px; 
+                            box-shadow: 3px 3px 5px #888; 
+                            z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
+                    <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
+                    
+                    <p><i class="fa fa-square" style="color: orange;"></i> <strong>Payant</strong></p>
+                    
+                    <p><i class="fa fa-square" style="color: green;"></i> <strong>Gratuit</strong></p>
+                    
+                    <p><i class="fa fa-square" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
+                    
+                    <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
+                    
+                    <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
 
-            <p> Distance du trajet : <strong>{distance:.2f} km</strong> </p>
-        </div>
+                    <p> Distance du trajet : <strong> {distance:.2f} km</strong> <br> </p>
+                </div>
         """
 
         # Ajoutez la légende personnalisée à la carte
