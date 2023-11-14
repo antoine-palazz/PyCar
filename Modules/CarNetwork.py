@@ -322,6 +322,9 @@ class CarNetwork():
                 icon=folium.Icon(color='purple'),
                 popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
                 ).add_to(map)
+            
+        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 5px; border: 1px solid black; border-radius: 5px;">Distance = {distance:.2f} km</div>'
+        map.get_root().html.add_child(folium.Element(legend_html))
 
 
     def nearest_stations(self, stop_coord, distance_max): 

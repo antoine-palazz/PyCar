@@ -79,4 +79,4 @@ class Autoroute(CarNetwork):
 
         for index, lat, lon in df[['ylatitude', 'xlongitude']].itertuples():
             
-            folium.RegularPolygonMarker(location=[lat, lon], color ='blue', radius=5).add_to(map)
+            folium.RegularPolygonMarker(location=[lon, lat], color ='blue', radius=5).add_to(map)
