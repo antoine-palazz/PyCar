@@ -311,6 +311,9 @@ class CarNetwork():
         # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
+        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 1px solid black; border-radius: 5px;">Distance = {distance:.2f} km</div>'
+        map.get_root().html.add_child(folium.Element(legend_html))
+
         # Itération sur chaque point d'arrêt
         for i in range(len(stop_coord)):
             lat = stop_coord[i][0]
@@ -323,9 +326,7 @@ class CarNetwork():
                 popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
                 ).add_to(map)
             
-        legend_html = f'<div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: white; padding: 10px; border: 1px solid black; border-radius: 5px;">Distance = {distance:.2f} km</div>'
-        map.get_root().html.add_child(folium.Element(legend_html))
-
+        
 
     def nearest_stations(self, stop_coord, distance_max): 
 
