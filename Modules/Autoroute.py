@@ -71,8 +71,9 @@ class Autoroute(CarNetwork):
 
 
     def plot_peages_autoroutes(self, map):
-
-        self.clean_base()
+        
+        ## FAIRE ATTENTION À BIEN APPLIQUER LA MÉTHODE .clean_base() à 
+        #  l'objet de la classe Autoroute avant de l'instancier 
         
         df = self.stations_peages[self.stations_peages['route'].str.startswith('A')]
 
