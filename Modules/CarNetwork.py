@@ -195,6 +195,24 @@ class CarNetwork():
         # Crée une carte centrée sur Paris
         carte = folium.Map(location=paris_coord, zoom_start=13)
 
+
+        # Représenter le point de départ et le point d'arrivée 
+
+        # Pour le point de départ
+        folium.Marker(
+            location=trajet[0],
+            popup=self.A,
+            icon=folium.Icon(icon='home', prefix='fa', color='blue')
+        ).add_to(carte)
+
+
+        # Pour le point d'arrivée 
+        folium.Marker(
+            location=trajet[-1],
+            popup='Drapeau',
+            icon=folium.Icon(icon='flag', prefix='fa', color='red')
+        ).add_to(carte)
+        
         # Trace l'itinéraire
         """folium.PolyLine(locations=trajet, color='red').add_to(carte)"""
 
