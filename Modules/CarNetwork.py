@@ -311,19 +311,17 @@ class CarNetwork():
         # Appel à la fonction distance_via_routes pour obtenir les distances et les coordonnées des points d'arrêt
         distance, stop_coord = self.distance_via_routes()
 
+        # Créer une légende avec la distance
         legend_html = f'<div style="background-color: white; padding: 10px; border: 1px solid black; border-radius: 5px;">Distance = {distance:.2f} km</div>'
-    
-        # Create a separate pane for the legend
 
-        legend_pane = folium.map.CustomPane('legend_pane', z_index=101)
+        # Create a div icon for the legend
+        legend_div = folium.DivIcon(html=legend_html)
 
+        # Create a marker for the legend using the div icon
         legend_marker = folium.Marker(
             location=[stop_coord[0][0], stop_coord[0][1]],  # Use the coordinates of the first stop as the location for the legend
-            icon=None,  # No icon for the legend marker
-            popup=folium.Popup(legend_html, parse_html=True),  # Use Popup to allow HTML content
-            pane=legend_pane,
+            icon=legend_div,
         )
-        
         legend_marker.add_to(map)
 
         # Itération sur chaque point d'arrêt
