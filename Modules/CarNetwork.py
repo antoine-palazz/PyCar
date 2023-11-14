@@ -415,6 +415,7 @@ class CarNetwork():
 
         """
          
+        df = self.stations_data
         for i in range(len(nearest_stations)):
     
             ## On récupère les localisations de toutes les bornes les 
@@ -427,10 +428,16 @@ class CarNetwork():
                 lat = nearest_stations_i[j][0] ## longitude
                 lon = nearest_stations_i[j][1] ##  latitude
 
+                ## On essaie de déterminer si cette borne est payante ou non, 
+                #  et son type d'accès
+                result =  df[(df['xlongitude'] == lon) & (df['ylatitude'] == lat)]
+
+                acces_type = result['acces_recharge'].unique()[0]
+
                 folium.Marker(
                 location=[lat, lon],
                 icon=folium.Icon(color='yellow'),
-                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}.",
+                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est"+acces_type,
                 ).add_to(map)
 
     def plot_stations(self, map):
