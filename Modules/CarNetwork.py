@@ -466,9 +466,8 @@ class CarNetwork():
         df = self.stations_data
 
         distance = float(self.distance)
-        print(distance)
 
-        legend_html = """
+        legend_html = f"""
                 <div style="position: fixed; 
                             top: 10px; 
                             right: 10px; 
@@ -492,7 +491,7 @@ class CarNetwork():
                     
                     <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
 
-                    <p> Distance du trajet : <strong> {distance:.2f} km</strong> <br> </p>
+                    Distance du trajet : <strong> {distance:.2f} km</strong> <br> 
                 </div>
         """
 
