@@ -1,20 +1,44 @@
-# Pycar
+# PyCar
 
-Projet python de deuxième année à l'ENSAE
-
+<div style="display: flex; justify-content: space-between;">
+    <div style="flex: 1; text-align: right;">
+        <picture>
+        <source media="(prefers-color-scheme: dark) srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
+        <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
+        <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+        </picture>
+    </div>
+    <div style="flex: 1; padding-right: 10px;">
+        Projet python de deuxième année à l'ENSAE.
+    </div>
+    
+</div>
 
 ## Description du projet 
 Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en distance et en coût) pour une voiture électrique, afin de relier un point A à un point B en France. 
 
 ## Architecture du répertoire 
-Le fichier [Bornes_véhicules.ipynb](https://github.com/AugustinCablant/Projet_python_2A/blob/main/Bornes_v%C3%A9hicules_%C3%A9lectriques.ipynb) est construit de la manière suivante :
+Les principaux dossiers sont : 
+- Notebooks : qui contient tous les notebooks nous ayant permis de visualiser les données.
+- SCRAP : qui contient les codes qui nous ont permis de scrapper plusieurs pages internet.
+- Application : contient la web-application que nous avons conçu pour visualiser les itinéraires.
+
+### Dossier notebooks
+#### Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/notebooks/EDA_bornes.ipynb) est construit de la manière suivante :
 - Description du fichier et statistiques descriptives
 - Représentation des bornes à recharge pour les voitures électriques en France
+
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
- <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
+<img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
+</picture>
+
 - 
 
 ## Pour commencer
