@@ -66,6 +66,10 @@ def page_suivante1():
     get_graph = graph_intro()
     return render_template("evolution_electrique.html", graph = get_graph)
 
+@app.route("/contextualisation")
+def contextualisation():
+    return render_template("contextualisation.html") 
+
 @app.route("/bornes")
 def page_suivante2():
     return render_template("map_bornes.html")
