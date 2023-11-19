@@ -68,7 +68,7 @@ def page_suivante1():
 
 @app.route("/contextualisation")
 def contextualisation():
-    return render_template("contextualisation.html") 
+    return render_template("contextualisation.html", graph = 'Static/IEA.jpeg') 
 
 @app.route("/bornes")
 def page_suivante2():
