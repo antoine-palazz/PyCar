@@ -616,11 +616,7 @@ class CarNetwork():
 
         # On récupère dans categories les différentes catégories représentées 
         # dans la colonne acces_recharge
-        categories = list(self.stations_data['acces_recharge'].unique())
-
-        # On récupère dans category les valeurs d'acces_recharge prise pas chaque
-        # borne dans la base de donnée self.stations_data
-        category_column = self.stations_data['acces_recharge'].to_list()
+        categories = list(df['acces_recharge'].unique())
 
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
