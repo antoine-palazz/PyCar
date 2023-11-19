@@ -192,6 +192,8 @@ class CarNetwork():
 
         """
 
+        ## On récupère les coordonnées de Paris pour centrer la carte
+        #  sur Paris
         trajet = self.trajet_voiture()
         paris_coord = [48.8566, 2.3522]
 
@@ -238,7 +240,32 @@ class CarNetwork():
         # lequel sa souris pointe
         MousePosition().add_to(carte)
 
+        # Pour des raisons pratiques, on se restreint ici aux
+        # localisations en île-de-France
+
+        # On récupère les localisations des frontières de l'île-de-France 
+        # sur le site https://france-geojson.gregoiredavid.fr/
+        geojson_url = 'https://france-geojson.gregoiredavid.fr/repo/regions/ile-de-france/region-ile-de-france.geojson'
     
+
+        # C'est une fonction définie par l'utilisateur qui prend 
+        # en argument un élément géographique (ou une "feature") 
+        # du GeoJSON et renvoie un dictionnaire spécifiant le style 
+        # à appliquer à cet élément.
+        def style_function(feature):
+            return {
+                'fillOpacity': 0,  # Ajuster la transparence ici (0 pour transparent, 1 pour opaque)
+                'weight': 2, # contour bleu avec une épaisseur de 2
+                'color': 'blue'
+            }
+        
+        # Cette fonction de Folium est utilisée pour charger le 
+        # fichier GeoJSON depuis l'URL spécifiée (geojson_url). 
+        folium.GeoJson(
+            geojson_url,
+            name='Île-de-France', 
+            style_function=style_function
+        ).add_to(carte)
 
         # Affiche la carte dans le notebook
         return carte
@@ -484,13 +511,72 @@ class CarNetwork():
         ================================================================
 
         """
-        # Make sure self.distance is set before using it
+        # On s'assure self.distance is défini avant de l'utiliser
         if self.distance is None:
             # If not set, calculate it
             self.distance, _ = self.distance_via_routes()
 
-        ## On récupère les données sur lesquelles on travaille
-        df = self.stations_data
+        # On récupère les données sur lesquelles on travaille, 
+        # puisque l'on a restreint notre travail à l'Île-de-France, il 
+        # faut restreindre le dataframe que l'on utilise aux bornes situées en 
+        # Île-de-France. 
+
+        #### Étape 1 : charger le dataframe contenant les localisations des limites de l'Île-de-France ####
+        # URL du fichier GeoJSON
+        geojson_url = 'https://france-geojson.gregoiredavid.fr/repo/regions/ile-de-france/region-ile-de-france.geojson'
+
+        # Charger le GeoDataFrame à partir de l'URL
+        gdf = gpd.read_file(geojson_url)
+
+        # Extraire les coordonnées de tous les points du polygone dans une colonne 'Coordinates'
+        gdf['Coordinates'] = gdf['geometry'].apply(lambda x: list(x.exterior.coords))
+
+        # Créer une liste de toutes les coordonnées
+        all_coords = [coord for sublist in gdf['Coordinates'] for coord in sublist]
+
+        # Créer un DataFrame à partir de la liste de toutes les coordonnées
+        df1 = pd.DataFrame(all_coords, columns=['Longitude', 'Latitude'])
+
+        #### Étape 2 : récupérer les coordonnées de toutes les bornes en France
+        df2 = self.stations_data[['xlongitude', 'ylatitude']]
+
+        # On renomme les colonnes pour rendre les choses plus commodes
+        df2.rename(columns={'xlongitude': 'Longitude', 'ylatitude': 'Latitude'}, inplace=True)
+        
+        # On inclut une qui vérifie si les bornes sont dans la région 
+        # et renvoie un dataframe contenant toutes les localisations des
+        # bornes en Île-de-France 
+
+        def bornes_dans_region(df1, df2):
+            def point_inside_polygon(x, y, poly):
+                n = len(poly)
+                inside = False
+                p1x, p1y = poly[0]
+                for i in range(1, n + 1):
+                    p2x, p2y = poly[i % n]
+                    if y > min(p1y, p2y):
+                        if y <= max(p1y, p2y):
+                            if x <= max(p1x, p2x):
+                                if p1y != p2y:
+                                    xinters = (y - p1y) * (p2x - p1x) / (p2y - p1y) + p1x
+                                    if p1x == p2x or x <= xinters:
+                                        inside = not inside
+                    p1x, p1y = p2x, p2y
+                return inside
+            
+            # Convertir les frontières en une liste de tuples
+            region_poly = list(zip(df1['Latitude'], df1['Longitude']))
+            
+            # Filtrer les bornes électriques qui sont à l'intérieur de la région
+            df3 = df2[[point_inside_polygon(lat, lon, region_poly) for lat, lon in zip(df2['Latitude'], df2['Longitude'])]]
+            
+            return df3
+
+        # On applique cette fonction pour récupérer les bornes qui nous intéressent
+        df3 = bornes_dans_region(df1, df2) 
+
+        # Finalement, on ne garde que les données de ces bornes 
+        df = self.stations_data.loc[df3.index]
 
         distance = float(self.distance)
 
