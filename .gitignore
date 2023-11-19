@@ -1,7 +1,4 @@
-*.csv
-tilescache/*
-*.tilescache
-*.osm 
 
-/Users/khelifanail/Documents/GitHub/Pycar/Tests/tilescache/15/
-
+data_vehicles/data_vehicles_french.csv
+data_vehicles/data_vehicles_french1.csv
+data_vehicles/sect-ind-auto-immat-energie.xlsx
