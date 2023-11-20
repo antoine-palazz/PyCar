@@ -1,7 +1,5 @@
 # Imports 
 import pandas as pd
-import math
-import googlemaps
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -15,7 +13,14 @@ import geopy.distance
 from geopy.distance import geodesic
 from folium.plugins import MousePosition
 from folium.plugins import TagFilterButton
-from folium.plugins import MarkerCluster
+
+
+
+
+# Coordonnées des villes en France 
+
+# Liste des colonnes de df : ['insee_code', 'city_code', 'zip_code', 'label', 'latitude', 'longitude', 
+#                            'department_name', 'department_number', 'region_name', 'region_geojson_name']
 
 
 class CarNetwork():
@@ -35,7 +40,7 @@ class CarNetwork():
     x_A : (latitude, longitude) du point A
     x_B : (latitude, longitude) du point B
     df : base de données sur laquelle repose la classe. On la défini à partir d'un URL
-
+    distance : distance between point A and point B that is computed afterwards
     Methods:
     --------
     get_coordo : permet de récupérer x_A et x_B
@@ -48,6 +53,7 @@ class CarNetwork():
         self.autonomie = autonomie
         self.x_A = None
         self.x_B = None
+        self.distance = None
         self.stations_data = pd.read_csv('https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25', sep = ';')
 
     def clean_data(self):
@@ -71,6 +77,9 @@ class CarNetwork():
 
         droping_liste = list(set(self.stations_data[self.stations_data['xlongitude'].isna()].index.to_list() + self.stations_data[self.stations_data['ylatitude'].isna()].index.to_list()))
         self.stations_data.drop(droping_liste, inplace = True)
+
+        # Supprimer les lignes où toutes les valeurs sont les mêmes
+        self.stations_data.drop_duplicates()
 
         # we transform the acces row in the dataframe by defining 
         # a function that we will then apply to the "acces_recharge" row
@@ -183,11 +192,30 @@ class CarNetwork():
 
         """
 
+        ## On récupère les coordonnées de Paris pour centrer la carte
+        #  sur Paris
         trajet = self.trajet_voiture()
         paris_coord = [48.8566, 2.3522]
 
         # Crée une carte centrée sur Paris
         carte = folium.Map(location=paris_coord, zoom_start=13)
+
+
+        # Représenter le point de départ et le point d'arrivée 
+        # Pour le point de départ
+        folium.Marker(
+            location=trajet[0],
+            popup=self.A,
+            icon=folium.Icon(icon='home', prefix='fa', color='blue')
+        ).add_to(carte)
+
+
+        # Pour le point d'arrivée 
+        folium.Marker(
+            location=trajet[-1],
+            popup=self.B,
+            icon=folium.Icon(icon='flag', prefix='fa', color='red')
+        ).add_to(carte)
 
         # Trace l'itinéraire
         """folium.PolyLine(locations=trajet, color='red').add_to(carte)"""
@@ -212,7 +240,32 @@ class CarNetwork():
         # lequel sa souris pointe
         MousePosition().add_to(carte)
 
+        # Pour des raisons pratiques, on se restreint ici aux
+        # localisations en île-de-France
+
+        # On récupère les localisations des frontières de l'île-de-France 
+        # sur le site https://france-geojson.gregoiredavid.fr/
+        geojson_url = 'https://france-geojson.gregoiredavid.fr/repo/regions/ile-de-france/region-ile-de-france.geojson'
     
+
+        # C'est une fonction définie par l'utilisateur qui prend 
+        # en argument un élément géographique (ou une "feature") 
+        # du GeoJSON et renvoie un dictionnaire spécifiant le style 
+        # à appliquer à cet élément.
+        def style_function(feature):
+            return {
+                'fillOpacity': 0,  # Ajuster la transparence ici (0 pour transparent, 1 pour opaque)
+                'weight': 2, # contour bleu avec une épaisseur de 2
+                'color': 'blue'
+            }
+        
+        # Cette fonction de Folium est utilisée pour charger le 
+        # fichier GeoJSON depuis l'URL spécifiée (geojson_url). 
+        folium.GeoJson(
+            geojson_url,
+            name='Île-de-France', 
+            style_function=style_function
+        ).add_to(carte)
 
         # Affiche la carte dans le notebook
         return carte
@@ -275,7 +328,9 @@ class CarNetwork():
                 j = j + 1 # compte combien de fois l'autonomie a été saturée pour pénaliser 
                           # la distance_1 sur toutes les boucles à partir de là
 
-        
+        self.distance = distance 
+
+
         return distance, stop_coord
     
     def plot_stop_points(self, map):
@@ -314,10 +369,11 @@ class CarNetwork():
 
             folium.Marker(
                 location=[lat, lon],
-                icon=folium.Icon(color='purple'),
+                icon=folium.Icon(icon=f'{i}', prefix='fa', color='purple'),
                 popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
                 ).add_to(map)
-
+            
+        
 
     def nearest_stations(self, stop_coord, distance_max): 
 
@@ -406,6 +462,7 @@ class CarNetwork():
 
         """
          
+        df = self.stations_data
         for i in range(len(nearest_stations)):
     
             ## On récupère les localisations de toutes les bornes les 
@@ -418,10 +475,16 @@ class CarNetwork():
                 lat = nearest_stations_i[j][0] ## longitude
                 lon = nearest_stations_i[j][1] ##  latitude
 
+                ## On essaie de déterminer si cette borne est payante ou non, 
+                #  et son type d'accès
+                result =  df[(df['xlongitude'] == lon) & (df['ylatitude'] == lat)]
+
+                acces_type = result['acces_recharge'].unique()[0]
+
                 folium.Marker(
                 location=[lat, lon],
                 icon=folium.Icon(color='yellow'),
-                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}.",
+                popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est {acces_type}",
                 ).add_to(map)
 
     def plot_stations(self, map):
@@ -448,40 +511,112 @@ class CarNetwork():
         ================================================================
 
         """
+        # On s'assure self.distance is défini avant de l'utiliser
+        if self.distance is None:
+            # If not set, calculate it
+            self.distance, _ = self.distance_via_routes()
 
-        ## On récupère les données sur lesquelles on travaille
-        df = self.stations_data
+        # On récupère les données sur lesquelles on travaille, 
+        # puisque l'on a restreint notre travail à l'Île-de-France, il 
+        # faut restreindre le dataframe que l'on utilise aux bornes situées en 
+        # Île-de-France. 
 
+        #### Étape 1 : charger le dataframe contenant les localisations des limites de l'Île-de-France ####
+        # URL du fichier GeoJSON
+        geojson_url = 'https://france-geojson.gregoiredavid.fr/repo/regions/ile-de-france/region-ile-de-france.geojson'
 
-        legend_html = """
-        <div style="position: fixed; 
-                    top: 10px; 
-                    right: 10px; 
-                    width: 220px; 
-                    background-color: rgba(255, 255, 255, 0.8); 
-                    border: 2px solid #000; 
-                    border-radius: 5px; 
-                    box-shadow: 3px 3px 5px #888; 
-                    z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
-            <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
+        # Charger le GeoDataFrame à partir de l'URL
+        gdf = gpd.read_file(geojson_url)
+
+        # Extraire les coordonnées de tous les points du polygone dans une colonne 'Coordinates'
+        gdf['Coordinates'] = gdf['geometry'].apply(lambda x: list(x.exterior.coords))
+
+        # Créer une liste de toutes les coordonnées
+        all_coords = [coord for sublist in gdf['Coordinates'] for coord in sublist]
+
+        # Créer un DataFrame à partir de la liste de toutes les coordonnées
+        df1 = pd.DataFrame(all_coords, columns=['Longitude', 'Latitude'])
+
+        #### Étape 2 : récupérer les coordonnées de toutes les bornes en France
+        df2 = self.stations_data[['xlongitude', 'ylatitude']]
+
+        # On renomme les colonnes pour rendre les choses plus commodes
+        df2.rename(columns={'xlongitude': 'Longitude', 'ylatitude': 'Latitude'}, inplace=True)
+        
+        # On inclut une qui vérifie si les bornes sont dans la région 
+        # et renvoie un dataframe contenant toutes les localisations des
+        # bornes en Île-de-France 
+
+        def bornes_dans_region(df1, df2):
+            def point_inside_polygon(x, y, poly):
+                n = len(poly)
+                inside = False
+                p1x, p1y = poly[0]
+                for i in range(1, n + 1):
+                    p2x, p2y = poly[i % n]
+                    if y > min(p1y, p2y):
+                        if y <= max(p1y, p2y):
+                            if x <= max(p1x, p2x):
+                                if p1y != p2y:
+                                    xinters = (y - p1y) * (p2x - p1x) / (p2y - p1y) + p1x
+                                    if p1x == p2x or x <= xinters:
+                                        inside = not inside
+                    p1x, p1y = p2x, p2y
+                return inside
             
-            <p><i class="fa fa-square" style="color: orange;"></i> <strong>Payant</strong></p>
+            # Convertir les frontières en une liste de tuples
+            region_poly = list(zip(df1['Latitude'], df1['Longitude']))
             
-            <p><i class="fa fa-square" style="color: green;"></i> <strong>Gratuit</strong></p>
+            # Filtrer les bornes électriques qui sont à l'intérieur de la région
+            df3 = df2[[point_inside_polygon(lat, lon, region_poly) for lat, lon in zip(df2['Latitude'], df2['Longitude'])]]
             
-            <p><i class="fa fa-square" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
-            
-            <p><i class="fa fa-square" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
-            
-            <p><i class="fa fa-square" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
-            
-            <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
-        </div>
+            return df3
+
+        # On applique cette fonction pour récupérer les bornes qui nous intéressent
+        df3 = bornes_dans_region(df1, df2) 
+
+        # Finalement, on ne garde que les données de ces bornes 
+        df = self.stations_data.loc[df3.index]
+
+        distance = float(self.distance)
+
+        legend_html = f"""
+                <div style="position: fixed; 
+                            top: 10px; 
+                            right: 10px; 
+                            width: 220px; 
+                            background-color: rgba(255, 255, 255, 0.8); 
+                            border: 2px solid #000; 
+                            border-radius: 5px; 
+                            box-shadow: 3px 3px 5px #888; 
+                            z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
+                    <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: orange;"></i> <strong>Payant</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: green;"></i> <strong>Gratuit</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
+                    
+                    <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
+
+                    Distance du trajet : <strong> {distance:.2f} km</strong> <br> 
+                </div>
         """
 
         # Ajoutez la légende personnalisée à la carte
         map.get_root().html.add_child(folium.Element(legend_html))
 
+        ## C.f. la documentation folium disponible ici pour justifier l'exemple 
+        ## 'https://python-visualization.github.io/folium/latest/user_guide/plugins/tag_filter_button.html'
+
+        # On récupère dans categories les différentes catégories représentées 
+        # dans la colonne acces_recharge
+        categories = list(df['acces_recharge'].unique())
 
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
@@ -492,15 +627,13 @@ class CarNetwork():
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
             # Ajoutez le marqueur à la carte
-            folium.RegularPolygonMarker(location=[lat, lon], 
-                                        tags = acces_recharge,
-                                        popup=com, 
-                                        fill_color=fill_color, 
-                                        color =fill_color, 
-                                        radius=5
-                                        ).add_to(map)
+            folium.Marker(location=[lat, lon], 
+                          tags = acces_recharge,
+                          tooltip="Cliquez sur moi !",
+                          popup=com, 
+                          icon=folium.Icon(color=fill_color, icon_size=(20, 20))
+                          ).add_to(map)
 
-        categories = list(df['acces_recharge'].unique())
         TagFilterButton(categories).add_to(map)
 
 

@@ -2,4 +2,4 @@
 #  Le double astérisque (**) est un caractère générique qui correspond à n'importe quel répertoire ou sous-répertoire.
 
 **/data.osm
-
+/Users/khelifanail/Documents/GitHub/Pycar/Tests/tilescache/*/data\ *.osm
