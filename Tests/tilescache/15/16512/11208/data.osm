@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.9 (2727825 spike-06.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="49.3179610" minlon="1.4062500" maxlat="49.3251220" maxlon="1.4172363"/>
+ <node id="290773073" visible="true" version="3" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3163899" lon="1.4187664"/>
+ <node id="290773076" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3200811" lon="1.4121690"/>
+ <node id="290773082" visible="true" version="3" changeset="27074602" timestamp="2014-11-27T18:55:35Z" user="TripleBee" uid="497177" lat="49.3230679" lon="1.4068129"/>
+ <node id="290773087" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:35Z" user="TripleBee" uid="497177" lat="49.3271919" lon="1.3994282"/>
+ <node id="290773088" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3300491" lon="1.3942140"/>
+ <node id="290773089" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3336841" lon="1.3873521"/>
+ <node id="942557822" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:35Z" user="TripleBee" uid="497177" lat="49.3204548" lon="1.4114877"/>
+ <node id="942557836" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:17Z" user="Eric V" uid="163480" lat="49.3254626" lon="1.4137218"/>
+ <node id="942557843" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:17Z" user="Eric V" uid="163480" lat="49.3161192" lon="1.4067727"/>
+ <node id="942557884" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:18Z" user="Eric V" uid="163480" lat="49.3251899" lon="1.4144562"/>
+ <node id="942557896" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:18Z" user="Eric V" uid="163480" lat="49.3181989" lon="1.4093399"/>
+ <node id="942557918" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:19Z" user="Eric V" uid="163480" lat="49.3136856" lon="1.4047478"/>
+ <node id="942557947" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:35Z" user="TripleBee" uid="497177" lat="49.3242450" lon="1.4046961"/>
+ <node id="942557956" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:20Z" user="Eric V" uid="163480" lat="49.3250088" lon="1.4158045"/>
+ <node id="942557968" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:35Z" user="TripleBee" uid="497177" lat="49.3254016" lon="1.4026292"/>
+ <node id="942557972" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:20Z" user="Eric V" uid="163480" lat="49.3189445" lon="1.4101971"/>
+ <node id="942558002" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:21Z" user="Eric V" uid="163480" lat="49.3150203" lon="1.4052149"/>
+ <node id="942558013" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:21Z" user="Eric V" uid="163480" lat="49.3153915" lon="1.4055143"/>
+ <node id="942558036" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:21Z" user="Eric V" uid="163480" lat="49.3248052" lon="1.4166702"/>
+ <node id="942558049" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:22Z" user="Eric V" uid="163480" lat="49.3195479" lon="1.4107385"/>
+ <node id="942558070" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:22Z" user="Eric V" uid="163480" lat="49.3248250" lon="1.4129477"/>
+ <node id="942558072" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:22Z" user="Eric V" uid="163480" lat="49.3152532" lon="1.4053540"/>
+ <node id="942558085" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:32:22Z" user="Eric V" uid="163480" lat="49.3157649" lon="1.4062247"/>
+ <node id="942558110" visible="true" version="2" changeset="5993380" timestamp="2010-10-09T13:37:20Z" user="Eric V" uid="163480" lat="49.3247947" lon="1.4172068"/>
+ <node id="942564316" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3230791" lon="1.4260071"/>
+ <node id="942564321" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3242947" lon="1.4219002"/>
+ <node id="942564323" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3219154" lon="1.4296781"/>
+ <node id="942564334" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3246714" lon="1.4184624"/>
+ <node id="942564335" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3229379" lon="1.4267545"/>
+ <node id="942564341" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3236325" lon="1.4238339"/>
+ <node id="942564343" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:17Z" user="Eric V" uid="163480" lat="49.3203895" lon="1.4334208"/>
+ <node id="942564352" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3247335" lon="1.4187886"/>
+ <node id="942564362" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3233921" lon="1.4244990"/>
+ <node id="942564364" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3198686" lon="1.4350876"/>
+ <node id="942564368" visible="true" version="3" changeset="94639997" timestamp="2020-11-23T13:05:54Z" user="patman37" uid="311391" lat="49.3137166" lon="1.4235465"/>
+ <node id="942564369" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3247209" lon="1.4192010"/>
+ <node id="942564377" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3231336" lon="1.4255212"/>
+ <node id="942564379" visible="true" version="2" changeset="5993380" timestamp="2010-10-09T13:45:36Z" user="Eric V" uid="163480" lat="49.3189689" lon="1.4369371"/>
+ <node id="942564384" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:18Z" user="Eric V" uid="163480" lat="49.3244666" lon="1.4211029"/>
+ <node id="942564386" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:19Z" user="Eric V" uid="163480" lat="49.3226984" lon="1.4275658"/>
+ <node id="942564394" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:37:19Z" user="Eric V" uid="163480" lat="49.3246899" lon="1.4177954"/>
+ <node id="942569542" visible="true" version="1" changeset="5993380" timestamp="2010-10-09T13:45:31Z" user="Eric V" uid="163480" lat="49.3177013" lon="1.4404422"/>
+ <node id="944175052" visible="true" version="1" changeset="6003627" timestamp="2010-10-10T16:35:34Z" user="Eric V" uid="163480" lat="49.3173428" lon="1.4415703"/>
+ <node id="950698455" visible="true" version="1" changeset="6051705" timestamp="2010-10-15T19:24:58Z" user="Eric V" uid="163480" lat="49.3255766" lon="1.4115931"/>
+ <node id="1341771297" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3288108" lon="1.3964858"/>
+ <node id="1341771333" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3283259" lon="1.3973672"/>
+ <node id="1341771540" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3347167" lon="1.3854115"/>
+ <node id="2431293955" visible="true" version="2" changeset="27074602" timestamp="2014-11-27T18:55:36Z" user="TripleBee" uid="497177" lat="49.3356790" lon="1.3836203"/>
+ <node id="2431293956" visible="true" version="3" changeset="49308548" timestamp="2017-06-06T15:19:51Z" user="fx99" uid="130472" lat="49.3372493" lon="1.3806668"/>
+ <node id="3208044588" visible="true" version="1" changeset="27074602" timestamp="2014-11-27T18:55:33Z" user="TripleBee" uid="497177" lat="49.3312249" lon="1.3920036"/>
+ <node id="3208044595" visible="true" version="1" changeset="27074602" timestamp="2014-11-27T18:55:33Z" user="TripleBee" uid="497177" lat="49.3135150" lon="1.4239115"/>
+ <node id="3208044618" visible="true" version="1" changeset="27074602" timestamp="2014-11-27T18:55:34Z" user="TripleBee" uid="497177" lat="49.3175732" lon="1.4166703"/>
+ <node id="3386300848" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227" lat="49.3216523" lon="1.4085578"/>
+ <node id="3386300849" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227" lat="49.3219119" lon="1.4088811"/>
+ <node id="3386300850" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227" lat="49.3220877" lon="1.4091157"/>
+ <node id="3386300851" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227" lat="49.3220405" lon="1.4090540">
+  <tag k="access" v="private"/>
+  <tag k="barrier" v="gate"/>
+ </node>
+ <node id="3386300852" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227" lat="49.3219128" lon="1.4087456">
+  <tag k="emergency" v="fire_hydrant"/>
+  <tag k="fire_hydrant:type" v="pillar"/>
+ </node>
+ <node id="3756266802" visible="true" version="1" changeset="34213343" timestamp="2015-09-23T19:35:27Z" user="sidjy" uid="550691" lat="49.3187586" lon="1.4145427">
+  <tag k="distance" v="23"/>
+  <tag k="highway" v="milestone"/>
+ </node>
+ <node id="3756266803" visible="true" version="1" changeset="34213343" timestamp="2015-09-23T19:35:27Z" user="sidjy" uid="550691" lat="49.3246614" lon="1.4039519">
+  <tag k="distance" v="24"/>
+  <tag k="highway" v="milestone"/>
+ </node>
+ <node id="3756266804" visible="true" version="1" changeset="34213343" timestamp="2015-09-23T19:35:27Z" user="sidjy" uid="550691" lat="49.3304187" lon="1.3935191">
+  <tag k="distance" v="25"/>
+  <tag k="highway" v="milestone"/>
+ </node>
+ <node id="3756266805" visible="true" version="1" changeset="34213343" timestamp="2015-09-23T19:35:28Z" user="sidjy" uid="550691" lat="49.3361455" lon="1.3827416">
+  <tag k="distance" v="26"/>
+  <tag k="highway" v="milestone"/>
+ </node>
+ <node id="4598759694" visible="true" version="1" changeset="45037226" timestamp="2017-01-09T21:06:34Z" user="jojolebestof" uid="223868" lat="49.3131563" lon="1.4046249"/>
+ <node id="4598759713" visible="true" version="1" changeset="45037226" timestamp="2017-01-09T21:06:34Z" user="jojolebestof" uid="223868" lat="49.3152079" lon="1.4053270"/>
+ <node id="4976073556" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212239" lon="1.4090179"/>
+ <node id="4976073557" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211835" lon="1.4089994"/>
+ <node id="4976073558" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211425" lon="1.4090142"/>
+ <node id="4976073559" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211118" lon="1.4090584"/>
+ <node id="4976073560" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3210997" lon="1.4091201"/>
+ <node id="4976073561" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211094" lon="1.4091828"/>
+ <node id="4976073562" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211383" lon="1.4092298"/>
+ <node id="4976073563" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211786" lon="1.4092483"/>
+ <node id="4976073564" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212196" lon="1.4092335"/>
+ <node id="4976073565" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212503" lon="1.4091893"/>
+ <node id="4976073566" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212624" lon="1.4091276"/>
+ <node id="4976073567" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212527" lon="1.4090649"/>
+ <node id="4976073568" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211129" lon="1.4092932"/>
+ <node id="4976073569" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3210755" lon="1.4093980"/>
+ <node id="4976073570" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212292" lon="1.4095267"/>
+ <node id="4976073571" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212667" lon="1.4094219"/>
+ <node id="4976073572" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211508" lon="1.4083722"/>
+ <node id="4976073573" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211197" lon="1.4084268"/>
+ <node id="4976073574" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211711" lon="1.4084881"/>
+ <node id="4976073575" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211487" lon="1.4085392"/>
+ <node id="4976073576" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3211766" lon="1.4085743"/>
+ <node id="4976073577" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3212305" lon="1.4084677"/>
+ <node id="4976073578" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3219005" lon="1.4091865"/>
+ <node id="4976073579" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3217817" lon="1.4094032"/>
+ <node id="4976073580" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:31Z" user="gsimon" uid="1668080" lat="49.3218158" lon="1.4094449"/>
+ <node id="4976073581" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:32Z" user="gsimon" uid="1668080" lat="49.3219346" lon="1.4092281"/>
+ <node id="4976073582" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:32Z" user="gsimon" uid="1668080" lat="49.3223435" lon="1.4093312"/>
+ <node id="4976073583" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:32Z" user="gsimon" uid="1668080" lat="49.3223777" lon="1.4092700"/>
+ <node id="4976073584" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:32Z" user="gsimon" uid="1668080" lat="49.3223047" lon="1.4091777"/>
+ <node id="4976073585" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:32Z" user="gsimon" uid="1668080" lat="49.3222700" lon="1.4092352"/>
+ <node id="4976073587" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215386" lon="1.4090367"/>
+ <node id="4976073588" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215147" lon="1.4090053"/>
+ <node id="4976073589" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214628" lon="1.4090994"/>
+ <node id="4976073590" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214847" lon="1.4091364"/>
+ <node id="4976073591" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3212440" lon="1.4089303"/>
+ <node id="4976073592" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214220" lon="1.4091637"/>
+ <node id="4976073593" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214495" lon="1.4091140"/>
+ <node id="4976073594" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3212699" lon="1.4088861"/>
+ <node id="4976073595" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3218837" lon="1.4085081"/>
+ <node id="4976073596" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3218527" lon="1.4085748"/>
+ <node id="4976073597" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3218813" lon="1.4086054"/>
+ <node id="4976073598" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3219105" lon="1.4085374"/>
+ <node id="4976073599" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215226" lon="1.4080838"/>
+ <node id="4976073600" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214018" lon="1.4079661"/>
+ <node id="4976073601" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3213796" lon="1.4080209"/>
+ <node id="4976073602" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3213100" lon="1.4079509"/>
+ <node id="4976073603" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3212700" lon="1.4080412"/>
+ <node id="4976073604" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3213413" lon="1.4081119"/>
+ <node id="4976073605" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3213525" lon="1.4080905"/>
+ <node id="4976073606" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214282" lon="1.4081595"/>
+ <node id="4976073607" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214170" lon="1.4081834"/>
+ <node id="4976073608" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214821" lon="1.4082483"/>
+ <node id="4976073609" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215199" lon="1.4081624"/>
+ <node id="4976073610" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214982" lon="1.4081387"/>
+ <node id="4976073611" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215307" lon="1.4092549"/>
+ <node id="4976073612" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215520" lon="1.4092207"/>
+ <node id="4976073613" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215614" lon="1.4092296"/>
+ <node id="4976073614" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3217335" lon="1.4089120"/>
+ <node id="4976073615" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3216586" lon="1.4088145"/>
+ <node id="4976073616" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3215093" lon="1.4091659"/>
+ <node id="4976073617" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:33Z" user="gsimon" uid="1668080" lat="49.3214907" lon="1.4091980"/>
+ <node id="4976073618" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:34Z" user="gsimon" uid="1668080" lat="49.3218695" lon="1.4084926"/>
+ <node id="4976073619" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:34Z" user="gsimon" uid="1668080" lat="49.3218402" lon="1.4085616"/>
+ <node id="4976073620" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:34Z" user="gsimon" uid="1668080" lat="49.3217366" lon="1.4083474"/>
+ <node id="4976073621" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:09:34Z" user="gsimon" uid="1668080" lat="49.3217035" lon="1.4084162"/>
+ <node id="4976077011" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3222110" lon="1.4095681"/>
+ <node id="4976077012" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3222050" lon="1.4093435"/>
+ <node id="4976077013" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3220955" lon="1.4091985"/>
+ <node id="4976077014" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3220230" lon="1.4093290"/>
+ <node id="4976077015" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3219268" lon="1.4100958"/>
+ <node id="4976077016" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3222152" lon="1.4095735"/>
+ <node id="4976077017" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3220180" lon="1.4093227"/>
+ <node id="4976077018" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3217301" lon="1.4098435"/>
+ <node id="4976077019" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3215131" lon="1.4092832"/>
+ <node id="4976077020" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3214724" lon="1.4092298"/>
+ <node id="4976077033" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3215770" lon="1.4101138"/>
+ <node id="4976077034" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3215795" lon="1.4101188"/>
+ <node id="4976077035" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:41Z" user="gsimon" uid="1668080" lat="49.3213069" lon="1.4106047"/>
+ <node id="4976077442" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:10:48Z" user="gsimon" uid="1668080" lat="49.3215015" lon="1.4108602"/>
+ <node id="6308467057" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3226972" lon="1.4099212"/>
+ <node id="6308467060" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3226362" lon="1.4098439"/>
+ <node id="6308467061" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3227252" lon="1.4096798"/>
+ <node id="6308467068" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3213390" lon="1.4124081"/>
+ <node id="6308467076" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3225418" lon="1.4094577"/>
+ <node id="6308467081" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3227427" lon="1.4090897"/>
+ <node id="6308468591" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:22Z" user="Alexandre148025" uid="191786" lat="49.3265013" lon="1.4006630"/>
+ <node id="6308468596" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3208634" lon="1.4083687"/>
+ <node id="6308468606" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3215147" lon="1.4098076"/>
+ <node id="6308468607" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3212201" lon="1.4077357"/>
+ <node id="6308468609" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3221544" lon="1.4086762"/>
+ <node id="6308468616" visible="true" version="2" changeset="81374950" timestamp="2020-02-23T19:59:18Z" user="Jean-Pierre Rondeau" uid="1257159" lat="49.3176581" lon="1.4086936"/>
+ <node id="6308468625" visible="true" version="2" changeset="123159143" timestamp="2022-07-03T17:22:41Z" user="MatthieuMartin" uid="46239" lat="49.3225802" lon="1.4090765">
+  <tag k="height" v="48.5"/>
+  <tag k="man_made" v="mast"/>
+  <tag k="operator" v="ATC France"/>
+  <tag k="ref:FR:ANFR" v="1707122"/>
+  <tag k="source" v="data.gouv.fr:ANFR - 2019-09"/>
+  <tag k="tower:type" v="communication"/>
+ </node>
+ <node id="6308468636" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3206587" lon="1.4091058"/>
+ <node id="6308468638" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3222586" lon="1.4084921"/>
+ <node id="6308468641" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3205678" lon="1.4114822"/>
+ <node id="6308468649" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786" lat="49.3156423" lon="1.4059914"/>
+ <way id="80988422" visible="true" version="2" changeset="6051705" timestamp="2010-10-15T19:25:03Z" user="Eric V" uid="163480">
+  <nd ref="944175052"/>
+  <nd ref="942569542"/>
+  <nd ref="942564379"/>
+  <nd ref="942564364"/>
+  <nd ref="942564343"/>
+  <nd ref="942564323"/>
+  <nd ref="942564386"/>
+  <nd ref="942564335"/>
+  <nd ref="942564316"/>
+  <nd ref="942564377"/>
+  <nd ref="942564362"/>
+  <nd ref="942564341"/>
+  <nd ref="942564321"/>
+  <nd ref="942564384"/>
+  <nd ref="942564369"/>
+  <nd ref="942564352"/>
+  <nd ref="942564334"/>
+  <nd ref="942564394"/>
+  <nd ref="942558110"/>
+  <nd ref="942558036"/>
+  <nd ref="942557956"/>
+  <nd ref="942557884"/>
+  <nd ref="942557836"/>
+  <nd ref="942558070"/>
+  <nd ref="950698455"/>
+  <tag k="admin_level" v="8"/>
+  <tag k="boundary" v="administrative"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+ </way>
+ <way id="314757352" visible="true" version="4" changeset="62470794" timestamp="2018-09-11T00:40:41Z" user="Olyon" uid="1443767">
+  <nd ref="3208044595"/>
+  <nd ref="942564368"/>
+  <nd ref="290773073"/>
+  <nd ref="3208044618"/>
+  <nd ref="3756266802"/>
+  <nd ref="290773076"/>
+  <nd ref="942557822"/>
+  <nd ref="3386300849"/>
+  <tag k="highway" v="primary"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="80"/>
+  <tag k="oneway" v="no"/>
+  <tag k="ref" v="D 6014"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+ </way>
+ <way id="331558625" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227">
+  <nd ref="3386300848"/>
+  <nd ref="3386300849"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="driveway"/>
+ </way>
+ <way id="331558626" visible="true" version="6" changeset="67655612" timestamp="2019-02-28T15:46:31Z" user="Alexandre148025" uid="191786">
+  <nd ref="3386300849"/>
+  <nd ref="290773082"/>
+  <nd ref="942557947"/>
+  <nd ref="3756266803"/>
+  <nd ref="942557968"/>
+  <nd ref="6308468591"/>
+  <nd ref="290773087"/>
+  <nd ref="1341771333"/>
+  <nd ref="1341771297"/>
+  <nd ref="290773088"/>
+  <nd ref="3756266804"/>
+  <nd ref="3208044588"/>
+  <nd ref="290773089"/>
+  <nd ref="1341771540"/>
+  <nd ref="2431293955"/>
+  <nd ref="3756266805"/>
+  <nd ref="2431293956"/>
+  <tag k="highway" v="primary"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="80"/>
+  <tag k="oneway" v="no"/>
+  <tag k="ref" v="D 6014"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+ </way>
+ <way id="331558627" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227">
+  <nd ref="3386300849"/>
+  <nd ref="3386300851"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="driveway"/>
+ </way>
+ <way id="331558628" visible="true" version="1" changeset="29295004" timestamp="2015-03-06T18:20:48Z" user="parville" uid="933227">
+  <nd ref="3386300851"/>
+  <nd ref="3386300850"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="driveway"/>
+ </way>
+ <way id="464803842" visible="true" version="2" changeset="67655612" timestamp="2019-02-28T15:46:31Z" user="Alexandre148025" uid="191786">
+  <nd ref="4598759694"/>
+  <nd ref="942557918"/>
+  <nd ref="942558002"/>
+  <nd ref="4598759713"/>
+  <nd ref="942558072"/>
+  <nd ref="942558013"/>
+  <nd ref="6308468649"/>
+  <nd ref="942558085"/>
+  <nd ref="942557843"/>
+  <nd ref="6308468616"/>
+  <nd ref="942557896"/>
+  <nd ref="942557972"/>
+  <nd ref="942558049"/>
+  <nd ref="942557822"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+ </way>
+ <way id="508269447" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:17Z" user="gsimon" uid="1668080">
+  <nd ref="4976077011"/>
+  <nd ref="4976073582"/>
+  <nd ref="4976073585"/>
+  <nd ref="4976077012"/>
+  <nd ref="4976077013"/>
+  <nd ref="4976077014"/>
+  <nd ref="4976077011"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+  <tag k="wall" v="no"/>
+ </way>
+ <way id="508269481" visible="true" version="2" changeset="96105854" timestamp="2020-12-19T13:30:46Z" user="AmiFritz" uid="172867">
+  <nd ref="4976077442"/>
+  <nd ref="4976077015"/>
+  <nd ref="4976077018"/>
+  <nd ref="4976077033"/>
+  <nd ref="4976077034"/>
+  <nd ref="4976077035"/>
+  <nd ref="4976077442"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+  <tag k="wall" v="no"/>
+ </way>
+ <way id="508269776" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:31Z" user="gsimon" uid="1668080">
+  <nd ref="4976077015"/>
+  <nd ref="4976077016"/>
+  <nd ref="4976077011"/>
+  <nd ref="4976077014"/>
+  <nd ref="4976077017"/>
+  <nd ref="4976077018"/>
+  <nd ref="4976077015"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+  <tag k="wall" v="no"/>
+ </way>
+ <way id="508269785" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:31Z" user="gsimon" uid="1668080">
+  <nd ref="4976077019"/>
+  <nd ref="4976073611"/>
+  <nd ref="4976073617"/>
+  <nd ref="4976077020"/>
+  <nd ref="4976077019"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+  <tag k="wall" v="no"/>
+ </way>
+ <way id="508270366" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:56Z" user="gsimon" uid="1668080">
+  <nd ref="4976073556"/>
+  <nd ref="4976073557"/>
+  <nd ref="4976073558"/>
+  <nd ref="4976073559"/>
+  <nd ref="4976073560"/>
+  <nd ref="4976073561"/>
+  <nd ref="4976073562"/>
+  <nd ref="4976073563"/>
+  <nd ref="4976073564"/>
+  <nd ref="4976073565"/>
+  <nd ref="4976073566"/>
+  <nd ref="4976073567"/>
+  <nd ref="4976073556"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270369" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:56Z" user="gsimon" uid="1668080">
+  <nd ref="4976073568"/>
+  <nd ref="4976073569"/>
+  <nd ref="4976073570"/>
+  <nd ref="4976073571"/>
+  <nd ref="4976073568"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270371" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:57Z" user="gsimon" uid="1668080">
+  <nd ref="4976073572"/>
+  <nd ref="4976073573"/>
+  <nd ref="4976073574"/>
+  <nd ref="4976073575"/>
+  <nd ref="4976073576"/>
+  <nd ref="4976073577"/>
+  <nd ref="4976073572"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270373" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:57Z" user="gsimon" uid="1668080">
+  <nd ref="4976073578"/>
+  <nd ref="4976073579"/>
+  <nd ref="4976073580"/>
+  <nd ref="4976073581"/>
+  <nd ref="4976073578"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270376" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:57Z" user="gsimon" uid="1668080">
+  <nd ref="4976073587"/>
+  <nd ref="4976073588"/>
+  <nd ref="4976073589"/>
+  <nd ref="4976073590"/>
+  <nd ref="4976073587"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270378" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:57Z" user="gsimon" uid="1668080">
+  <nd ref="4976073591"/>
+  <nd ref="4976073592"/>
+  <nd ref="4976073593"/>
+  <nd ref="4976073594"/>
+  <nd ref="4976073591"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270381" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:57Z" user="gsimon" uid="1668080">
+  <nd ref="4976073595"/>
+  <nd ref="4976073596"/>
+  <nd ref="4976073597"/>
+  <nd ref="4976073598"/>
+  <nd ref="4976073595"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270384" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:58Z" user="gsimon" uid="1668080">
+  <nd ref="4976073599"/>
+  <nd ref="4976073600"/>
+  <nd ref="4976073601"/>
+  <nd ref="4976073602"/>
+  <nd ref="4976073603"/>
+  <nd ref="4976073604"/>
+  <nd ref="4976073605"/>
+  <nd ref="4976073606"/>
+  <nd ref="4976073607"/>
+  <nd ref="4976073608"/>
+  <nd ref="4976073609"/>
+  <nd ref="4976073610"/>
+  <nd ref="4976073599"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270388" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:58Z" user="gsimon" uid="1668080">
+  <nd ref="4976073611"/>
+  <nd ref="4976073612"/>
+  <nd ref="4976073613"/>
+  <nd ref="4976073614"/>
+  <nd ref="4976073615"/>
+  <nd ref="4976073587"/>
+  <nd ref="4976073590"/>
+  <nd ref="4976073616"/>
+  <nd ref="4976073617"/>
+  <nd ref="4976073611"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270393" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:11:58Z" user="gsimon" uid="1668080">
+  <nd ref="4976073618"/>
+  <nd ref="4976073619"/>
+  <nd ref="4976073596"/>
+  <nd ref="4976073595"/>
+  <nd ref="4976073618"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270521" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:12:12Z" user="gsimon" uid="1668080">
+  <nd ref="4976073582"/>
+  <nd ref="4976073583"/>
+  <nd ref="4976073584"/>
+  <nd ref="4976073585"/>
+  <nd ref="4976073582"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="508270573" visible="true" version="1" changeset="50361811" timestamp="2017-07-17T20:12:15Z" user="gsimon" uid="1668080">
+  <nd ref="4976073618"/>
+  <nd ref="4976073620"/>
+  <nd ref="4976073621"/>
+  <nd ref="4976073619"/>
+  <nd ref="4976073618"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2017"/>
+ </way>
+ <way id="673633633" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:23Z" user="Alexandre148025" uid="191786">
+  <nd ref="6308468607"/>
+  <nd ref="6308468596"/>
+  <nd ref="6308468636"/>
+  <nd ref="6308468606"/>
+  <nd ref="6308468609"/>
+  <nd ref="6308468607"/>
+  <tag k="landuse" v="residential"/>
+ </way>
+ <way id="673633653" visible="true" version="1" changeset="67655612" timestamp="2019-02-28T15:46:28Z" user="Alexandre148025" uid="191786">
+  <nd ref="6308468638"/>
+  <nd ref="6308467081"/>
+  <nd ref="6308467076"/>
+  <nd ref="6308467061"/>
+  <nd ref="6308467060"/>
+  <nd ref="6308467057"/>
+  <nd ref="6308467068"/>
+  <nd ref="6308468641"/>
+  <nd ref="6308468606"/>
+  <nd ref="6308468609"/>
+  <nd ref="6308468638"/>
+  <tag k="landuse" v="industrial"/>
+ </way>
+ <relation id="1213659" visible="true" version="16" changeset="137228298" timestamp="2023-06-12T05:59:05Z" user="bagnolais" uid="1943820">
+  <member type="node" ref="603019654" role="admin_centre"/>
+  <member type="way" ref="80842735" role="outer"/>
+  <member type="way" ref="80852177" role="outer"/>
+  <member type="way" ref="80539642" role="outer"/>
+  <member type="way" ref="80742089" role="outer"/>
+  <member type="way" ref="1181262906" role="outer"/>
+  <member type="way" ref="80840070" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235017124" role="outer"/>
+  <tag k="admin_level" v="8"/>
+  <tag k="boundary" v="administrative"/>
+  <tag k="name" v="Écouis"/>
+  <tag k="population" v="816"/>
+  <tag k="population:date" v="2019"/>
+  <tag k="postal_code" v="27440"/>
+  <tag k="ref:INSEE" v="27214"/>
+  <tag k="source:population" v="INSEE 2022"/>
+  <tag k="source:postal_code" v="La Poste - 12/2014"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q1061448"/>
+  <tag k="wikipedia" v="fr:Écouis"/>
+ </relation>
+ <relation id="1226435" visible="true" version="14" changeset="116036736" timestamp="2022-01-11T19:01:52Z" user="cquest_bot" uid="541379">
+  <member type="node" ref="603008982" role="admin_centre"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="81422672" role="outer"/>
+  <member type="way" ref="81433294" role="outer"/>
+  <member type="way" ref="81576297" role="outer"/>
+  <member type="way" ref="237740773" role="outer"/>
+  <member type="way" ref="81553612" role="outer"/>
+  <member type="way" ref="235025186" role="outer"/>
+  <member type="way" ref="81576291" role="outer"/>
+  <tag k="admin_level" v="8"/>
+  <tag k="boundary" v="administrative"/>
+  <tag k="name" v="Touffreville"/>
+  <tag k="population" v="353"/>
+  <tag k="population:date" v="2019"/>
+  <tag k="postal_code" v="27440"/>
+  <tag k="ref:INSEE" v="27649"/>
+  <tag k="source:population" v="INSEE 2022"/>
+  <tag k="source:postal_code" v="La Poste - 12/2014"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q1137300"/>
+  <tag k="wikipedia" v="fr:Touffreville (Eure)"/>
+ </relation>
+ <relation id="2612570" visible="true" version="6" changeset="137776381" timestamp="2023-06-26T06:39:40Z" user="michel60" uid="211063">
+  <member type="node" ref="2045718641" role="device"/>
+  <member type="node" ref="1341771540" role="from"/>
+  <member type="node" ref="2431293955" role="to"/>
+  <tag k="enforcement" v="maxspeed"/>
+  <tag k="maxspeed" v="80"/>
+  <tag k="milestone" v="PK25+850"/>
+  <tag k="name" v="Val d'Orger|SE-&gt;NO"/>
+  <tag k="ref" v="D6014"/>
+  <tag k="type" v="enforcement"/>
+ </relation>
+ <relation id="3221915" visible="true" version="4" changeset="45704134" timestamp="2017-02-01T02:38:05Z" user="nyuriks" uid="339581">
+  <member type="way" ref="235025186" role="outer"/>
+  <member type="way" ref="432066820" role="outer"/>
+  <member type="way" ref="432066818" role="outer"/>
+  <member type="way" ref="81553612" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="81408226" role="outer"/>
+  <member type="way" ref="80864855" role="outer"/>
+  <member type="way" ref="80852173" role="outer"/>
+  <member type="way" ref="80742089" role="outer"/>
+  <member type="way" ref="80539642" role="outer"/>
+  <member type="way" ref="80852177" role="outer"/>
+  <member type="way" ref="80842735" role="outer"/>
+  <member type="way" ref="235017124" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234876354" role="outer"/>
+  <member type="way" ref="234882418" role="outer"/>
+  <member type="way" ref="53455281" role="outer"/>
+  <member type="way" ref="53455279" role="outer"/>
+  <member type="way" ref="53456991" role="outer"/>
+  <member type="way" ref="53457015" role="outer"/>
+  <member type="way" ref="234879115" role="outer"/>
+  <member type="way" ref="234867885" role="outer"/>
+  <member type="way" ref="234863618" role="outer"/>
+  <member type="way" ref="34610194" role="outer"/>
+  <member type="way" ref="34626328" role="outer"/>
+  <member type="way" ref="34626327" role="outer"/>
+  <member type="way" ref="234801803" role="outer"/>
+  <member type="way" ref="234800755" role="outer"/>
+  <member type="way" ref="109369027" role="outer"/>
+  <member type="way" ref="234800756" role="outer"/>
+  <member type="way" ref="226912062" role="outer"/>
+  <member type="way" ref="238775251" role="outer"/>
+  <member type="way" ref="238777076" role="outer"/>
+  <member type="way" ref="237764301" role="outer"/>
+  <member type="way" ref="238772973" role="outer"/>
+  <member type="way" ref="238772970" role="outer"/>
+  <member type="way" ref="238787841" role="outer"/>
+  <member type="node" ref="26695769" role="admin_centre"/>
+  <tag k="disused:boundary" v="political"/>
+  <tag k="disused:political_division" v="canton"/>
+  <tag k="end_date" v="2015-03"/>
+  <tag k="name" v="Fleury-sur-Andelle"/>
+  <tag k="ref:INSEE" v="2718"/>
+  <tag k="source" v="data.gouv.fr-Ministère de l'Intérieur-03/2012"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q137995"/>
+  <tag k="wikipedia" v="fr:Canton de Fleury-sur-Andelle"/>
+ </relation>
+ <relation id="3221919" visible="true" version="5" changeset="97006999" timestamp="2021-01-05T21:48:11Z" user="s_Frantz" uid="47355">
+  <member type="way" ref="238775251" role="outer"/>
+  <member type="way" ref="238775250" role="outer"/>
+  <member type="way" ref="227219754" role="outer"/>
+  <member type="way" ref="227219755" role="outer"/>
+  <member type="way" ref="892468779" role="outer"/>
+  <member type="way" ref="892468778" role="outer"/>
+  <member type="way" ref="892468776" role="outer"/>
+  <member type="way" ref="226832273" role="outer"/>
+  <member type="way" ref="226832274" role="outer"/>
+  <member type="way" ref="81908379" role="outer"/>
+  <member type="way" ref="81924161" role="outer"/>
+  <member type="way" ref="227343682" role="outer"/>
+  <member type="way" ref="82292584" role="outer"/>
+  <member type="way" ref="82455818" role="outer"/>
+  <member type="way" ref="226079946" role="outer"/>
+  <member type="way" ref="82609226" role="outer"/>
+  <member type="way" ref="234794060" role="outer"/>
+  <member type="way" ref="82528987" role="outer"/>
+  <member type="way" ref="82525412" role="outer"/>
+  <member type="way" ref="136081916" role="outer"/>
+  <member type="way" ref="82525410" role="outer"/>
+  <member type="way" ref="81647473" role="outer"/>
+  <member type="way" ref="82441125" role="outer"/>
+  <member type="way" ref="81647479" role="outer"/>
+  <member type="way" ref="81681705" role="outer"/>
+  <member type="way" ref="81681708" role="outer"/>
+  <member type="way" ref="81814070" role="outer"/>
+  <member type="way" ref="81647476" role="outer"/>
+  <member type="way" ref="81661214" role="outer"/>
+  <member type="way" ref="81661215" role="outer"/>
+  <member type="way" ref="237739830" role="outer"/>
+  <member type="way" ref="237739828" role="outer"/>
+  <member type="way" ref="81531941" role="outer"/>
+  <member type="way" ref="81408219" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="81553612" role="outer"/>
+  <member type="way" ref="235025186" role="outer"/>
+  <member type="way" ref="432066820" role="outer"/>
+  <member type="way" ref="432066818" role="outer"/>
+  <member type="way" ref="238787841" role="outer"/>
+  <member type="way" ref="238772970" role="outer"/>
+  <member type="way" ref="238772973" role="outer"/>
+  <member type="way" ref="237764301" role="outer"/>
+  <member type="way" ref="238777076" role="outer"/>
+  <member type="node" ref="267589862" role="admin_centre"/>
+  <tag k="disused:boundary" v="political"/>
+  <tag k="disused:political_division" v="canton"/>
+  <tag k="end_date" v="2015-03"/>
+  <tag k="name" v="Lyons-la-Forêt"/>
+  <tag k="ref:INSEE" v="2722"/>
+  <tag k="source" v="data.gouv.fr-Ministère de l'Intérieur-03/2012"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q281353"/>
+  <tag k="wikipedia" v="fr:Canton de Lyons-la-Forêt"/>
+ </relation>
+ <relation id="3393297" visible="true" version="6" changeset="97006999" timestamp="2021-01-05T21:48:11Z" user="s_Frantz" uid="47355">
+  <member type="way" ref="136081916" role="outer"/>
+  <member type="way" ref="82525410" role="outer"/>
+  <member type="way" ref="81647473" role="outer"/>
+  <member type="way" ref="82441125" role="outer"/>
+  <member type="way" ref="81647479" role="outer"/>
+  <member type="way" ref="81681705" role="outer"/>
+  <member type="way" ref="81681708" role="outer"/>
+  <member type="way" ref="81814070" role="outer"/>
+  <member type="way" ref="81647476" role="outer"/>
+  <member type="way" ref="81661214" role="outer"/>
+  <member type="way" ref="81661215" role="outer"/>
+  <member type="way" ref="237739830" role="outer"/>
+  <member type="way" ref="237739828" role="outer"/>
+  <member type="way" ref="81531941" role="outer"/>
+  <member type="way" ref="81408219" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="81553612" role="outer"/>
+  <member type="way" ref="235025186" role="outer"/>
+  <member type="way" ref="432066820" role="outer"/>
+  <member type="way" ref="432066818" role="outer"/>
+  <member type="way" ref="238787841" role="outer"/>
+  <member type="way" ref="238772970" role="outer"/>
+  <member type="way" ref="238772973" role="outer"/>
+  <member type="way" ref="237764301" role="outer"/>
+  <member type="way" ref="238777076" role="outer"/>
+  <member type="way" ref="238775251" role="outer"/>
+  <member type="way" ref="238775250" role="outer"/>
+  <member type="way" ref="227219754" role="outer"/>
+  <member type="way" ref="227219755" role="outer"/>
+  <member type="way" ref="892468779" role="outer"/>
+  <member type="way" ref="892468778" role="outer"/>
+  <member type="way" ref="892468776" role="outer"/>
+  <member type="way" ref="226832273" role="outer"/>
+  <member type="way" ref="226832274" role="outer"/>
+  <member type="way" ref="81908379" role="outer"/>
+  <member type="way" ref="81924161" role="outer"/>
+  <member type="way" ref="227343682" role="outer"/>
+  <member type="way" ref="82292584" role="outer"/>
+  <member type="way" ref="82455818" role="outer"/>
+  <member type="way" ref="226079946" role="outer"/>
+  <member type="way" ref="82609226" role="outer"/>
+  <member type="way" ref="234794060" role="outer"/>
+  <member type="way" ref="82528987" role="outer"/>
+  <member type="way" ref="82525412" role="outer"/>
+  <tag k="disused:boundary" v="local_authority"/>
+  <tag k="disused:local_authority:FR" v="CC"/>
+  <tag k="name" v="Communauté de Communes du Canton de Lyons-la-Forêt"/>
+  <tag k="ref:FR:SIREN" v="242700417"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q1119691"/>
+  <tag k="wikipedia" v="fr:Communauté de communes du canton de Lyons-la-Forêt"/>
+ </relation>
+ <relation id="3393305" visible="true" version="4" changeset="46373868" timestamp="2017-02-24T17:33:59Z" user="Olyon" uid="1443767">
+  <member type="way" ref="247267535" role="outer"/>
+  <member type="way" ref="213843476" role="outer"/>
+  <member type="way" ref="213869919" role="outer"/>
+  <member type="way" ref="213855087" role="outer"/>
+  <member type="way" ref="213861980" role="outer"/>
+  <member type="way" ref="214246830" role="outer"/>
+  <member type="way" ref="213876720" role="outer"/>
+  <member type="way" ref="80853906" role="outer"/>
+  <member type="way" ref="80853912" role="outer"/>
+  <member type="way" ref="214238421" role="outer"/>
+  <member type="way" ref="234889250" role="outer"/>
+  <member type="way" ref="234889247" role="outer"/>
+  <member type="way" ref="234889930" role="outer"/>
+  <member type="way" ref="234892994" role="outer"/>
+  <member type="way" ref="53448154" role="outer"/>
+  <member type="way" ref="53448192" role="outer"/>
+  <member type="way" ref="53448152" role="outer"/>
+  <member type="way" ref="53448225" role="outer"/>
+  <member type="way" ref="234888328" role="outer"/>
+  <member type="way" ref="53448232" role="outer"/>
+  <member type="way" ref="234882979" role="outer"/>
+  <member type="way" ref="53448223" role="outer"/>
+  <member type="way" ref="53448235" role="outer"/>
+  <member type="way" ref="53448200" role="outer"/>
+  <member type="way" ref="53455286" role="outer"/>
+  <member type="way" ref="234882418" role="outer"/>
+  <member type="way" ref="234876354" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="81408226" role="outer"/>
+  <member type="way" ref="80864855" role="outer"/>
+  <member type="way" ref="80864854" role="outer"/>
+  <member type="way" ref="80837272" role="outer"/>
+  <member type="way" ref="80738336" role="outer"/>
+  <member type="way" ref="80738326" role="outer"/>
+  <member type="way" ref="80838352" role="outer"/>
+  <member type="way" ref="234580784" role="outer"/>
+  <member type="way" ref="234578568" role="outer"/>
+  <member type="way" ref="234143421" role="outer"/>
+  <member type="way" ref="234143000" role="outer"/>
+  <member type="way" ref="46162111" role="outer"/>
+  <member type="way" ref="46162030" role="outer"/>
+  <member type="way" ref="46162047" role="outer"/>
+  <member type="way" ref="46162017" role="outer"/>
+  <member type="way" ref="46162037" role="outer"/>
+  <member type="way" ref="46162040" role="outer"/>
+  <member type="way" ref="212765732" role="outer"/>
+  <member type="way" ref="201931615" role="outer"/>
+  <member type="way" ref="213190068" role="outer"/>
+  <member type="way" ref="213190067" role="outer"/>
+  <member type="way" ref="213852067" role="outer"/>
+  <member type="way" ref="213852066" role="outer"/>
+  <member type="way" ref="209666823" role="outer"/>
+  <tag k="disused:boundary" v="local_authority"/>
+  <tag k="disused:local_authority:FR" v="CC"/>
+  <tag k="name" v="Communauté de Communes des Andelys et de ses Environs"/>
+  <tag k="ref:FR:SIREN" v="242700631"/>
+  <tag k="short_name" v="CCAE"/>
+  <tag k="type" v="boundary"/>
+  <tag k="website" v="http://www.ccae.fr/"/>
+  <tag k="wikidata" v="Q2987985"/>
+  <tag k="wikipedia" v="fr:Communauté de communes des Andelys et de ses environs"/>
+ </relation>
+ <relation id="4573952" visible="true" version="8" changeset="99772393" timestamp="2021-02-22T21:09:53Z" user="Furdrien" uid="6696140">
+  <member type="node" ref="26694430" role="admin_centre"/>
+  <member type="way" ref="234317014" role="outer"/>
+  <member type="way" ref="234436207" role="outer"/>
+  <member type="way" ref="53010861" role="outer"/>
+  <member type="way" ref="53010862" role="outer"/>
+  <member type="way" ref="30841965" role="outer"/>
+  <member type="way" ref="234436208" role="outer"/>
+  <member type="way" ref="234436205" role="outer"/>
+  <member type="way" ref="212757799" role="outer"/>
+  <member type="way" ref="201928762" role="outer"/>
+  <member type="way" ref="54936113" role="outer"/>
+  <member type="way" ref="54936114" role="outer"/>
+  <member type="way" ref="201931614" role="outer"/>
+  <member type="way" ref="213190068" role="outer"/>
+  <member type="way" ref="213190067" role="outer"/>
+  <member type="way" ref="213852067" role="outer"/>
+  <member type="way" ref="213852066" role="outer"/>
+  <member type="way" ref="209666823" role="outer"/>
+  <member type="way" ref="247267535" role="outer"/>
+  <member type="way" ref="213843476" role="outer"/>
+  <member type="way" ref="213869919" role="outer"/>
+  <member type="way" ref="213855087" role="outer"/>
+  <member type="way" ref="213861980" role="outer"/>
+  <member type="way" ref="214246830" role="outer"/>
+  <member type="way" ref="213876720" role="outer"/>
+  <member type="way" ref="80853906" role="outer"/>
+  <member type="way" ref="80853912" role="outer"/>
+  <member type="way" ref="214238421" role="outer"/>
+  <member type="way" ref="234889250" role="outer"/>
+  <member type="way" ref="234889247" role="outer"/>
+  <member type="way" ref="234889930" role="outer"/>
+  <member type="way" ref="234892994" role="outer"/>
+  <member type="way" ref="53448154" role="outer"/>
+  <member type="way" ref="53448192" role="outer"/>
+  <member type="way" ref="53448152" role="outer"/>
+  <member type="way" ref="53448225" role="outer"/>
+  <member type="way" ref="234888328" role="outer"/>
+  <member type="way" ref="53448232" role="outer"/>
+  <member type="way" ref="234882979" role="outer"/>
+  <member type="way" ref="53448223" role="outer"/>
+  <member type="way" ref="53448235" role="outer"/>
+  <member type="way" ref="53448200" role="outer"/>
+  <member type="way" ref="53455286" role="outer"/>
+  <member type="way" ref="234882418" role="outer"/>
+  <member type="way" ref="234876354" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="81408226" role="outer"/>
+  <member type="way" ref="80864855" role="outer"/>
+  <member type="way" ref="80864854" role="outer"/>
+  <member type="way" ref="80837272" role="outer"/>
+  <member type="way" ref="80738336" role="outer"/>
+  <member type="way" ref="80738326" role="outer"/>
+  <member type="way" ref="80838352" role="outer"/>
+  <member type="way" ref="234580784" role="outer"/>
+  <member type="way" ref="234578568" role="outer"/>
+  <member type="way" ref="234143421" role="outer"/>
+  <member type="way" ref="234143420" role="outer"/>
+  <member type="way" ref="234144542" role="outer"/>
+  <member type="way" ref="234578569" role="outer"/>
+  <member type="way" ref="558323543" role="outer"/>
+  <member type="way" ref="234577343" role="outer"/>
+  <member type="way" ref="234577344" role="outer"/>
+  <member type="way" ref="234445253" role="outer"/>
+  <member type="way" ref="234442884" role="outer"/>
+  <member type="way" ref="234442883" role="outer"/>
+  <member type="way" ref="202130760" role="outer"/>
+  <member type="way" ref="202130759" role="outer"/>
+  <member type="way" ref="234441863" role="outer"/>
+  <member type="way" ref="54119067" role="outer"/>
+  <member type="way" ref="234440709" role="outer"/>
+  <member type="way" ref="54208945" role="outer"/>
+  <member type="way" ref="234439199" role="outer"/>
+  <member type="way" ref="909763241" role="outer"/>
+  <member type="way" ref="234439198" role="outer"/>
+  <member type="way" ref="54442896" role="outer"/>
+  <member type="way" ref="54442897" role="outer"/>
+  <member type="way" ref="234316494" role="outer"/>
+  <tag k="boundary" v="political"/>
+  <tag k="name" v="Les Andelys"/>
+  <tag k="political_division" v="canton"/>
+  <tag k="ref:INSEE" v="2701"/>
+  <tag k="source" v="(JORF 2014-02-28) Décret nº 2014-241 du 25 février 2014 portant délimitation des cantons dans le département de l’Eure"/>
+  <tag k="source:url" v="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661304"/>
+  <tag k="start_date" v="2015-03"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q1573839"/>
+  <tag k="wikipedia" v="fr:Canton des Andelys"/>
+ </relation>
+ <relation id="4574392" visible="true" version="7" changeset="97006999" timestamp="2021-01-05T21:48:11Z" user="s_Frantz" uid="47355">
+  <member type="node" ref="26694775" role="admin_centre"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234876356" role="outer"/>
+  <member type="way" ref="234876353" role="outer"/>
+  <member type="way" ref="53456992" role="outer"/>
+  <member type="way" ref="53456991" role="outer"/>
+  <member type="way" ref="53457015" role="outer"/>
+  <member type="way" ref="234879115" role="outer"/>
+  <member type="way" ref="234867885" role="outer"/>
+  <member type="way" ref="234863618" role="outer"/>
+  <member type="way" ref="34610194" role="outer"/>
+  <member type="way" ref="34626328" role="outer"/>
+  <member type="way" ref="34626327" role="outer"/>
+  <member type="way" ref="234801803" role="outer"/>
+  <member type="way" ref="234800755" role="outer"/>
+  <member type="way" ref="109369027" role="outer"/>
+  <member type="way" ref="234800756" role="outer"/>
+  <member type="way" ref="226912062" role="outer"/>
+  <member type="way" ref="238775250" role="outer"/>
+  <member type="way" ref="227219754" role="outer"/>
+  <member type="way" ref="227219755" role="outer"/>
+  <member type="way" ref="892468779" role="outer"/>
+  <member type="way" ref="892468778" role="outer"/>
+  <member type="way" ref="892468776" role="outer"/>
+  <member type="way" ref="226832273" role="outer"/>
+  <member type="way" ref="226832274" role="outer"/>
+  <member type="way" ref="81908379" role="outer"/>
+  <member type="way" ref="81924161" role="outer"/>
+  <member type="way" ref="227343682" role="outer"/>
+  <member type="way" ref="82292584" role="outer"/>
+  <member type="way" ref="82455818" role="outer"/>
+  <member type="way" ref="226079946" role="outer"/>
+  <member type="way" ref="82609226" role="outer"/>
+  <member type="way" ref="140275315" role="outer"/>
+  <member type="way" ref="234794057" role="outer"/>
+  <member type="way" ref="234794058" role="outer"/>
+  <member type="way" ref="183962108" role="outer"/>
+  <member type="way" ref="140154637" role="outer"/>
+  <member type="way" ref="129899812" role="outer"/>
+  <member type="way" ref="129899811" role="outer"/>
+  <member type="way" ref="234793069" role="outer"/>
+  <member type="way" ref="234791335" role="outer"/>
+  <member type="way" ref="234590197" role="outer"/>
+  <member type="way" ref="234587618" role="outer"/>
+  <member type="way" ref="234587619" role="outer"/>
+  <member type="way" ref="234792213" role="outer"/>
+  <member type="way" ref="136081917" role="outer"/>
+  <member type="way" ref="136081916" role="outer"/>
+  <member type="way" ref="82525410" role="outer"/>
+  <member type="way" ref="81647473" role="outer"/>
+  <member type="way" ref="82441125" role="outer"/>
+  <member type="way" ref="81647479" role="outer"/>
+  <member type="way" ref="81681705" role="outer"/>
+  <member type="way" ref="81681708" role="outer"/>
+  <member type="way" ref="81814070" role="outer"/>
+  <member type="way" ref="81647476" role="outer"/>
+  <member type="way" ref="81661214" role="outer"/>
+  <member type="way" ref="81661215" role="outer"/>
+  <member type="way" ref="237739830" role="outer"/>
+  <member type="way" ref="237739828" role="outer"/>
+  <member type="way" ref="81531941" role="outer"/>
+  <member type="way" ref="81408219" role="outer"/>
+  <tag k="boundary" v="political"/>
+  <tag k="name" v="Romilly-sur-Andelle"/>
+  <tag k="political_division" v="canton"/>
+  <tag k="ref:INSEE" v="2719"/>
+  <tag k="source" v="(JORF 2014-02-28) Décret nº 2014-241 du 25 février 2014 portant délimitation des cantons dans le département de l’Eure"/>
+  <tag k="source:url" v="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661304"/>
+  <tag k="start_date" v="2015-03"/>
+  <tag k="type" v="boundary"/>
+  <tag k="wikidata" v="Q18413910"/>
+  <tag k="wikipedia" v="fr:Canton de Romilly-sur-Andelle"/>
+ </relation>
+ <relation id="4616158" visible="true" version="2" changeset="29032598" timestamp="2015-02-22T22:16:07Z" user="Verdy_p" uid="90780">
+  <member type="relation" ref="4573952" role="01"/>
+  <member type="relation" ref="4573962" role="02"/>
+  <member type="relation" ref="4573970" role="03"/>
+  <member type="relation" ref="4573977" role="04"/>
+  <member type="relation" ref="4574007" role="05"/>
+  <member type="relation" ref="4574038" role="06"/>
+  <member type="relation" ref="4574046" role="07"/>
+  <member type="relation" ref="4574126" role="08"/>
+  <member type="relation" ref="4574813" role="09"/>
+  <member type="relation" ref="4575007" role="10"/>
+  <member type="relation" ref="4575115" role="11"/>
+  <member type="relation" ref="4574129" role="12"/>
+  <member type="relation" ref="4574139" role="13"/>
+  <member type="relation" ref="4574145" role="14"/>
+  <member type="relation" ref="4574178" role="15"/>
+  <member type="relation" ref="4574186" role="16"/>
+  <member type="relation" ref="4574189" role="17"/>
+  <member type="relation" ref="4574194" role="18"/>
+  <member type="relation" ref="4574392" role="19"/>
+  <member type="relation" ref="4574671" role="20"/>
+  <member type="relation" ref="4574683" role="21"/>
+  <member type="relation" ref="4574687" role="22"/>
+  <member type="relation" ref="4574690" role="23"/>
+  <tag k="boundary" v="political"/>
+  <tag k="collection" v="boundary"/>
+  <tag k="description" v="23 cantons"/>
+  <tag k="name" v="Eure - cantons (mars 2015)"/>
+  <tag k="planned:ref" v="027"/>
+  <tag k="political_division" v="canton"/>
+  <tag k="source" v="(JORF 2014-02-28) Décret nº 2014-241 du 25 février 2014 portant délimitation des cantons dans le département de l’Eure"/>
+  <tag k="source:url" v="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000028661304"/>
+  <tag k="start_date" v="2015-03"/>
+  <tag k="type" v="collection"/>
+ </relation>
+ <relation id="7009210" visible="true" version="5" changeset="97006999" timestamp="2021-01-05T21:48:11Z" user="s_Frantz" uid="47355">
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234876356" role="outer"/>
+  <member type="way" ref="234876353" role="outer"/>
+  <member type="way" ref="53456992" role="outer"/>
+  <member type="way" ref="53456991" role="outer"/>
+  <member type="way" ref="53457015" role="outer"/>
+  <member type="way" ref="234879115" role="outer"/>
+  <member type="way" ref="234867885" role="outer"/>
+  <member type="way" ref="234863618" role="outer"/>
+  <member type="way" ref="34610194" role="outer"/>
+  <member type="way" ref="34626328" role="outer"/>
+  <member type="way" ref="34626327" role="outer"/>
+  <member type="way" ref="234801803" role="outer"/>
+  <member type="way" ref="234800755" role="outer"/>
+  <member type="way" ref="109369027" role="outer"/>
+  <member type="way" ref="234800756" role="outer"/>
+  <member type="way" ref="226912062" role="outer"/>
+  <member type="way" ref="238775250" role="outer"/>
+  <member type="way" ref="227219754" role="outer"/>
+  <member type="way" ref="227219755" role="outer"/>
+  <member type="way" ref="892468779" role="outer"/>
+  <member type="way" ref="892468778" role="outer"/>
+  <member type="way" ref="892468776" role="outer"/>
+  <member type="way" ref="226832273" role="outer"/>
+  <member type="way" ref="226832274" role="outer"/>
+  <member type="way" ref="81908379" role="outer"/>
+  <member type="way" ref="81924161" role="outer"/>
+  <member type="way" ref="227343682" role="outer"/>
+  <member type="way" ref="82292584" role="outer"/>
+  <member type="way" ref="82455818" role="outer"/>
+  <member type="way" ref="82441130" role="outer"/>
+  <member type="way" ref="81647479" role="outer"/>
+  <member type="way" ref="81681705" role="outer"/>
+  <member type="way" ref="81681708" role="outer"/>
+  <member type="way" ref="81814070" role="outer"/>
+  <member type="way" ref="81647476" role="outer"/>
+  <member type="way" ref="81661214" role="outer"/>
+  <member type="way" ref="81661215" role="outer"/>
+  <member type="way" ref="237739830" role="outer"/>
+  <member type="way" ref="237739828" role="outer"/>
+  <member type="way" ref="81531941" role="outer"/>
+  <member type="way" ref="81408219" role="outer"/>
+  <tag k="boundary" v="local_authority"/>
+  <tag k="local_authority:FR" v="CC"/>
+  <tag k="name" v="Communauté de communes Lyons Andelle"/>
+  <tag k="ref:FR:SIREN" v="200070142"/>
+  <tag k="type" v="boundary"/>
+  <tag k="website" v="http://www.cdcla.fr/"/>
+  <tag k="wikidata" v="Q29268685"/>
+  <tag k="wikipedia" v="fr:Communauté de communes Lyons Andelle"/>
+ </relation>
+ <relation id="7009221" visible="true" version="8" changeset="127993505" timestamp="2022-10-24T11:57:22Z" user="user_9375142" uid="9375142">
+  <member type="way" ref="30841966" role="outer"/>
+  <member type="way" ref="30842658" role="outer"/>
+  <member type="way" ref="30842354" role="outer"/>
+  <member type="way" ref="30842591" role="outer"/>
+  <member type="way" ref="30842357" role="outer"/>
+  <member type="way" ref="30842592" role="outer"/>
+  <member type="way" ref="54888507" role="outer"/>
+  <member type="way" ref="54888500" role="outer"/>
+  <member type="way" ref="58664088" role="outer"/>
+  <member type="way" ref="34912063" role="outer"/>
+  <member type="way" ref="30836519" role="outer"/>
+  <member type="way" ref="30843042" role="outer"/>
+  <member type="way" ref="30843041" role="outer"/>
+  <member type="way" ref="30843288" role="outer"/>
+  <member type="way" ref="80142475" role="outer"/>
+  <member type="way" ref="148824535" role="outer"/>
+  <member type="way" ref="149187596" role="outer"/>
+  <member type="way" ref="30843295" role="outer"/>
+  <member type="way" ref="56152797" role="outer"/>
+  <member type="way" ref="56152795" role="outer"/>
+  <member type="way" ref="243348170" role="outer"/>
+  <member type="way" ref="243710300" role="outer"/>
+  <member type="way" ref="56152796" role="outer"/>
+  <member type="way" ref="220119357" role="outer"/>
+  <member type="way" ref="160283187" role="outer"/>
+  <member type="way" ref="54934592" role="outer"/>
+  <member type="way" ref="30845986" role="outer"/>
+  <member type="way" ref="30845991" role="outer"/>
+  <member type="way" ref="30845581" role="outer"/>
+  <member type="way" ref="30845584" role="outer"/>
+  <member type="way" ref="30845576" role="outer"/>
+  <member type="way" ref="30844945" role="outer"/>
+  <member type="way" ref="30844941" role="outer"/>
+  <member type="way" ref="30844946" role="outer"/>
+  <member type="way" ref="1106567034" role="outer"/>
+  <member type="way" ref="30844629" role="outer"/>
+  <member type="way" ref="30844694" role="outer"/>
+  <member type="way" ref="80142467" role="outer"/>
+  <member type="way" ref="30844695" role="outer"/>
+  <member type="way" ref="54936103" role="outer"/>
+  <member type="way" ref="54936105" role="outer"/>
+  <member type="way" ref="234998824" role="outer"/>
+  <member type="way" ref="449427384" role="outer"/>
+  <member type="way" ref="235005532" role="outer"/>
+  <member type="way" ref="235008595" role="outer"/>
+  <member type="way" ref="235012177" role="outer"/>
+  <member type="way" ref="235012176" role="outer"/>
+  <member type="way" ref="30844481" role="outer"/>
+  <member type="way" ref="54936099" role="outer"/>
+  <member type="way" ref="54936112" role="outer"/>
+  <member type="way" ref="54936100" role="outer"/>
+  <member type="way" ref="235012175" role="outer"/>
+  <member type="way" ref="243324474" role="outer"/>
+  <member type="way" ref="213190067" role="outer"/>
+  <member type="way" ref="213852067" role="outer"/>
+  <member type="way" ref="213852066" role="outer"/>
+  <member type="way" ref="209666823" role="outer"/>
+  <member type="way" ref="247267535" role="outer"/>
+  <member type="way" ref="213843476" role="outer"/>
+  <member type="way" ref="213869919" role="outer"/>
+  <member type="way" ref="213855087" role="outer"/>
+  <member type="way" ref="213861980" role="outer"/>
+  <member type="way" ref="214246830" role="outer"/>
+  <member type="way" ref="213876720" role="outer"/>
+  <member type="way" ref="80853906" role="outer"/>
+  <member type="way" ref="80853912" role="outer"/>
+  <member type="way" ref="214238421" role="outer"/>
+  <member type="way" ref="234889250" role="outer"/>
+  <member type="way" ref="234889247" role="outer"/>
+  <member type="way" ref="234889930" role="outer"/>
+  <member type="way" ref="234892994" role="outer"/>
+  <member type="way" ref="53448154" role="outer"/>
+  <member type="way" ref="53448192" role="outer"/>
+  <member type="way" ref="53448152" role="outer"/>
+  <member type="way" ref="53448225" role="outer"/>
+  <member type="way" ref="234888328" role="outer"/>
+  <member type="way" ref="53448232" role="outer"/>
+  <member type="way" ref="234882979" role="outer"/>
+  <member type="way" ref="53448223" role="outer"/>
+  <member type="way" ref="53448235" role="outer"/>
+  <member type="way" ref="53448200" role="outer"/>
+  <member type="way" ref="53455286" role="outer"/>
+  <member type="way" ref="234882418" role="outer"/>
+  <member type="way" ref="234876354" role="outer"/>
+  <member type="way" ref="234876357" role="outer"/>
+  <member type="way" ref="234887920" role="outer"/>
+  <member type="way" ref="235017127" role="outer"/>
+  <member type="way" ref="235017130" role="outer"/>
+  <member type="way" ref="235022042" role="outer"/>
+  <member type="way" ref="235017129" role="outer"/>
+  <member type="way" ref="235019529" role="outer"/>
+  <member type="way" ref="81553622" role="outer"/>
+  <member type="way" ref="80988422" role="outer"/>
+  <member type="way" ref="80988419" role="outer"/>
+  <member type="way" ref="81422674" role="outer"/>
+  <member type="way" ref="81408226" role="outer"/>
+  <member type="way" ref="80864855" role="outer"/>
+  <member type="way" ref="80864854" role="outer"/>
+  <member type="way" ref="80837272" role="outer"/>
+  <member type="way" ref="80738336" role="outer"/>
+  <member type="way" ref="80738326" role="outer"/>
+  <member type="way" ref="80838352" role="outer"/>
+  <member type="way" ref="234580784" role="outer"/>
+  <member type="way" ref="234578568" role="outer"/>
+  <member type="way" ref="234143421" role="outer"/>
+  <member type="way" ref="234143420" role="outer"/>
+  <member type="way" ref="234144542" role="outer"/>
+  <member type="way" ref="234578569" role="outer"/>
+  <member type="way" ref="558323543" role="outer"/>
+  <member type="way" ref="234577343" role="outer"/>
+  <member type="way" ref="234577344" role="outer"/>
+  <member type="way" ref="234445253" role="outer"/>
+  <member type="way" ref="234442884" role="outer"/>
+  <member type="way" ref="234441865" role="outer"/>
+  <member type="way" ref="234441864" role="outer"/>
+  <member type="way" ref="234441863" role="outer"/>
+  <member type="way" ref="54119067" role="outer"/>
+  <member type="way" ref="234440709" role="outer"/>
+  <member type="way" ref="54208945" role="outer"/>
+  <member type="way" ref="234439199" role="outer"/>
+  <member type="way" ref="909763241" role="outer"/>
+  <member type="way" ref="234439198" role="outer"/>
+  <member type="way" ref="54442896" role="outer"/>
+  <member type="way" ref="30837192" role="outer"/>
+  <member type="way" ref="30837191" role="outer"/>
+  <member type="way" ref="30837194" role="outer"/>
+  <member type="way" ref="60116594" role="outer"/>
+  <member type="way" ref="51829349" role="outer"/>
+  <member type="way" ref="860982623" role="outer"/>
+  <member type="way" ref="51829341" role="outer"/>
+  <member type="way" ref="735323596" role="outer"/>
+  <member type="way" ref="735323597" role="outer"/>
+  <member type="way" ref="30837188" role="outer"/>
+  <member type="way" ref="30842204" role="outer"/>
+  <tag k="boundary" v="local_authority"/>
+  <tag k="local_authority:FR" v="CA"/>
+  <tag k="name" v="Seine Normandie Agglomération"/>
+  <tag k="ref:FR:SIREN" v="200072312"/>
+  <tag k="short_name" v="SNA"/>
+  <tag k="type" v="boundary"/>
+  <tag k="website" v="http://www.cape27.fr"/>
+  <tag k="wikidata" v="Q28495734"/>
+  <tag k="wikipedia" v="fr:Seine Normandie Agglomération"/>
+ </relation>
+ <relation id="9244119" visible="true" version="30" changeset="140374260" timestamp="2023-08-25T13:57:44Z" user="Ephtolens" uid="10224323">
+  <member type="way" ref="38290370" role=""/>
+  <member type="way" ref="893791598" role=""/>
+  <member type="way" ref="331439203" role=""/>
+  <member type="way" ref="893791600" role=""/>
+  <member type="way" ref="893791611" role=""/>
+  <member type="way" ref="38285600" role=""/>
+  <member type="way" ref="464151737" role=""/>
+  <member type="way" ref="331439223" role=""/>
+  <member type="way" ref="1013798730" role=""/>
+  <member type="way" ref="558321538" role=""/>
+  <member type="way" ref="282742540" role=""/>
+  <member type="way" ref="282742543" role=""/>
+  <member type="way" ref="417611707" role=""/>
+  <member type="way" ref="417612693" role=""/>
+  <member type="way" ref="417615193" role=""/>
+  <member type="way" ref="805370141" role=""/>
+  <member type="way" ref="805370140" role=""/>
+  <member type="way" ref="417615516" role=""/>
+  <member type="way" ref="417615896" role=""/>
+  <member type="way" ref="417616038" role=""/>
+  <member type="way" ref="417618659" role=""/>
+  <member type="way" ref="417618665" role=""/>
+  <member type="way" ref="417619319" role=""/>
+  <member type="way" ref="417619769" role=""/>
+  <member type="way" ref="417619922" role=""/>
+  <member type="way" ref="80735405" role=""/>
+  <member type="way" ref="1119109834" role=""/>
+  <member type="way" ref="80735400" role=""/>
+  <member type="way" ref="80735403" role=""/>
+  <member type="way" ref="1119109833" role=""/>
+  <member type="way" ref="80735406" role=""/>
+  <member type="way" ref="1020045246" role=""/>
+  <member type="way" ref="499283376" role=""/>
+  <member type="way" ref="705933081" role=""/>
+  <member type="way" ref="314757350" role=""/>
+  <member type="way" ref="464802343" role=""/>
+  <member type="way" ref="314757352" role=""/>
+  <member type="way" ref="331558626" role=""/>
+  <member type="way" ref="498389964" role=""/>
+  <member type="way" ref="436199942" role=""/>
+  <member type="way" ref="314757351" role=""/>
+  <member type="way" ref="314759223" role=""/>
+  <member type="way" ref="171507822" role=""/>
+  <member type="way" ref="171507820" role=""/>
+  <member type="way" ref="1165317860" role=""/>
+  <member type="way" ref="77781258" role=""/>
+  <member type="way" ref="1165317861" role=""/>
+  <member type="way" ref="24616098" role=""/>
+  <member type="way" ref="171507828" role=""/>
+  <member type="way" ref="1177949972" role=""/>
+  <member type="way" ref="1177950134" role=""/>
+  <member type="way" ref="1165317863" role=""/>
+  <member type="way" ref="1165317862" role=""/>
+  <member type="way" ref="1164893122" role=""/>
+  <member type="way" ref="1164893123" role=""/>
+  <member type="way" ref="171507831" role=""/>
+  <member type="way" ref="644350920" role=""/>
+  <member type="way" ref="29098720" role=""/>
+  <member type="way" ref="1136824670" role=""/>
+  <member type="way" ref="1136824668" role=""/>
+  <member type="way" ref="29098705" role=""/>
+  <member type="way" ref="1136824667" role=""/>
+  <member type="way" ref="1136824665" role=""/>
+  <member type="way" ref="613508691" role=""/>
+  <member type="way" ref="613508687" role=""/>
+  <member type="way" ref="613508689" role=""/>
+  <member type="way" ref="370961897" role=""/>
+  <member type="way" ref="675014376" role=""/>
+  <member type="way" ref="675014386" role=""/>
+  <member type="way" ref="370961896" role=""/>
+  <member type="way" ref="601115611" role=""/>
+  <member type="way" ref="1068653023" role=""/>
+  <member type="way" ref="601115612" role=""/>
+  <member type="way" ref="1068653021" role=""/>
+  <member type="way" ref="1068653020" role=""/>
+  <member type="way" ref="613508672" role=""/>
+  <member type="way" ref="370962274" role=""/>
+  <member type="way" ref="613508676" role=""/>
+  <member type="way" ref="613508674" role=""/>
+  <member type="way" ref="370962275" role=""/>
+  <member type="way" ref="288358363" role=""/>
+  <member type="way" ref="219705270" role=""/>
+  <member type="way" ref="219705271" role=""/>
+  <member type="way" ref="288497866" role=""/>
+  <member type="way" ref="29098704" role=""/>
+  <member type="way" ref="288354626" role=""/>
+  <member type="way" ref="746752487" role=""/>
+  <member type="way" ref="320459481" role=""/>
+  <member type="way" ref="288354629" role=""/>
+  <member type="way" ref="139847994" role=""/>
+  <member type="way" ref="288173726" role=""/>
+  <member type="way" ref="713872366" role=""/>
+  <member type="way" ref="23772873" role=""/>
+  <member type="way" ref="1029573335" role=""/>
+  <member type="way" ref="1202005743" role=""/>
+  <member type="way" ref="746750816" role=""/>
+  <member type="way" ref="746097007" role=""/>
+  <member type="way" ref="746097006" role=""/>
+  <member type="way" ref="746097005" role=""/>
+  <member type="way" ref="23772874" role=""/>
+  <member type="way" ref="746750815" role=""/>
+  <member type="way" ref="1071363527" role=""/>
+  <member type="way" ref="1071363525" role=""/>
+  <member type="way" ref="1071363524" role=""/>
+  <member type="way" ref="1071363521" role=""/>
+  <member type="way" ref="713872368" role=""/>
+  <member type="way" ref="586586833" role=""/>
+  <member type="way" ref="746719860" role=""/>
+  <member type="way" ref="380170069" role=""/>
+  <member type="way" ref="380170064" role=""/>
+  <member type="way" ref="746719859" role=""/>
+  <member type="way" ref="24580171" role=""/>
+  <member type="way" ref="746719858" role=""/>
+  <member type="way" ref="746719857" role=""/>
+  <member type="way" ref="24580173" role=""/>
+  <member type="way" ref="24580172" role=""/>
+  <member type="way" ref="713872356" role=""/>
+  <member type="way" ref="1165597817" role=""/>
+  <member type="way" ref="287043502" role=""/>
+  <member type="way" ref="139162744" role=""/>
+  <member type="way" ref="319485212" role=""/>
+  <member type="way" ref="319485211" role=""/>
+  <member type="way" ref="24580174" role=""/>
+  <member type="way" ref="184768080" role=""/>
+  <member type="way" ref="1111517579" role=""/>
+  <member type="way" ref="155411263" role=""/>
+  <member type="way" ref="1148784331" role=""/>
+  <member type="way" ref="1148784330" role=""/>
+  <member type="way" ref="1148785191" role=""/>
+  <member type="way" ref="1148785190" role=""/>
+  <member type="way" ref="155411264" role=""/>
+  <member type="way" ref="81205047" role=""/>
+  <member type="way" ref="1180780913" role=""/>
+  <member type="way" ref="83700497" role=""/>
+  <member type="way" ref="1180780917" role=""/>
+  <member type="way" ref="320718606" role=""/>
+  <member type="way" ref="1180780912" role=""/>
+  <member type="way" ref="221977214" role=""/>
+  <member type="way" ref="1180780915" role=""/>
+  <member type="way" ref="1180780914" role=""/>
+  <member type="way" ref="1071054918" role=""/>
+  <member type="way" ref="893791599" role=""/>
+  <member type="way" ref="893791610" role=""/>
+  <member type="way" ref="893791597" role=""/>
+  <member type="way" ref="38286025" role=""/>
+  <member type="way" ref="1068653022" role=""/>
+  <member type="way" ref="1071363520" role=""/>
+  <member type="way" ref="1071363522" role=""/>
+  <tag k="name" v="Route Départementale 6014"/>
+  <tag k="old_ref" v="N 14"/>
+  <tag k="ref" v="D 6014"/>
+  <tag k="route" v="road"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="11539042" visible="true" version="5" changeset="137776381" timestamp="2023-06-26T06:39:40Z" user="michel60" uid="211063">
+  <member type="node" ref="2045718641" role="device"/>
+  <member type="node" ref="2431293955" role="from"/>
+  <member type="node" ref="1341771540" role="to"/>
+  <tag k="enforcement" v="maxspeed"/>
+  <tag k="maxspeed" v="80"/>
+  <tag k="milestone" v="PK25+850"/>
+  <tag k="name" v="Val d'Orger|NO-&gt;SE"/>
+  <tag k="ref" v="D6014"/>
+  <tag k="type" v="enforcement"/>
+ </relation>
+ <relation id="12620388" visible="true" version="19" changeset="141002137" timestamp="2023-09-08T20:40:01Z" user="kornx" uid="12951478">
+  <member type="way" ref="27456710" role=""/>
+  <member type="way" ref="137267018" role=""/>
+  <member type="way" ref="571999724" role=""/>
+  <member type="way" ref="62329980" role=""/>
+  <member type="way" ref="137342762" role=""/>
+  <member type="way" ref="98653416" role=""/>
+  <member type="way" ref="285267940" role=""/>
+  <member type="way" ref="223402619" role=""/>
+  <member type="way" ref="1119173044" role=""/>
+  <member type="way" ref="1104456967" role=""/>
+  <member type="way" ref="27456708" role=""/>
+  <member type="way" ref="557099623" role=""/>
+  <member type="way" ref="104551558" role=""/>
+  <member type="way" ref="999277665" role=""/>
+  <member type="way" ref="102479806" role=""/>
+  <member type="way" ref="999277663" role=""/>
+  <member type="way" ref="41361566" role=""/>
+  <member type="way" ref="50563128" role=""/>
+  <member type="way" ref="162591690" role=""/>
+  <member type="way" ref="303288878" role=""/>
+  <member type="way" ref="32853548" role=""/>
+  <member type="way" ref="104551548" role=""/>
+  <member type="way" ref="518496225" role=""/>
+  <member type="way" ref="865940275" role=""/>
+  <member type="way" ref="137267059" role=""/>
+  <member type="way" ref="50567080" role=""/>
+  <member type="way" ref="176036634" role=""/>
+  <member type="way" ref="135906866" role=""/>
+  <member type="way" ref="27456625" role=""/>
+  <member type="way" ref="157749591" role=""/>
+  <member type="way" ref="157749590" role=""/>
+  <member type="way" ref="24250335" role=""/>
+  <member type="way" ref="35067895" role=""/>
+  <member type="way" ref="1090776132" role=""/>
+  <member type="way" ref="302041605" role=""/>
+  <member type="way" ref="27305067" role=""/>
+  <member type="way" ref="693756611" role=""/>
+  <member type="way" ref="40029858" role=""/>
+  <member type="way" ref="947895771" role=""/>
+  <member type="way" ref="693760729" role=""/>
+  <member type="way" ref="1059462361" role=""/>
+  <member type="way" ref="947895780" role=""/>
+  <member type="way" ref="947895781" role=""/>
+  <member type="way" ref="1059462363" role=""/>
+  <member type="way" ref="947895768" role=""/>
+  <member type="way" ref="34677623" role=""/>
+  <member type="way" ref="24250426" role=""/>
+  <member type="way" ref="24250345" role=""/>
+  <member type="way" ref="680694194" role=""/>
+  <member type="way" ref="999277661" role=""/>
+  <member type="way" ref="999277662" role=""/>
+  <member type="way" ref="43567912" role=""/>
+  <member type="way" ref="137342763" role=""/>
+  <member type="way" ref="729112000" role=""/>
+  <member type="way" ref="1101075082" role=""/>
+  <member type="way" ref="50567111" role=""/>
+  <member type="way" ref="1085766656" role=""/>
+  <member type="way" ref="680694187" role=""/>
+  <member type="way" ref="45792041" role=""/>
+  <member type="way" ref="549544016" role=""/>
+  <member type="way" ref="285267941" role=""/>
+  <member type="way" ref="34401700" role=""/>
+  <member type="way" ref="490697660" role=""/>
+  <member type="way" ref="1182730802" role=""/>
+  <member type="way" ref="157749594" role=""/>
+  <member type="way" ref="157749592" role=""/>
+  <member type="way" ref="137267017" role=""/>
+  <member type="way" ref="557099624" role=""/>
+  <member type="way" ref="27237458" role=""/>
+  <member type="way" ref="35722938" role=""/>
+  <member type="way" ref="175850162" role=""/>
+  <member type="way" ref="50237669" role=""/>
+  <member type="way" ref="424247961" role=""/>
+  <member type="way" ref="303288879" role=""/>
+  <member type="way" ref="41360746" role=""/>
+  <member type="way" ref="518496226" role=""/>
+  <member type="way" ref="50567081" role=""/>
+  <member type="way" ref="1023795121" role=""/>
+  <member type="way" ref="176035392" role=""/>
+  <member type="way" ref="1023795142" role=""/>
+  <member type="way" ref="176036635" role=""/>
+  <member type="way" ref="694454192" role=""/>
+  <member type="way" ref="50564506" role=""/>
+  <member type="way" ref="557100400" role=""/>
+  <member type="way" ref="904545517" role=""/>
+  <member type="way" ref="904545520" role=""/>
+  <member type="way" ref="888597346" role=""/>
+  <member type="way" ref="888597345" role=""/>
+  <member type="way" ref="146616022" role=""/>
+  <member type="way" ref="1061641960" role=""/>
+  <member type="way" ref="557099622" role=""/>
+  <member type="way" ref="865999419" role=""/>
+  <member type="way" ref="680694190" role=""/>
+  <member type="way" ref="47267647" role=""/>
+  <member type="way" ref="1119173047" role=""/>
+  <member type="way" ref="302041606" role=""/>
+  <member type="way" ref="813232730" role=""/>
+  <member type="way" ref="42206818" role=""/>
+  <member type="way" ref="303288877" role=""/>
+  <member type="way" ref="40031743" role=""/>
+  <member type="way" ref="137267058" role=""/>
+  <member type="way" ref="176036633" role=""/>
+  <member type="way" ref="24250637" role=""/>
+  <member type="way" ref="27456624" role=""/>
+  <member type="way" ref="43567913" role=""/>
+  <member type="way" ref="98653366" role=""/>
+  <member type="way" ref="1022698689" role=""/>
+  <member type="way" ref="1119171064" role=""/>
+  <member type="way" ref="40294685" role=""/>
+  <member type="way" ref="428687398" role=""/>
+  <member type="way" ref="196655964" role=""/>
+  <member type="way" ref="35067894" role=""/>
+  <member type="way" ref="602208814" role=""/>
+  <member type="way" ref="865999417" role=""/>
+  <member type="way" ref="680694188" role=""/>
+  <member type="way" ref="45569557" role=""/>
+  <member type="way" ref="1119171060" role=""/>
+  <member type="way" ref="658275760" role=""/>
+  <member type="way" ref="549544017" role=""/>
+  <member type="way" ref="888597343" role=""/>
+  <member type="way" ref="1055720192" role=""/>
+  <member type="way" ref="1055720191" role=""/>
+  <member type="way" ref="41391946" role=""/>
+  <member type="way" ref="1022096431" role=""/>
+  <member type="way" ref="1022096432" role=""/>
+  <member type="way" ref="49809553" role=""/>
+  <member type="way" ref="1206241453" role=""/>
+  <member type="way" ref="50567050" role=""/>
+  <member type="way" ref="100166665" role=""/>
+  <member type="way" ref="145236197" role=""/>
+  <member type="way" ref="705933081" role=""/>
+  <member type="way" ref="558321538" role=""/>
+  <member type="way" ref="282742540" role=""/>
+  <member type="way" ref="417616038" role=""/>
+  <member type="way" ref="417615896" role=""/>
+  <member type="way" ref="546109638" role=""/>
+  <member type="way" ref="314757351" role=""/>
+  <member type="way" ref="145236197" role=""/>
+  <member type="way" ref="100166665" role=""/>
+  <member type="way" ref="546126949" role=""/>
+  <member type="way" ref="38285600" role=""/>
+  <member type="way" ref="417612693" role=""/>
+  <member type="way" ref="331558626" role=""/>
+  <member type="way" ref="80735406" role=""/>
+  <member type="way" ref="1020045246" role=""/>
+  <member type="way" ref="464802343" role=""/>
+  <member type="way" ref="314757352" role=""/>
+  <member type="way" ref="282742543" role=""/>
+  <member type="way" ref="417611707" role=""/>
+  <member type="way" ref="461959415" role=""/>
+  <member type="way" ref="947351867" role=""/>
+  <member type="way" ref="461961008" role=""/>
+  <tag k="historic" v="roman_road"/>
+  <tag k="name" v="Chaussée Jules Cèsar"/>
+  <tag k="route" v="historic"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="12767258" visible="true" version="3" changeset="118430706" timestamp="2022-03-13T14:00:19Z" user="user_8101879" uid="8101879">
+  <member type="relation" ref="12618995" role=""/>
+  <member type="relation" ref="12630508" role=""/>
+  <member type="relation" ref="12620388" role=""/>
+  <tag k="description" v="https://itineraires-romains-en-france.pagesperso-orange.fr/templates/tableau_vr18.htm"/>
+  <tag k="historic:civilization" v="ancient_roman"/>
+  <tag k="name" v="Voie Romaine Troyes - Brionne"/>
+  <tag k="ref" v="VR18"/>
+  <tag k="route" v="historic"/>
+  <tag k="type" v="superroute"/>
+ </relation>
+</osm>

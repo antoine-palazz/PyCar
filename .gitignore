@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 ## Cette ligne indique à Git d'ignorer tout fichier nommé "data.osm", indépendamment de son emplacement dans le dépôt.
 #  Le double astérisque (**) est un caractère générique qui correspond à n'importe quel répertoire ou sous-répertoire.
 
 **/data.osm
 /Users/khelifanail/Documents/GitHub/Pycar/Tests/tilescache/*/data\ *.osm
+=======
+
+data_vehicles/data_vehicles_french.csv
+data_vehicles/data_vehicles_french1.csv
+data_vehicles/conversion1.ipynb
+>>>>>>> 2952a4d9dd0221a8cef6c35dae4383862deab15b
