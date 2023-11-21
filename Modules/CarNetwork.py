@@ -12,8 +12,8 @@ import folium
 import geopy.distance 
 from geopy.distance import geodesic
 from folium.plugins import MousePosition
-from folium.plugins import TagFilterButton
-
+import folium
+import os 
 
 
 
@@ -639,6 +639,73 @@ class CarNetwork():
                 radius=5  # Opacité du remplissage
             ).add_to(map)
 
+    def plot_accidents(self, map):
+
+        cwd=os.getcwd()
+        accidents_2022idf_path=os.path.join(cwd,"accidents_2022_idf.xlsx")
+
+        accidents_2022idf_carac=pd.read_excel(accidents_2022idf_path)
+
+        #reshape des data
+        accidents_2022idf_carac["Latitude"]=accidents_2022idf_carac["Latitude"].str.replace(',','.').astype(float)
+        accidents_2022idf_carac["Longitude"]=accidents_2022idf_carac["Longitude"].str.replace(',','.').astype(float)
+
+        #on trie les données d'accident en fonction de leur localisation
+        dict_accidents_2022idf = accidents_2022idf_carac.groupby(["Commune","Adresse"]).groups
+        #on trie le dictionnaire obtenu
+        dict_trie_accidents_2022idf=dict(sorted(dict_accidents_2022idf.items(),key=lambda item : len(item[1]),reverse=True))
 
 
+        map=folium.Map([48.866667,2.333333],zoom_start=12)
+        #on affiche les 25 localisations avec le plus d'accidents en Idf
+        i=0
+        for key in dict_trie_accidents_2022idf.keys():
+            list1=[]
+            for elem in dict_trie_accidents_2022idf[key]:
+                list1.append(accidents_2022idf_carac.iloc[elem]["Latitude"])
+                m1,m2=list1.index(min(list1)),list1.index(max(list1))
+                #on affiche une ligne entre les points les plus éloignés
+            coord_ligne1=[accidents_2022idf_carac.iloc[dict_trie_accidents_2022idf[key][m1]]['Longitude'],accidents_2022idf_carac.iloc[dict_trie_accidents_2022idf[key][m1]]['Latitude']]
+            coord_ligne2=[accidents_2022idf_carac.iloc[dict_trie_accidents_2022idf[key][m2]]['Longitude'],accidents_2022idf_carac.iloc[dict_trie_accidents_2022idf[key][m2]]['Latitude']]
+            folium.PolyLine([coord_ligne1,coord_ligne2],
+                            popup=key,
+                            weight = 0.7 * len(dict_trie_accidents_2022idf[key]/len(dict_trie_accidents_2022idf[('93066 - Saint-Denis','AUTOROUTE A1')]))
+                            ).add_to(map)
+            i=i+1
+            if i > 25:
+                break
+            
 
+
+    def cout_distance_thermique(self, prix_essence, essence = True):
+        """ 
+        Parameters:
+        -----------
+        dist : une distance (en kilomètres)
+        prix_essence : prix de l'essence à une date t (exemple : 1.8€/l)
+        essence : True par défaut (si False, signifie que c'est un véhicule Diesel)
+        -----------
+        N.B : 
+        En 2021, une voiture particulière essence consommait en moyenne 7,54 litres pour parcourir 100 kilomètres 
+        contre 6,11 pour les voitures diesel.
+        -----------
+        return : 
+        -----------
+        coût pour parcourir la distance 
+        """
+
+        prix_essence = 1.85
+
+        distance, _ = self.distance_via_routes()
+
+        if essence == True: 
+            conso_100k = 7.54  #nombre de litre consommé par le véhicule à essence sur 100km  
+            
+        else: 
+            conso_100k = 6.11  #nombre de litre consommé par le véhicule disesel sur 100km 
+        
+        nb_litre_trajet = (distance * conso_100k) / 100  #nombre de litre consommé par le véhicule sur la distance dist 
+        cout_trajet = nb_litre_trajet * prix_essence  #coût du trajet 
+        
+        return cout_trajet 
+    
