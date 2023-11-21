@@ -206,7 +206,8 @@ class CarNetwork():
         folium.Marker(
             location=trajet[0],
             popup=self.A,
-            icon=folium.Icon(icon='home', prefix='fa', color='blue')
+            icon=folium.Icon(icon='home', prefix='fa', color='blue'),
+            tooltip=self.A
         ).add_to(carte)
 
 
@@ -214,7 +215,8 @@ class CarNetwork():
         folium.Marker(
             location=trajet[-1],
             popup=self.B,
-            icon=folium.Icon(icon='flag', prefix='fa', color='red')
+            icon=folium.Icon(icon='flag', prefix='fa', color='red'),
+            tooltip=self.B
         ).add_to(carte)
 
         # Trace l'itinéraire
@@ -264,7 +266,8 @@ class CarNetwork():
         folium.GeoJson(
             geojson_url,
             name='Île-de-France', 
-            style_function=style_function
+            style_function=style_function, 
+            popup="Limites de l'île-de-France"
         ).add_to(carte)
 
         # Affiche la carte dans le notebook
@@ -371,6 +374,7 @@ class CarNetwork():
                 location=[lat, lon],
                 icon=folium.Icon(icon=f'{i}', prefix='fa', color='purple'),
                 popup=f"Arrêt numéro {i} : vous devez recharger votre batterie.",
+                tooltip=f"Arrêt numéro {i} : vous devez recharger votre batterie."
                 ).add_to(map)
             
         
@@ -485,6 +489,7 @@ class CarNetwork():
                 location=[lat, lon],
                 icon=folium.Icon(color='yellow'),
                 popup=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est {acces_type}",
+                tooltip=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est {acces_type}"
                 ).add_to(map)
 
     def plot_stations(self, map):
@@ -592,15 +597,15 @@ class CarNetwork():
                             z-index: 1000; padding: 10px; font-size: 14px; font-family: Arial, sans-serif;">
                     <p style="text-align: center; font-size: 18px;"><strong>Légende de la Carte</strong></p>
                     
-                    <p><i class="fa fa-map-marker" style="color: orange;"></i> <strong>Payant</strong></p>
+                    <p><i class="fa fa-stop" style="color: red; font-size: 20px;"></i> <strong>Payant</strong></p>
                     
-                    <p><i class="fa fa-map-marker" style="color: green;"></i> <strong>Gratuit</strong></p>
+                    <p><i class="fa fa-stop" style="color: green; font-size: 20px;"></i> <strong>Gratuit</strong></p>
                     
-                    <p><i class="fa fa-map-marker" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
+                    <p><i class="fa fa-stop" style="color: grey; font-size: 20px;"></i> <strong>Informations manquantes</strong></p>
                     
-                    <p><i class="fa fa-map-marker" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
+                    <p><i class="fa fa-stop" style="color: cyan; font-size: 20px;"></i> <strong>Carte ou badge</strong></p>
                     
-                    <p><i class="fa fa-map-marker" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
+                    <p><i class="fa fa-stop" style="color: yellow; font-size: 20px;"></i> <strong>Gratuit de 12-14h et de 19h-21h</strong></p>
                     
                     <p><i class="fa fa-map-marker" style="color: purple; font-size: 20px;"></i> <strong>Points d'arrêt</strong></p>
 
@@ -614,26 +619,26 @@ class CarNetwork():
         ## C.f. la documentation folium disponible ici pour justifier l'exemple 
         ## 'https://python-visualization.github.io/folium/latest/user_guide/plugins/tag_filter_button.html'
 
-        # On récupère dans categories les différentes catégories représentées 
-        # dans la colonne acces_recharge
-        categories = list(df['acces_recharge'].unique())
-
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
-            if acces_recharge == 'payant': fill_color = 'orange'
+            if acces_recharge == 'payant': fill_color = 'red'
             elif acces_recharge == 'gratuit': fill_color = 'green'
             elif acces_recharge == 'information manquante': fill_color = 'grey'
             elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
             elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
             # Ajoutez le marqueur à la carte
-            folium.Marker(location=[lat, lon], 
-                          tags = acces_recharge,
-                          tooltip="Cliquez sur moi !",
-                          popup=com, 
-                          icon=folium.Icon(color=fill_color, icon_size=(20, 20))
-                          ).add_to(map)
 
-        TagFilterButton(categories).add_to(map)
+            folium.RegularPolygonMarker(
+                location=[lat,lon],
+                popup=com,
+                tooltip=com,
+                fill_color=fill_color, 
+                color=fill_color, # Couleur des contours du polygone
+                rotation=45,
+                radius=5  # Opacité du remplissage
+            ).add_to(map)
+
+
 
 
