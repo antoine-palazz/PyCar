@@ -492,7 +492,7 @@ class CarNetwork():
                 tooltip=f"Ceci est l'une des {len(nearest_stations_i)} bornes les plus proches de l'arrêt numéro {i}. Son type est {acces_type}"
                 ).add_to(map)
 
-    def plot_stations(self, map, idf=True):
+    def plot_stations(self, map):
 
         """ 
         ================================================================
@@ -509,6 +509,9 @@ class CarNetwork():
         
         -idf : vaut par défaut True, indique si l'on représente uniquement 
                les bornes en Île-de-France
+
+        -distance : vaut par défaut True, indique si l'on indique la distance
+               sur la carte
 
         ================================================================
 
@@ -621,47 +624,24 @@ class CarNetwork():
         ## C.f. la documentation folium disponible ici pour justifier l'exemple 
         ## 'https://python-visualization.github.io/folium/latest/user_guide/plugins/tag_filter_button.html'
 
-        if idf==True:
-            for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
-                # Créez un marqueur avec une couleur différente en fonction des valeurs
-                if acces_recharge == 'payant': fill_color = 'red'
-                elif acces_recharge == 'gratuit': fill_color = 'green'
-                elif acces_recharge == 'information manquante': fill_color = 'grey'
-                elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
-                elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
+        for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
+            # Créez un marqueur avec une couleur différente en fonction des valeurs
+            if acces_recharge == 'payant': fill_color = 'red'
+            elif acces_recharge == 'gratuit': fill_color = 'green'
+            elif acces_recharge == 'information manquante': fill_color = 'grey'
+            elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
+            elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
 
-                # Ajoutez le marqueur à la carte
+            # Ajoutez le marqueur à la carte
 
-                folium.RegularPolygonMarker(
-                    location=[lat,lon],
-                    popup=com,
-                    tooltip=com,
-                    fill_color=fill_color, 
-                    color=fill_color, # Couleur des contours du polygone
-                    rotation=45,
-                    radius=5  # Opacité du remplissage
-                ).add_to(map)
-
-        else: 
-            for index, lat, lon, com, acces_recharge in self.stations_data[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
-                # Créez un marqueur avec une couleur différente en fonction des valeurs
-                if acces_recharge == 'payant': fill_color = 'red'
-                elif acces_recharge == 'gratuit': fill_color = 'green'
-                elif acces_recharge == 'information manquante': fill_color = 'grey'
-                elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
-                elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
-
-                # Ajoutez le marqueur à la carte
-
-                folium.RegularPolygonMarker(
-                    location=[lat,lon],
-                    popup=com,
-                    tooltip=com,
-                    fill_color=fill_color, 
-                    color=fill_color, # Couleur des contours du polygone
-                    rotation=45,
-                    radius=5  # Opacité du remplissage
-                ).add_to(map)
+            folium.RegularPolygonMarker(
+                location=[lat,lon],
+                popup=com,
+                tooltip=com,
+                fill_color=fill_color, 
+                color=fill_color, # Couleur des contours du polygone                    rotation=45,
+                radius=5  # Opacité du remplissage
+            ).add_to(map)
 
     def plot_accidents(self, map):
 
