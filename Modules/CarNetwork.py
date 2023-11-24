@@ -47,7 +47,7 @@ class CarNetwork():
     calcul_distance_haversine : permet de calculer une distance à vol d'oiseau
     """
 
-    def __init__(self, A, B, autonomie):
+    def __init__(self, A = None, B = None, autonomie = None):
         self.A = A
         self.B = B
         self.autonomie = autonomie
