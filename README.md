@@ -15,7 +15,19 @@
 </div>
 
 ## Description du projet 
-Le but est de créer un package permettant d'obtenir l'itinéraire optimal (en distance et en coût) pour une voiture électrique, afin de relier un point A à un point B en France. 
+Ce projet a pour objectif de créer un itinéraire optimal pour un véhicule électrique en tenant compte des bornes de recharge disponibles sur le territoire français. L'idée est d'optimiser le trajet en minimisant les arrêts de recharge et en maximisant l'efficacité énergétique du parcours.
+
+Collaborateurs : 
+- Naïl Khelifa 
+- Thomas Pogu
+- Augustin Cablant
+
+## Description du projet 
+Recherche d'Itinéraire : Le système permet à l'utilisateur de spécifier un point de départ et une destination, puis calcule l'itinéraire optimal en considérant les bornes de recharge électrique le long du trajet.
+
+Informations sur les Bornes de Recharge : Le système fournit des informations détaillées sur les bornes de recharge disponibles, y compris leur emplacement, le type de connecteur, la puissance de recharge, etc.
+
+Optimisation de l'Énergie : L'algorithme d'optimisation prend en compte la capacité de la batterie du véhicule, les conditions de circulation et la disponibilité des bornes de recharge pour maximiser l'efficacité énergétique du trajet.
 
 ## Architecture du répertoire 
 Les principaux dossiers sont : 
@@ -23,10 +35,31 @@ Les principaux dossiers sont :
 - SCRAP : qui contient les codes qui nous ont permis de scrapper plusieurs pages internet.
 - Application : contient la web-application que nous avons conçu pour visualiser les itinéraires.
 
-### Dossier notebooks
-#### Le fichier [EDA_bornes.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/notebooks/EDA_bornes.ipynb) est construit de la manière suivante :
-- Description du fichier et statistiques descriptives
-- Représentation des bornes à recharge pour les voitures électriques en France
+## Technologies utilisées
+- Langage de Programmation : Python
+- Framework Web : Flask (pour une interface utilisateur)
+
+## Structure du projet
+
+- Le dossier notebooks contient tous les notebooks de statistiques descriptives (présents dans le dossier notebooks_unique). Nous avons fait le choix de tout regrouper dans le fichier EDA.ipynb. 
+#### Le fichier [EDA.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/notebooks/EDA.ipynb) est construit de la manière suivante :
+- ##### [I. La pollution en France](#La_pollution_en_France)
+
+- ##### [II. Répartition de la population en France métropolitaine]
+
+- ##### [III. Répartition des véhicules électriques en France métropolitaine]
+- ###### [III.B Analyse du fichier]
+- ###### [III.C Répartition des ventes de véhicules en fonction de leur motorisation en France]
+- ###### [III.D Classement des véhicules électriques en France métropolitaine]
+- ###### [III.E Autonomie des voitures électriques]
+- ###### [III.F Évolution des voitures électriques en France métropolitaine]
+- ###### [III.G Voitures particulières immatriculées par commune et par type de recharge]
+- ###### [III.H Projection de ventes de voitures électriques selon l'IEA]
+- ###### [III.I Tentative de prédictions]
+
+- ##### [IV. Répartition des bornes électriques en France métropolitaine]
+
+- ##### [V. Accidents en France métropolitaine]
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
@@ -39,25 +72,42 @@ Les principaux dossiers sont :
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
 
-- 
+- DOWNLOAD est le dossier avec les datasets téléchargés
+- Modules est le dossier contenant la classe permettant de trouver l'itinéraire optimal
+- SCRAP est le dossier contenant les codes pour scraper les données ainsi que les datasets correspondants
 
-## Pour commencer
+## Installation
 
-- Installer toutes les dépendances avec:
+- Cloner le dépôt : 
+```
+$ git clone https://github.com/AugustinCablant/PyCar.git
+```
+
+- Installer les dépendances :
 
 ```
 $ pip install -r requirements.txt
 ```
 
-## Exemple
-
-Pour obtenir l'itinéraire entre une localisation A et une localisation B :
-
+- Exécuter l'application : python src/main.py
 ```
-code
+$ python Application/main.py
 ```
 
-## Sources 
-- Dataset pour les bornes de recharge pour [véhicules électriques](https://www.data.gouv.fr/fr/datasets/bornes-de-recharge-pour-vehicules-electriques-3/)
-- Estimation de la population par région en France sur le site de l'[INSEE](https://www.insee.fr/fr/statistiques/1893198)
-- 
+## Utilisation
+
+- Accéder à l'interface web à l'adresse : 
+```
+$ python Application/main.py
+```
+- Spécifier le point de départ et la destination.
+- L'application affichera l'itinéraire optimal avec les bornes de recharge recommandées.
+
+## Contribuer 
+
+Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes :
+
+- Forker le projet.
+- Créer une branche pour votre fonctionnalité : git checkout -b nouvelle-fonctionnalite
+- Effectuer les modifications nécessaires.
+- Soumettre une demande de fusion (Pull Request).

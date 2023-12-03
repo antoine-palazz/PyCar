@@ -1,3 +1,0 @@
-""" 
-Création du package PyCar
-"""
