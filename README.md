@@ -3,7 +3,7 @@
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; text-align: right;">
         <picture>
-        <source media="(prefers-color-scheme: dark) srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
+        <source media="(prefers-color-scheme: dark) srcset= "https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
         <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
         <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
         </picture>
@@ -43,23 +43,23 @@ Les principaux dossiers sont :
 
 - Le dossier notebooks contient tous les notebooks de statistiques descriptives (présents dans le dossier notebooks_unique). Nous avons fait le choix de tout regrouper dans le fichier EDA.ipynb. 
 #### Le fichier [EDA.ipynb](https://github.com/AugustinCablant/PyCar/blob/main/notebooks/EDA.ipynb) est construit de la manière suivante :
-- ##### [I. La pollution en France](#La_pollution_en_France)
+- ##### I. La pollution en France
 
-- ##### [II. Répartition de la population en France métropolitaine]
+- ##### II. Répartition de la population en France métropolitaine
 
-- ##### [III. Répartition des véhicules électriques en France métropolitaine]
-- ###### [III.B Analyse du fichier]
-- ###### [III.C Répartition des ventes de véhicules en fonction de leur motorisation en France]
-- ###### [III.D Classement des véhicules électriques en France métropolitaine]
-- ###### [III.E Autonomie des voitures électriques]
-- ###### [III.F Évolution des voitures électriques en France métropolitaine]
-- ###### [III.G Voitures particulières immatriculées par commune et par type de recharge]
-- ###### [III.H Projection de ventes de voitures électriques selon l'IEA]
-- ###### [III.I Tentative de prédictions]
+- ##### III. Répartition des véhicules électriques en France métropolitaine
+- ###### III.B Analyse du fichier
+- ###### III.C Répartition des ventes de véhicules en fonction de leur motorisation en France
+- ###### III.D Classement des véhicules électriques en France métropolitaine
+- ###### III.E Autonomie des voitures électriques
+- ###### III.F Évolution des voitures électriques en France métropolitaine
+- ###### III.G Voitures particulières immatriculées par commune et par type de recharge
+- ###### III.H Projection de ventes de voitures électriques selon l'IEA
+- ###### III.I Tentative de prédictions
 
-- ##### [IV. Répartition des bornes électriques en France métropolitaine]
+- ##### IV. Répartition des bornes électriques en France métropolitaine
 
-- ##### [V. Accidents en France métropolitaine]
+- ##### V. Accidents en France métropolitaine
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
