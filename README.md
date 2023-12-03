@@ -94,14 +94,29 @@ $ python Application/main.py
 - Accéder à l'interface web à l'adresse : 
 ```
 $ python Application/app.py
-```
+``` 
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="">
- <source media="(prefers-color-scheme: light)" srcset="">
- <img alt="Un rapide aperçu" src="">
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/python.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/python.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/python.png">
+</picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app.png">
 </picture>
 - Spécifier le point de départ et la destination.
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app_1.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app_1.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app_1.png">
+</picture>
 - L'application affichera l'itinéraire optimal avec les bornes de recharge recommandées.
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/iti.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/iti.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/iti.png">
+</picture>
 
 ## Contribuer 
 
