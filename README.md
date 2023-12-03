@@ -66,11 +66,6 @@ Les principaux dossiers sont :
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
 <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
 </picture>
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap2.png">
- <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
-</picture>
 
 - DOWNLOAD est le dossier avec les datasets téléchargés
 - Modules est le dossier contenant la classe permettant de trouver l'itinéraire optimal
@@ -89,7 +84,7 @@ $ git clone https://github.com/AugustinCablant/PyCar.git
 $ pip install -r requirements.txt
 ```
 
-- Exécuter l'application : python src/main.py
+- Exécuter l'application : python Application/app.py
 ```
 $ python Application/main.py
 ```
@@ -98,8 +93,13 @@ $ python Application/main.py
 
 - Accéder à l'interface web à l'adresse : 
 ```
-$ python Application/main.py
+$ python Application/app.py
 ```
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="">
+ <source media="(prefers-color-scheme: light)" srcset="">
+ <img alt="Un rapide aperçu" src="">
+</picture>
 - Spécifier le point de départ et la destination.
 - L'application affichera l'itinéraire optimal avec les bornes de recharge recommandées.
 
