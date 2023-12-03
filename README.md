@@ -5,7 +5,7 @@
         <picture>
         <source media="(prefers-color-scheme: dark) srcset= "https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
         <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
-        <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/Projet_python_2A/blob/main/cap.png">
+        <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/Application/Static/logo.jpeg">
         </picture>
     </div>
     <div style="flex: 1; padding-right: 10px;">
