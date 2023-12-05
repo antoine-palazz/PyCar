@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c1eff6a3962259a3b9b7fd3fa5656c75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c1eff6a3962259a3b9b7fd3fa5656c75" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c1eff6a3962259a3b9b7fd3fa5656c75 = L.map(
+                "map_c1eff6a3962259a3b9b7fd3fa5656c75",
+                {
+                    center: [48.866667, 2.333333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_839d526f07668aa8f09bde165a6dfa4a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c1eff6a3962259a3b9b7fd3fa5656c75);
+        
+    
+            var heat_map_6b714e9a78d89a98643e16349b6abe09 = L.heatLayer(
+                [[48.922, 2.357, 16.799999999999997], [48.872, 2.301, 8.399999999999999], [48.926, 2.397, 8.399999999999999], [48.945, 2.285, 7.699999999999999], [48.757, 2.335, 7.699999999999999], [48.873, 2.359, 7.0], [48.934, 2.274, 7.0], [48.951, 2.475, 7.0], [48.817, 2.429, 7.0], [48.966, 2.257, 6.3], [48.817, 2.348, 5.6], [48.887, 2.385, 5.6], [48.913, 2.477, 5.6], [48.826, 2.519, 5.6], [48.834, 2.41, 4.8999999999999995], [48.918, 2.223, 4.8999999999999995], [48.776, 2.429, 4.8999999999999995], [48.846, 2.368, 4.199999999999999], [48.876, 2.278, 4.199999999999999], [48.888, 2.373, 4.199999999999999], [48.865, 2.396, 4.199999999999999], [48.856, 2.405, 4.199999999999999], [48.778, 2.217, 4.199999999999999], [48.919, 2.224, 4.199999999999999], [48.833, 2.157, 4.199999999999999], [48.835, 2.581, 4.199999999999999]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_c1eff6a3962259a3b9b7fd3fa5656c75);
+        
+</script>
+</html>

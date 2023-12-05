@@ -10,6 +10,8 @@ import os
 import sys
 import seaborn as sns
 import pandas as pd
+from nbconvert import HTMLExporter
+import nbformat
 car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
 sys.path.append(car_network_directory)
 from CarNetwork import CarNetwork
@@ -88,6 +90,10 @@ def page_suivante4():
 def page_suivante5():
     get_graph = evol_accidents()
     return render_template("evol_accidents.html", graph = get_graph)
+
+@app.route('/EDA')
+def EDA():
+    return render_template("EDA_html.html")
 
 @app.route('/')
 def accueil():
