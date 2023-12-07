@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_61a1a3469c2b6bce196e4eeb81ba9778 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_61a1a3469c2b6bce196e4eeb81ba9778" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_61a1a3469c2b6bce196e4eeb81ba9778 = L.map(
+                "map_61a1a3469c2b6bce196e4eeb81ba9778",
+                {
+                    center: [48.866667, 2.333333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_076ace225a1f204404f0a46e032200d5 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+            var poly_line_18a279610fe21045f48c3cd7e240e931 = L.polyline(
+                [[48.922, 2.357], [48.931, 2.368]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 16.799999999999997}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_fcf24098af57eeb65264652e17dced05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8e09e43990f45076c4fce05cc12abaa = $(`<div id="html_b8e09e43990f45076c4fce05cc12abaa" style="width: 100.0%; height: 100.0%;">('93066 - Saint-Denis', 'AUTOROUTE A1')</div>`)[0];
+                popup_fcf24098af57eeb65264652e17dced05.setContent(html_b8e09e43990f45076c4fce05cc12abaa);
+            
+        
+
+        poly_line_18a279610fe21045f48c3cd7e240e931.bindPopup(popup_fcf24098af57eeb65264652e17dced05)
+        ;
+
+        
+    
+    
+            var poly_line_2762bc6394e8b74931c65fc03f068890 = L.polyline(
+                [[48.873, 2.296], [48.867, 2.316]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 8.399999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_9acf2fc625b849c1619be414be52a7d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eee18b2fbdcde9c66d8a11f6cc17e5e6 = $(`<div id="html_eee18b2fbdcde9c66d8a11f6cc17e5e6" style="width: 100.0%; height: 100.0%;">('75108 - Paris 8e Arrondissement', 'AVENUE DES CHAMPS ELYSEES')</div>`)[0];
+                popup_9acf2fc625b849c1619be414be52a7d4.setContent(html_eee18b2fbdcde9c66d8a11f6cc17e5e6);
+            
+        
+
+        poly_line_2762bc6394e8b74931c65fc03f068890.bindPopup(popup_9acf2fc625b849c1619be414be52a7d4)
+        ;
+
+        
+    
+    
+            var poly_line_57c55ebd5e13c7244c7311cf76fbf8c5 = L.polyline(
+                [[48.924, 2.385], [48.928, 2.418]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 8.399999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_3d961c16e946817d06d1d7378d5d9615 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a0d1ca500b2010f31b912921503a69e = $(`<div id="html_4a0d1ca500b2010f31b912921503a69e" style="width: 100.0%; height: 100.0%;">('93027 - Courneuve', 'AUTOROUTE A86')</div>`)[0];
+                popup_3d961c16e946817d06d1d7378d5d9615.setContent(html_4a0d1ca500b2010f31b912921503a69e);
+            
+        
+
+        poly_line_57c55ebd5e13c7244c7311cf76fbf8c5.bindPopup(popup_3d961c16e946817d06d1d7378d5d9615)
+        ;
+
+        
+    
+    
+            var poly_line_ba5dbe0f533992b866ee8034c6b22270 = L.polyline(
+                [[48.949, 2.281], [48.938, 2.298]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.699999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_5bf1dfd29a1b0b5995f94dd0b8d7392f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1be3396c763ae70b6eaf6dea6d0c1319 = $(`<div id="html_1be3396c763ae70b6eaf6dea6d0c1319" style="width: 100.0%; height: 100.0%;">('92036 - Gennevilliers', 'AUTOROUTE A15')</div>`)[0];
+                popup_5bf1dfd29a1b0b5995f94dd0b8d7392f.setContent(html_1be3396c763ae70b6eaf6dea6d0c1319);
+            
+        
+
+        poly_line_ba5dbe0f533992b866ee8034c6b22270.bindPopup(popup_5bf1dfd29a1b0b5995f94dd0b8d7392f)
+        ;
+
+        
+    
+    
+            var poly_line_5a970a5045ee84418dc96667465da688 = L.polyline(
+                [[48.761, 2.316], [48.758, 2.34]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.699999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_5891679ebc24a260dc925171979ee367 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d1f961a88ee1149b8d63ba86b04d632 = $(`<div id="html_6d1f961a88ee1149b8d63ba86b04d632" style="width: 100.0%; height: 100.0%;">('94034 - Fresnes', 'AUTOROUTE A86')</div>`)[0];
+                popup_5891679ebc24a260dc925171979ee367.setContent(html_6d1f961a88ee1149b8d63ba86b04d632);
+            
+        
+
+        poly_line_5a970a5045ee84418dc96667465da688.bindPopup(popup_5891679ebc24a260dc925171979ee367)
+        ;
+
+        
+    
+    
+            var poly_line_61d43296215d82bb31846d423289acd6 = L.polyline(
+                [[48.882, 2.351], [48.872, 2.36]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.0}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_8abf2d5f7e04a71aac8114445a4eb883 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f64cc1d4f1f01401f506051b579170aa = $(`<div id="html_f64cc1d4f1f01401f506051b579170aa" style="width: 100.0%; height: 100.0%;">('75110 - Paris 10e Arrondissement', 'BOULEVARD DE MAGENTA')</div>`)[0];
+                popup_8abf2d5f7e04a71aac8114445a4eb883.setContent(html_f64cc1d4f1f01401f506051b579170aa);
+            
+        
+
+        poly_line_61d43296215d82bb31846d423289acd6.bindPopup(popup_8abf2d5f7e04a71aac8114445a4eb883)
+        ;
+
+        
+    
+    
+            var poly_line_5ac300c5c70d5fb84d549241261f05e2 = L.polyline(
+                [[48.935, 2.261], [48.936, 2.289]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.0}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_6f4a812e8bffc607239ab119b914a955 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1744b965d39eff08e416201287983a03 = $(`<div id="html_1744b965d39eff08e416201287983a03" style="width: 100.0%; height: 100.0%;">('92036 - Gennevilliers', 'A86')</div>`)[0];
+                popup_6f4a812e8bffc607239ab119b914a955.setContent(html_1744b965d39eff08e416201287983a03);
+            
+        
+
+        poly_line_5ac300c5c70d5fb84d549241261f05e2.bindPopup(popup_6f4a812e8bffc607239ab119b914a955)
+        ;
+
+        
+    
+    
+            var poly_line_7e9380a9a4d628a12502f042d2f9aaf9 = L.polyline(
+                [[48.956, 2.473], [48.926, 2.482]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.0}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_bf42f01443523e4857cb9f464025d3c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_072ae13337c51e049db5777d9ded1284 = $(`<div id="html_072ae13337c51e049db5777d9ded1284" style="width: 100.0%; height: 100.0%;">('93005 - Aulnay-sous-Bois', 'AUTOROUTE A3')</div>`)[0];
+                popup_bf42f01443523e4857cb9f464025d3c3.setContent(html_072ae13337c51e049db5777d9ded1284);
+            
+        
+
+        poly_line_7e9380a9a4d628a12502f042d2f9aaf9.bindPopup(popup_bf42f01443523e4857cb9f464025d3c3)
+        ;
+
+        
+    
+    
+            var poly_line_dd00b73f7381184506156d6518e49059 = L.polyline(
+                [[48.818, 2.42], [48.816, 2.45]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 7.0}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_dc7315ca82cb514f2df625bfab6cd7d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_096ae2bbbb06462a059bbc49aed717f4 = $(`<div id="html_096ae2bbbb06462a059bbc49aed717f4" style="width: 100.0%; height: 100.0%;">('94069 - Saint-Maurice', 'A4')</div>`)[0];
+                popup_dc7315ca82cb514f2df625bfab6cd7d6.setContent(html_096ae2bbbb06462a059bbc49aed717f4);
+            
+        
+
+        poly_line_dd00b73f7381184506156d6518e49059.bindPopup(popup_dc7315ca82cb514f2df625bfab6cd7d6)
+        ;
+
+        
+    
+    
+            var poly_line_2f475b7d7b5dc790f45d4c8078054f13 = L.polyline(
+                [[48.976, 2.239], [48.963, 2.265]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 6.3}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_8f0d9bd37e183551981685e8378f8037 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8031de2e4e02518f62cf4dea51acc2f = $(`<div id="html_e8031de2e4e02518f62cf4dea51acc2f" style="width: 100.0%; height: 100.0%;">('95582 - Sannois', ' A15')</div>`)[0];
+                popup_8f0d9bd37e183551981685e8378f8037.setContent(html_e8031de2e4e02518f62cf4dea51acc2f);
+            
+        
+
+        poly_line_2f475b7d7b5dc790f45d4c8078054f13.bindPopup(popup_8f0d9bd37e183551981685e8378f8037)
+        ;
+
+        
+    
+    
+            var poly_line_e45d87920bf98d061f328e1a450a9852 = L.polyline(
+                [[48.817, 2.348], [48.826, 2.387]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5.6}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_cec3bea2b12c7b7f44b2827cfca69b97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a231f0def11e515d4569c1097dcd7f9f = $(`<div id="html_a231f0def11e515d4569c1097dcd7f9f" style="width: 100.0%; height: 100.0%;">('75113 - Paris 13e Arrondissement', 'BD PERIPHERIQUE INTERIEUR')</div>`)[0];
+                popup_cec3bea2b12c7b7f44b2827cfca69b97.setContent(html_a231f0def11e515d4569c1097dcd7f9f);
+            
+        
+
+        poly_line_e45d87920bf98d061f328e1a450a9852.bindPopup(popup_cec3bea2b12c7b7f44b2827cfca69b97)
+        ;
+
+        
+    
+    
+            var poly_line_233d7b3e4f4a77c1531fdbacdc856781 = L.polyline(
+                [[48.883, 2.371], [48.889, 2.393]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5.6}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_c841a85087d3073e57ed961d943bffae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e8c2d2975ac5e427bfbee01967d391a = $(`<div id="html_5e8c2d2975ac5e427bfbee01967d391a" style="width: 100.0%; height: 100.0%;">('75119 - Paris 19e Arrondissement', 'AVENUE JEAN JAURES')</div>`)[0];
+                popup_c841a85087d3073e57ed961d943bffae.setContent(html_5e8c2d2975ac5e427bfbee01967d391a);
+            
+        
+
+        poly_line_233d7b3e4f4a77c1531fdbacdc856781.bindPopup(popup_c841a85087d3073e57ed961d943bffae)
+        ;
+
+        
+    
+    
+            var poly_line_6f4c62bbe76f7d47ddff2cde1add1f8f = L.polyline(
+                [[48.899, 2.469], [48.918, 2.479]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5.6}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_8d2b0c383ab6418711b0dd46a0a1c945 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7afa8caee14c9c0780a7c76b7273ecd5 = $(`<div id="html_7afa8caee14c9c0780a7c76b7273ecd5" style="width: 100.0%; height: 100.0%;">('93010 - Bondy', 'AUTOROUTE A3')</div>`)[0];
+                popup_8d2b0c383ab6418711b0dd46a0a1c945.setContent(html_7afa8caee14c9c0780a7c76b7273ecd5);
+            
+        
+
+        poly_line_6f4c62bbe76f7d47ddff2cde1add1f8f.bindPopup(popup_8d2b0c383ab6418711b0dd46a0a1c945)
+        ;
+
+        
+    
+    
+            var poly_line_aed90c1a190f632948ee72ef08b485d4 = L.polyline(
+                [[48.83, 2.496], [48.826, 2.519]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5.6}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_bf6d3372b573a8e3c59a1a67a0d3986b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_febe2bebc7262ce4524f8b626082d279 = $(`<div id="html_febe2bebc7262ce4524f8b626082d279" style="width: 100.0%; height: 100.0%;">('94017 - Champigny-sur-Marne', 'A4')</div>`)[0];
+                popup_bf6d3372b573a8e3c59a1a67a0d3986b.setContent(html_febe2bebc7262ce4524f8b626082d279);
+            
+        
+
+        poly_line_aed90c1a190f632948ee72ef08b485d4.bindPopup(popup_bf6d3372b573a8e3c59a1a67a0d3986b)
+        ;
+
+        
+    
+    
+            var poly_line_99b387e059de243cdf48d9ee1ec217af = L.polyline(
+                [[48.849, 2.373], [48.839, 2.43]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.8999999999999995}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_f9a19520dcbc22bbcccc14294f6386ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07570825dc6c2815dbe9dbf924c4226d = $(`<div id="html_07570825dc6c2815dbe9dbf924c4226d" style="width: 100.0%; height: 100.0%;">('75112 - Paris 12e Arrondissement', 'AVENUE DAUMESNIL')</div>`)[0];
+                popup_f9a19520dcbc22bbcccc14294f6386ab.setContent(html_07570825dc6c2815dbe9dbf924c4226d);
+            
+        
+
+        poly_line_99b387e059de243cdf48d9ee1ec217af.bindPopup(popup_f9a19520dcbc22bbcccc14294f6386ab)
+        ;
+
+        
+    
+    
+            var poly_line_0291fab6d34d0e21e6fc0647927b95cb = L.polyline(
+                [[48.895, 2.192], [48.918, 2.223]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.8999999999999995}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_73efa2e711acd9607cd408b6d7701330 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_672626e62105b4b7f868cc1c3189ae3d = $(`<div id="html_672626e62105b4b7f868cc1c3189ae3d" style="width: 100.0%; height: 100.0%;">('92050 - Nanterre', 'A86')</div>`)[0];
+                popup_73efa2e711acd9607cd408b6d7701330.setContent(html_672626e62105b4b7f868cc1c3189ae3d);
+            
+        
+
+        poly_line_0291fab6d34d0e21e6fc0647927b95cb.bindPopup(popup_73efa2e711acd9607cd408b6d7701330)
+        ;
+
+        
+    
+    
+            var poly_line_b39554dbaac0a618fc5415e0525da876 = L.polyline(
+                [[48.776, 2.429], [48.799, 2.446]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.8999999999999995}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_5b507782ede67de54e1b4409aaab6485 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ed9118c19cc61d92ceec2f7bb2d03f4 = $(`<div id="html_6ed9118c19cc61d92ceec2f7bb2d03f4" style="width: 100.0%; height: 100.0%;">('94028 - Créteil', 'A86 EXT')</div>`)[0];
+                popup_5b507782ede67de54e1b4409aaab6485.setContent(html_6ed9118c19cc61d92ceec2f7bb2d03f4);
+            
+        
+
+        poly_line_b39554dbaac0a618fc5415e0525da876.bindPopup(popup_5b507782ede67de54e1b4409aaab6485)
+        ;
+
+        
+    
+    
+            var poly_line_c66e7eb2a3ba80071f053c7467afae94 = L.polyline(
+                [[48.846, 2.368], [48.842, 2.372]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_cd795e4ced05f63c160fe6e00270068e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cac8f17ea37747a289853a4c3292eac8 = $(`<div id="html_cac8f17ea37747a289853a4c3292eac8" style="width: 100.0%; height: 100.0%;">('75112 - Paris 12e Arrondissement', 'QUAI DE LA RAPEE')</div>`)[0];
+                popup_cd795e4ced05f63c160fe6e00270068e.setContent(html_cac8f17ea37747a289853a4c3292eac8);
+            
+        
+
+        poly_line_c66e7eb2a3ba80071f053c7467afae94.bindPopup(popup_cd795e4ced05f63c160fe6e00270068e)
+        ;
+
+        
+    
+    
+            var poly_line_7e8ac70f507ded7a789c13ffc307008d = L.polyline(
+                [[48.852, 2.252], [48.877, 2.279]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_9e419c7d96bdf14665e8d6851984b59a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e5d4d15669dfdfe9d7bd338d385564a = $(`<div id="html_4e5d4d15669dfdfe9d7bd338d385564a" style="width: 100.0%; height: 100.0%;">('75116 - Paris 16e Arrondissement', 'BD PERIPHERIQUE EXTERIEUR')</div>`)[0];
+                popup_9e419c7d96bdf14665e8d6851984b59a.setContent(html_4e5d4d15669dfdfe9d7bd338d385564a);
+            
+        
+
+        poly_line_7e8ac70f507ded7a789c13ffc307008d.bindPopup(popup_9e419c7d96bdf14665e8d6851984b59a)
+        ;
+
+        
+    
+    
+            var poly_line_5ee8c472a9048469807ee90e77c633cf = L.polyline(
+                [[48.886, 2.371], [48.894, 2.382]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_ddb81c270a553faeeef73c2f7da06ecc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e4bb4a741f209c989cf27454f944656 = $(`<div id="html_6e4bb4a741f209c989cf27454f944656" style="width: 100.0%; height: 100.0%;">('75119 - Paris 19e Arrondissement', 'AVENUE DE FLANDRE')</div>`)[0];
+                popup_ddb81c270a553faeeef73c2f7da06ecc.setContent(html_6e4bb4a741f209c989cf27454f944656);
+            
+        
+
+        poly_line_5ee8c472a9048469807ee90e77c633cf.bindPopup(popup_ddb81c270a553faeeef73c2f7da06ecc)
+        ;
+
+        
+    
+    
+            var poly_line_e7fce58b108af35a7760fb50a5ffe796 = L.polyline(
+                [[48.863, 2.389], [48.872, 2.405]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_3c3f04ad5e3f8b683ba26a8c1d7e88da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_671175777d8dbad9ec783c9d963f5071 = $(`<div id="html_671175777d8dbad9ec783c9d963f5071" style="width: 100.0%; height: 100.0%;">('75120 - Paris 20e Arrondissement', 'AVENUE GAMBETTA')</div>`)[0];
+                popup_3c3f04ad5e3f8b683ba26a8c1d7e88da.setContent(html_671175777d8dbad9ec783c9d963f5071);
+            
+        
+
+        poly_line_e7fce58b108af35a7760fb50a5ffe796.bindPopup(popup_3c3f04ad5e3f8b683ba26a8c1d7e88da)
+        ;
+
+        
+    
+    
+            var poly_line_9e1690ada1d86e8006ac731876de5eaf = L.polyline(
+                [[48.873, 2.391], [48.854, 2.406]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_21c274b12e49450eb778b6d22ee2f235 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6dc40e8e384e428b6f5d45d9b62591ca = $(`<div id="html_6dc40e8e384e428b6f5d45d9b62591ca" style="width: 100.0%; height: 100.0%;">('75120 - Paris 20e Arrondissement', 'RUE DES PYRENEES')</div>`)[0];
+                popup_21c274b12e49450eb778b6d22ee2f235.setContent(html_6dc40e8e384e428b6f5d45d9b62591ca);
+            
+        
+
+        poly_line_9e1690ada1d86e8006ac731876de5eaf.bindPopup(popup_21c274b12e49450eb778b6d22ee2f235)
+        ;
+
+        
+    
+    
+            var poly_line_727c3f774057ad9d20768d5232edb570 = L.polyline(
+                [[48.781, 2.173], [48.777, 2.222]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_23fc58e0e2a1c5a2538bb23fd817d2da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9464d1742bd95a7eed410c7dfa00a22 = $(`<div id="html_a9464d1742bd95a7eed410c7dfa00a22" style="width: 100.0%; height: 100.0%;">('78640 - Vélizy-Villacoublay', 'A86 EXT')</div>`)[0];
+                popup_23fc58e0e2a1c5a2538bb23fd817d2da.setContent(html_a9464d1742bd95a7eed410c7dfa00a22);
+            
+        
+
+        poly_line_727c3f774057ad9d20768d5232edb570.bindPopup(popup_23fc58e0e2a1c5a2538bb23fd817d2da)
+        ;
+
+        
+    
+    
+            var poly_line_ff1734106790481c73f1e1cb9197cc29 = L.polyline(
+                [[48.919, 2.224], [48.932, 2.249]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_129758e0e2872304e511fe037fc81325 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e0eafac3535b337261e8f3870905a3b = $(`<div id="html_9e0eafac3535b337261e8f3870905a3b" style="width: 100.0%; height: 100.0%;">('92025 - Colombes', 'A86')</div>`)[0];
+                popup_129758e0e2872304e511fe037fc81325.setContent(html_9e0eafac3535b337261e8f3870905a3b);
+            
+        
+
+        poly_line_ff1734106790481c73f1e1cb9197cc29.bindPopup(popup_129758e0e2872304e511fe037fc81325)
+        ;
+
+        
+    
+    
+            var poly_line_c61feef156118fcfd147c3decb197cbd = L.polyline(
+                [[48.833, 2.157], [48.836, 2.182]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_3dd1b1a727369c1ffbcabdc02c6fa42e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4359320483492304c1709e4f7f6938f0 = $(`<div id="html_4359320483492304c1709e4f7f6938f0" style="width: 100.0%; height: 100.0%;">('92047 - Marnes-la-Coquette', 'A13')</div>`)[0];
+                popup_3dd1b1a727369c1ffbcabdc02c6fa42e.setContent(html_4359320483492304c1709e4f7f6938f0);
+            
+        
+
+        poly_line_c61feef156118fcfd147c3decb197cbd.bindPopup(popup_3dd1b1a727369c1ffbcabdc02c6fa42e)
+        ;
+
+        
+    
+    
+            var poly_line_4e69c3da1db3b2807e7801fb8ec4ce11 = L.polyline(
+                [[48.836, 2.542], [48.835, 2.581]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4.199999999999999}
+            ).addTo(map_61a1a3469c2b6bce196e4eeb81ba9778);
+        
+    
+        var popup_5200e54ff1d8252bf8f1d735c18028f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56368a9cbee21846daf4e8bb71a555f3 = $(`<div id="html_56368a9cbee21846daf4e8bb71a555f3" style="width: 100.0%; height: 100.0%;">('93051 - Noisy-le-Grand', 'A4')</div>`)[0];
+                popup_5200e54ff1d8252bf8f1d735c18028f0.setContent(html_56368a9cbee21846daf4e8bb71a555f3);
+            
+        
+
+        poly_line_4e69c3da1db3b2807e7801fb8ec4ce11.bindPopup(popup_5200e54ff1d8252bf8f1d735c18028f0)
+        ;
+
+        
+    
+</script>
+</html>
