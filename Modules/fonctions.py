@@ -12,6 +12,8 @@ import pyroutelib3
 from pyroutelib3 import Router
 import requests, json
 import folium 
+from CarNetwork import CarNetwork
+
 
 # Bornes 
 URL = 'https://www.data.gouv.fr/fr/datasets/r/517258d5-aee7-4fa4-ac02-bd83ede23d25'
@@ -194,3 +196,155 @@ def trajet_electrique(Trajet_thermique_lat, Trajet_thermique_lon, autonomie):
             parcourue = 0
     total += parcourue
     return Trajet_lat, Trajet_lon, total
+
+
+class Autoroute(CarNetwork):
+
+    def __init__(self, A, B, autonomie):
+        super().__init__(A, B, autonomie)
+        self.stations_peages = pd.read_csv('https://static.data.gouv.fr/resources/gares-de-peage-du-reseau-routier-national-concede/20230728-163544/gares-peage-2023.csv', sep = ';')
+
+    
+    def clean_base(self):
+
+        ## Dans la base de donnée, les coordonnées des péages sont en 
+        #  unité de Lambert 93. Nous les transformons en degrés géographique
+
+        ## Dans la base de donnée, les coordonées de Lambert données dans 
+        #  les colonnes 'x' et 'y' sont des strings, on corrige ça 
+
+        self.stations_peages['x'] = self.stations_peages['x'].str.replace(',', '.').astype(float)
+        self.stations_peages['y'] = self.stations_peages['y'].str.replace(',', '.').astype(float)
+
+
+        def lambert93_to_latlon(x, y):
+
+            in_proj = Proj(init='epsg:2154')  # EPSG code for Lambert 93
+            out_proj = Proj(init='epsg:4326')  # EPSG code for WGS84 (lat/lon)
+
+            lon, lat = transform(in_proj, out_proj, x, y)
+            return lat, lon
+                
+        ## On crée deux nouvelles colonnes 
+        self.stations_peages['xlongitude'] = lambert93_to_latlon(self.stations_peages['x'], self.stations_peages['y'])[0]
+        self.stations_peages['ylatitude'] = lambert93_to_latlon(self.stations_peages['x'], self.stations_peages['y'])[1]
+
+        ## On renomme les colonnes par soucis de clarté
+        self.stations_peages.rename(columns={'x': 'lambert93_x', 'y' : 'lambert93_y'}, inplace=True)
+
+        '''
+        Les coordonnées de longitude > 90 ou de latitude > 90 sont inutiles car elles dépassent les limites 
+        des valeurs possibles pour la longitude (de -180 à 180) et la latitude (de -90 à 90) sur la surface 
+        de la Terre, et donc, elles sont généralement considérées comme des données incorrectes. 
+        La routine supprime ces données du dataframe.
+        '''
+
+
+        liste = []
+        for row in self.stations_peages.itertuples():
+
+            if row.xlongitude > 90 or row.ylatitude > 90:
+                liste.append(row.Index)
+
+        self.stations_peages.drop(liste)
+
+
+    def plot_peages_autoroutes(self, map):
+        
+        ## FAIRE ATTENTION À BIEN APPLIQUER LA MÉTHODE .clean_base() à 
+        #  l'objet de la classe Autoroute avant de l'instancier 
+        
+        df = self.stations_peages[self.stations_peages['route'].str.startswith('A')]
+
+        for index, lat, lon in df[['ylatitude', 'xlongitude']].itertuples():
+            
+            # attention ici on inverse lon et lat !
+            folium.RegularPolygonMarker(location=[lon, lat], color ='blue', radius=5).add_to(map)
+
+
+################################################################
+## FONCTIONS POUR NAÏL ##
+################################################################
+
+
+
+def cout_distance_thermique(dist, prix_essence, essence = True):
+    """ 
+    Parameters:
+    -----------
+    dist : une distance (en kilomètres)
+    prix_essence : prix de l'essence à une date t (exemple : 1.8€/l)
+    essence : True par défaut (si False, signifie que c'est un véhicule Diesel)
+    -----------
+    N.B : 
+    En 2021, une voiture particulière essence consommait en moyenne 7,54 litres pour parcourir 100 kilomètres 
+    contre 6,11 pour les voitures diesel.
+    -----------
+    return : 
+    -----------
+    coût pour parcourir la distance 
+    """
+    if essence == True: 
+        conso_100k = 7.54  #nombre de litre consommé par le véhicule à essence sur 100km  
+        
+    else: 
+        conso_100k = 6.11  #nombre de litre consommé par le véhicule disesel sur 100km 
+    
+    nb_litre_trajet = (dist * conso_100k) / 100  #nombre de litre consommé par le véhicule sur la distance dist 
+    cout_trajet = nb_litre_trajet * prix_essence  #coût du trajet 
+    return cout_trajet 
+
+def distance_entre_2_bornes(borne1, borne2):
+    """ 
+    Parameters:
+    -----------
+    borne1 : [lat1, lon1] 
+    borne2 : [lat2, lon2]
+    -----------
+    return : 
+    -----------
+    retourne le nombre de km à parcourir pour aller de la borne 1 à la borne 2 
+    """
+    # Naïl je te laisse faire, c'est toi l'expert 
+    return None
+
+
+def cout_trajet_electrique(start, autonomie_véhicule, autonomie_start, dist, liste_localisation_bornes, prix):
+    """ 
+    Parameters:
+    -----------
+    start : [lat, lon] point de départ du véhicule électrique
+    autonomie_véhicule : autonomie du véhicule si rechargé à 100% (exemple : 500km)
+    autonomie_start : autonomie du véhicule au départ (exemple : 200km)
+    dist : distance que le véhicule souhaite parcourir
+    liste_localisation_bornes : liste contenant la localisation des bornes et le prix du kWH sur lesquelles le véhicule va s'arrêter
+    pour se recharger (chaque élément de la liste est un triplet du type : [lat, lon, prix])
+    conso : conso du véhicule (exemple : 17 kWh/100 km)
+    prix : prix du kWh (exemple : 0.50€)
+    -----------
+    N.B : 
+    Un véhicule électrique consomme entre 15 et 18 kWh pour effectuer 100 km en milieu urbain et extra-urbain. 
+    Et consomme 20 à 25 kWh pour 100 km parcourus sur autoroute.
+    -----------
+    Return : 
+    -----------
+    coût pour qu'à la fin du voyage, le véhicule soit rechargé à 100% 
+    """
+    cout_total = 0
+    for i, sous_liste in enumerate(liste_localisation_bornes): 
+        prix_borne = sous_liste[2]
+        if i==0:
+            distance = distance_entre_2_bornes(start, sous_liste[0:2])  #distance entre le point de départ et la borne 1
+        else: # i > 0
+            sous_liste_avant = liste_localisation_bornes[i-1]
+            borne_avant = sous_liste_avant[0:2]  #[lat, lon]
+            distance = distance_entre_2_bornes(borne_avant, sous_liste[0:2])  #distance entre la borne i-1 et i
+        autonomie_restante = autonomie_start - distance
+        if autonomie_restante<=0:
+            print(f"Le trajet trouvé n'est pas le bon, le véhicule tombe en panne avant d'avoir pu atteindre la borne {i}")
+        else: 
+            nb_km_remplir = autonomie_véhicule - autonomie_restante  #nb de km qu'il faut pour que le véhicule ait une autonomie max
+            prix_100km = 20 * prix  #on suppose que le véhicule roule sur une autoroute (donc 20kwH pour 100km)
+            cout_auto_max = (nb_km_remplir * prix_100km) / 100  #prix pour que le véhicule soit à son autonomie maximale
+            cout_total += cout_auto_max  #actualisation du coût total
+    return cout_total
