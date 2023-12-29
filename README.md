@@ -152,7 +152,7 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 - [International Energy Agency](https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019), *Average price and driving range of BEVs, 2010-2019*
 
-  ### Différents scraps utiles
+### Différents scraps utiles
 
   -[Etat des lieux des voitures électriques en France](https://fr.wikipedia.org/wiki/Voiture_%C3%A9lectrique_en_France) *Page Wikipédia présentant le parc des véhicules électriques en France (version la plus récente)*
 
