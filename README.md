@@ -152,6 +152,18 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 - [International Energy Agency](https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019), *Average price and driving range of BEVs, 2010-2019*
 
+  ### Différents scraps utiles
+
+  -[Etat des lieux des voitures électriques en France](https://fr.wikipedia.org/wiki/Voiture_%C3%A9lectrique_en_France) *Page Wikipédia présentant le parc des véhicules électriques en France (version la plus récente)*
+
+  -[Accidents principaux en France](https://fr.wikipedia.org/wiki/%C3%89volution_d%C3%A9taill%C3%A9e_des_accidents_routiers_en_France_m%C3%A9tropolitaine) *Page Wikipédia présentant les accidents principaux en France (version la plus récente)*
+
+  -[Liste de différentes autonomies de véhicules électriques](https://www.automobile-propre.com/voiture-electrique-top-des-meilleures-autonomies/) *Site présentant les véhciules électriques ainsi que leurs autonomies, (version la plus récente)*
+
+  - [Classement des véhiucules électriques les plus vendues ](https://www.frandroid.com/survoltes/voitures-electriques/1707169_les-70-voitures-electriques-les-plus-vendues-en-france-le-numero-2-mondial-arrive-enfin) *Site présentant les véhicules électriques les plus vendus en 2023 (version la plus récente)*
+ 
+  - 
+
 
 ## Remarques 
 
