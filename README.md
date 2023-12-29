@@ -139,8 +139,14 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 - [adresse.data.gouv.fr](https://adresse.data.gouv.fr/api-doc/adresse), *API Adresse*.
 
+- [France GeoJson](https://france-geojson.gregoiredavid.fr/), *France GeoJson* : utilisé pour obtenir les coordonnées GeoJson des limites de l'Île-de-France
 
+### Fichier Graphique.py
 
+- [INSEE](https://www.insee.fr/fr/statistiques/fichier/2015759/deve-envir-emissions-co2.xlsx), *Émissions de gaz à effet de serre par activité*
 
+- [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/bornes-de-recharge-pour-vehicules-electriques-3/), *Bornes de recharge pour véhicules électriques*, 2019 (Version la plus récente).
 
+### Fichier autonomie_km.py
 
+- [International Energy Agency]("https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019"), *Average price and driving range of BEVs, 2010-2019*
