@@ -626,39 +626,40 @@ class CarNetwork():
 
         for index, lat, lon, com, acces_recharge in df[['ylatitude', 'xlongitude', 'n_station', 'acces_recharge']].itertuples():
             # Créez un marqueur avec une couleur différente en fonction des valeurs
-            if acces_recharge == 'payant': fill_color = 'red'
-            elif acces_recharge == 'gratuit': fill_color = 'green'
-            elif acces_recharge == 'information manquante': fill_color = 'grey'
-            elif acces_recharge == 'carte ou badge': fill_color = 'cyan'
-            elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h': fill_color = 'yellow'
+            if acces_recharge == 'payant' : fill_color = 'red'
+            elif acces_recharge == 'gratuit' : fill_color = 'green'
+            elif acces_recharge == 'information manquante' : fill_color = 'grey'
+            elif acces_recharge == 'carte ou badge' : fill_color = 'cyan'
+            elif acces_recharge == 'charges gratuites de 12 à 14h et de 19h à 21h' : fill_color = 'yellow'
 
             # Ajoutez le marqueur à la carte
 
             folium.RegularPolygonMarker(
                 location=[lat, lon],
-                popup=com,
-                tooltip=com,
-                fill_color=fill_color, 
-                color=fill_color,# Couleur des contours du polygone                    rotation=45,
-                radius=5  # Opacité du remplissage
+                popup = com,
+                tooltip = com,
+                fill_color = fill_color,
+                color = fill_color,# Couleur des contours du polygone                    rotation=45,
+                radius = 5  # Opacité du remplissage
             ).add_to(map)
 
     def plot_accidents(self, map):
 
         # Charge les données du fichier Excel dans un DataFrame nommé accidents_2022idf_carac
+
         accidents_2022idf_carac = pd.read_excel('/home/onyxia/work/PyCar/DOWNLOAD/accidents_2022_idf.xlsx')
 
-        # reshape des data
-        accidents_2022idf_carac["Latitude"] = accidents_2022idf_carac["Latitude"].str.replace(',', '.').astype(float)
-        accidents_2022idf_carac["Longitude"] = accidents_2022idf_carac["Longitude"].str.replace(',', '.').astype(float)
+        # Remplace les virgules par des points et convertit la colonne "Latitude" en flottants
+        accidents_2022idf_carac["Latitude"] = accidents_2022idf_carac["Latitude"].str.replace(',','.').astype(float)
+
+        # Remplace les virgules par des points et convertit la colonne "Longitude" en flottants
+        accidents_2022idf_carac["Longitude"] = accidents_2022idf_carac["Longitude"].str.replace(',','.').astype(float)
 
         # on trie les données d'accident en fonction de leur localisation
-        dict_accidents_2022idf = accidents_2022idf_carac.groupby(["Commune", "Adresse"]).groups
+         dict_accidents_2022idf = accidents_2022idf_carac.groupby(["Commune", "Adresse"]).groups
         # on trie le dictionnaire obtenu
         dict_trie_accidents_2022idf = dict(sorted(dict_accidents_2022idf.items(), key=lambda item : len(item[1]), reverse=True))
 
-
-        map = folium.Map([48.866667, 2.333333], zoom_start=12)
         # on affiche les 25 localisations avec le plus d'accidents en Idf
         i = 0
         for key in dict_trie_accidents_2022idf.keys():
