@@ -152,6 +152,7 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 - [International Energy Agency](https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019), *Average price and driving range of BEVs, 2010-2019*
 
-## Remarque: 
+
+## Remarques 
 
 On trouvera dans le notebook **test1.ipynb** (fichier Tests) un mode d'emploi de la classe derrière notre projet. 

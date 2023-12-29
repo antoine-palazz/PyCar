@@ -645,10 +645,8 @@ class CarNetwork():
 
     def plot_accidents(self, map):
 
-        cwd=os.getcwd()
-        accidents_2022idf_path=os.path.join(cwd,"accidents_2022_idf.xlsx")
-
-        accidents_2022idf_carac=pd.read_excel(accidents_2022idf_path)
+        # Charge les données du fichier Excel dans un DataFrame nommé accidents_2022idf_carac
+        accidents_2022idf_carac = pd.read_excel('/home/onyxia/work/PyCar/DOWNLOAD/accidents_2022_idf.xlsx')
 
         #reshape des data
         accidents_2022idf_carac["Latitude"]=accidents_2022idf_carac["Latitude"].str.replace(',','.').astype(float)
