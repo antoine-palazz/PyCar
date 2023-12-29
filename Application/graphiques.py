@@ -9,7 +9,8 @@ from io import BytesIO
 import base64
 
 ## Si Naïl : '/Users/khelifanail/Documents/GitHub/Pycar'
-os.chdir("/Users/khelifanail/Documents/GitHub/PyCar")
+## Remplacer le chemin selon l'utilisateur
+os.chdir("/home/onyxia/work/PyCar")
 def evolution_nbre_voiture_elec():
     df = pd.read_csv('DOWNLOAD/Voitures.csv', sep=';')
     List_date = []

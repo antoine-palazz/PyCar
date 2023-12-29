@@ -10,14 +10,10 @@ import os
 import sys
 import seaborn as sns
 import pandas as pd
-<<<<<<< HEAD
-car_network_directory = '/Users/khelifanail/Documents/GitHub/Pycar/Modules'
-## Si Naïl : '/Users/khelifanail/Documents/GitHub/Pycar/Modules'
-=======
 from nbconvert import HTMLExporter
 import nbformat
-car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
->>>>>>> aec86883c13c243625b024419ed298229a1b13b6
+## changer le chemin du repertoire selon l'utilisateur (si Augustin : '/Users/augustincablant/Documents/GitHub/Pycar/Modules')
+car_network_directory = '/home/onyxia/work/PyCar/Modules'
 sys.path.append(car_network_directory)
 from CarNetwork import CarNetwork
 
@@ -25,7 +21,7 @@ from CarNetwork import CarNetwork
 app = Flask(__name__)
 
 @app.route('/calcul', methods=['POST'])
-def calcul(): 
+def calcul():
     """ 
     Permet de déterminer et retourner l'itinéraire.
     """
