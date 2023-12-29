@@ -48,6 +48,7 @@ Les principaux dossiers sont :
 - ##### II. Répartition de la population en France métropolitaine
 
 - ##### III. Répartition des véhicules électriques en France métropolitaine
+
 - ###### III.B Analyse du fichier
 - ###### III.C Répartition des ventes de véhicules en fonction de leur motorisation en France
 - ###### III.D Classement des véhicules électriques en France métropolitaine
@@ -149,4 +150,8 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 ### Fichier autonomie_km.py
 
-- [International Energy Agency]("https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019"), *Average price and driving range of BEVs, 2010-2019*
+- [International Energy Agency](https://www.iea.org/data-and-statistics/charts/average-price-and-driving-range-of-bevs-2010-2019), *Average price and driving range of BEVs, 2010-2019*
+
+## Remarque: 
+
+On trouvera dans le notebook **test1.ipynb** (fichier Tests) un mode d'emploi de la classe derrière notre projet. 
