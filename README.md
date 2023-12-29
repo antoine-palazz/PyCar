@@ -160,9 +160,9 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
   -[Liste de différentes autonomies de véhicules électriques](https://www.automobile-propre.com/voiture-electrique-top-des-meilleures-autonomies/) *Site présentant les véhciules électriques ainsi que leurs autonomies, (version la plus récente)*
 
-  - [Classement des véhiucules électriques les plus vendues ](https://www.frandroid.com/survoltes/voitures-electriques/1707169_les-70-voitures-electriques-les-plus-vendues-en-france-le-numero-2-mondial-arrive-enfin) *Site présentant les véhicules électriques les plus vendus en 2023 (version la plus récente)*
+  -[Classement des véhiucules électriques les plus vendues ](https://www.frandroid.com/survoltes/voitures-electriques/1707169_les-70-voitures-electriques-les-plus-vendues-en-france-le-numero-2-mondial-arrive-enfin) *Site présentant les véhicules électriques les plus vendus en 2023 (version la plus récente)*
  
-  - 
+
 
 
 ## Remarques 
