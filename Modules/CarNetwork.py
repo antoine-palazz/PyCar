@@ -643,11 +643,11 @@ class CarNetwork():
                 radius = 5  # Opacité du remplissage
             ).add_to(map)
 
-    def plot_accidents(self, map):
+    def plot_accidents(self, map, path):
 
         # Charge les données du fichier Excel dans un DataFrame nommé accidents_2022idf_carac
 
-        accidents_2022idf_carac = pd.read_excel('/home/onyxia/work/PyCar/DOWNLOAD/accidents_2022_idf.xlsx')
+        accidents_2022idf_carac = pd.read_excel(path)
 
         # Remplace les virgules par des points et convertit la colonne "Latitude" en flottants
         accidents_2022idf_carac["Latitude"] = accidents_2022idf_carac["Latitude"].str.replace(',','.').astype(float)
