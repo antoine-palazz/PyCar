@@ -656,7 +656,7 @@ class CarNetwork():
         accidents_2022idf_carac["Longitude"] = accidents_2022idf_carac["Longitude"].str.replace(',','.').astype(float)
 
         # on trie les données d'accident en fonction de leur localisation
-         dict_accidents_2022idf = accidents_2022idf_carac.groupby(["Commune", "Adresse"]).groups
+        dict_accidents_2022idf = accidents_2022idf_carac.groupby(["Commune", "Adresse"]).groups
         # on trie le dictionnaire obtenu
         dict_trie_accidents_2022idf = dict(sorted(dict_accidents_2022idf.items(), key=lambda item : len(item[1]), reverse=True))
 
