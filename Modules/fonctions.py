@@ -294,19 +294,6 @@ def cout_distance_thermique(dist, prix_essence, essence = True):
     cout_trajet = nb_litre_trajet * prix_essence  #coût du trajet 
     return cout_trajet 
 
-def distance_entre_2_bornes(borne1, borne2):
-    """ 
-    Parameters:
-    -----------
-    borne1 : [lat1, lon1] 
-    borne2 : [lat2, lon2]
-    -----------
-    return : 
-    -----------
-    retourne le nombre de km à parcourir pour aller de la borne 1 à la borne 2 
-    """
-    # Naïl je te laisse faire, c'est toi l'expert 
-    return None
 
 
 def cout_trajet_electrique(start, autonomie_véhicule, autonomie_start, dist, liste_localisation_bornes, prix):

@@ -126,3 +126,21 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 - Créer une branche pour votre fonctionnalité : git checkout -b nouvelle-fonctionnalite
 - Effectuer les modifications nécessaires.
 - Soumettre une demande de fusion (Pull Request).
+
+## Bibliographie des sources
+
+### Notebook accidents_2022_idf.ipynb
+
+- [Observatoire national interministériel de la sécurité routière](https://www.onisr.securite-routiere.gouv.fr/sites/default/files/2023-10/ONISR_DDT_2022.xlsx), *Accidents de voiture sur l'année 2022*, 2022 : fichier excel (seul moyen d'accès) "Accidents_2022_idf.xlsx" (DOWNLOADS)
+
+### Fichier CarNetwork.py 
+
+- [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/bornes-de-recharge-pour-vehicules-electriques-3/), *Bornes de recharge pour véhicules électriques*, 2019 (Version la plus récente).
+
+- [adresse.data.gouv.fr](https://adresse.data.gouv.fr/api-doc/adresse), *API Adresse*.
+
+
+
+
+
+
