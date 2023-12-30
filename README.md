@@ -62,12 +62,6 @@ Les principaux dossiers sont :
 
 - ##### V. Accidents en France métropolitaine
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/cap1.png">
-<img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/cap.png">
-</picture>
-
 - DOWNLOAD est le dossier avec les datasets téléchargés
 - Modules est le dossier contenant la classe permettant de trouver l'itinéraire optimal
 - SCRAP est le dossier contenant les codes pour scraper les données ainsi que les datasets correspondants

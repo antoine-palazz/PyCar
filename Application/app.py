@@ -13,7 +13,7 @@ import pandas as pd
 from nbconvert import HTMLExporter
 import nbformat
 ## changer le chemin du repertoire selon l'utilisateur (si Augustin : '/Users/augustincablant/Documents/GitHub/Pycar/Modules')
-car_network_directory = '/home/onyxia/work/PyCar/Modules'
+car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
 sys.path.append(car_network_directory)
 from CarNetwork import CarNetwork
 
