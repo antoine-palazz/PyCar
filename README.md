@@ -100,6 +100,21 @@ $ python Application/app.py
  <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app.png">
  <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app.png">
 </picture>
+
+Vous pouvez accéder à l'Exploratory Data Analysis que nous avons effectué en cliquant sur l'onglet "EDA"
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/EDA.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/EDA.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/EDA.png">
+</picture>
+
+Ou bien retrouver ce qui a motivé ce projet en cliquant sur "Pourquoi ce projet ?"
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/Pourquoi%20%3F.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/Pourquoi%20%3F.png">
+ <img alt="Un rapide aperçu" src="https://github.com/AugustinCablant/PyCar/blob/main/images/Pourquoi%20%3F.png">
+</picture>
+
 - Spécifier le point de départ et la destination.
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/AugustinCablant/PyCar/blob/main/images/web_app_1.png">
