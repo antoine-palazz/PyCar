@@ -14,7 +14,7 @@
     
 </div>
 
-## Description du projet 
+## But 
 Ce projet a pour objectif de créer un itinéraire optimal pour un véhicule électrique en tenant compte des bornes de recharge disponibles sur le territoire français. L'idée est d'optimiser le trajet en minimisant les arrêts de recharge et en maximisant l'efficacité énergétique du parcours.
 
 Collaborateurs : 
