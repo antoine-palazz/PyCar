@@ -7,9 +7,11 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
+import sys
 
-## Si Naïl : '/Users/khelifanail/Documents/GitHub/Pycar'
-## Remplacer le chemin selon l'utilisateur
+cwd=os.getcwd()
+cwd_parent=(os.path.dirname(cwd))
+sys.path.append(cwd_parent + '/Modules')
 os.chdir("/Users/augustincablant/Documents/GitHub/Pycar/Modules")
 def evolution_nbre_voiture_elec():
     df = pd.read_csv('DOWNLOAD/Voitures.csv', sep=';')

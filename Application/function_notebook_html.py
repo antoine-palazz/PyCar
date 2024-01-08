@@ -1,8 +1,12 @@
 from nbconvert import HTMLExporter
 import nbformat
 import sys
-directory = '/Users/augustincablant/Documents/GitHub/Pycar'
-sys.path.append(directory)
+import os 
+
+
+cwd=os.getcwd()
+cwd_parent=(os.path.dirname(cwd))
+sys.path.append(cwd_parent)
 
 def notebook_to_html(notebook_path):
     with open(notebook_path) as notebook_file:
