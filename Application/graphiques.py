@@ -12,7 +12,7 @@ import sys
 cwd=os.getcwd()
 cwd_parent=(os.path.dirname(cwd))
 sys.path.append(cwd_parent + '/Modules')
-os.chdir("/Users/augustincablant/Documents/GitHub/Pycar/Modules")
+
 def evolution_nbre_voiture_elec():
     df = pd.read_csv('DOWNLOAD/Voitures.csv', sep=';')
     List_date = []
