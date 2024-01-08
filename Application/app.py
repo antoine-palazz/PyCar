@@ -12,8 +12,10 @@ import seaborn as sns
 import pandas as pd
 from nbconvert import HTMLExporter
 import nbformat
-## changer le chemin du repertoire selon l'utilisateur (si Augustin : '/Users/augustincablant/Documents/GitHub/Pycar/Modules')
-car_network_directory = '/Users/augustincablant/Documents/GitHub/Pycar/Modules'
+
+cwd=os.getcwd()
+cwd_parent = (os.path.dirname(cwd))
+car_network_directory = cwd_parent + '/Modules' 
 sys.path.append(car_network_directory)
 from CarNetwork import CarNetwork
 
