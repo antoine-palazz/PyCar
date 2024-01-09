@@ -79,9 +79,9 @@ $ git clone https://github.com/AugustinCablant/PyCar.git
 $ pip install -r requirements.txt
 ```
 
-- Exécuter l'application : python Application/app.py
+- Exécuter l'application :
 ```
-$ python Application/main.py
+$ python Application/app.py
 ```
 
 ## Utilisation
